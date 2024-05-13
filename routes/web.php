@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+Route::get('/wishlist', function () {
+    return view('wishlist');
+});
+  
 Route::get('/cart', function () {
     return view('cart');
 });
