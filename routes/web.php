@@ -24,3 +24,11 @@ Route::get('/checkout', function () {
 Route::get('/wishlist', function () {
     return view('wishlist');
 });
+  
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
