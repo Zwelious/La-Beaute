@@ -39,3 +39,7 @@ Route::get('/register', function () {
 Route::get('/forget', function () {
     return view('forget');
 });
+
+Route::get('/register1', function () {
+    return view('register1');
+});
