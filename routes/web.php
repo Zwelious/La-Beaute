@@ -18,24 +18,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-
-Route::get('/wishlist', function () {
-    return view('wishlist');
-});
-
-Route::get('/cart', function () {
-    return view('cart');
-});
-
-Route::get('/register', function () {
-    return view('register');
-});
-
-Route::get('/forget', function () {
-    return view('forget');
-});
-
 Route::get('/login', [LoginController::class, 'Login']);
+
+Route::get('/register', [RegisterController::class, 'Register']);
+
+Route::get('/forget', [ForgetPassController::class, 'ForgetPass']);
+
+Route::get('/cart', [CartController::class, 'Cart']);
+
+Route::get('/checkout', [CheckoutController::class, 'Checkout']);
+
+Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
