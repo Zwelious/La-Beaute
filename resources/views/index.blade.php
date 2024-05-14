@@ -17,12 +17,12 @@
                     <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active rounded">
-                                <img src="img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
-                                <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
+                                <img src="img/hero-img-1.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                <a href="#" class="btn px-4 py-2 text-white rounded">Pink Flash</a>
                             </div>
                             <div class="carousel-item rounded">
                                 <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                                <a href="#" class="btn px-4 py-2 text-white rounded">Dior</a>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -537,7 +537,7 @@
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="img/vegetable-item-3.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                        <img src="img/vegetable-item-3.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
                     </div>
                     <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
                     <div class="p-4 rounded-bottom">
