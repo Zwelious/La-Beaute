@@ -3,26 +3,14 @@
 @section("body")
 
 <section class="bg-light py-5">
-  <div class="container">
-    <div class="row">
+  <div class="container pt-5">
+    <div class="row mt-5">
       <div class="col-xl-8 col-lg-8 mb-4">
-        <div class="card mb-4 border shadow-0">
-          <div class="p-4 d-flex justify-content-between">
-            <div class="">
-              <h5>Have an account?</h5>
-              <p class="mb-0 text-wrap ">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            </div>
-            <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
-              <a href="#" class="btn btn-outline-primary me-0 me-md-2 mb-2 mb-md-0 w-100">Register</a>
-              <a href="#" class="btn btn-primary shadow-0 text-nowrap w-100">Sign in</a>
-            </div>
-          </div>
-        </div>
 
         <!-- Checkout -->
         <div class="card shadow-0 border">
           <div class="p-4">
-            <h5 class="card-title mb-3">Guest checkout</h5>
+            <h5 class="card-title mb-3">Checkout</h5>
             <div class="row">
               <div class="col-6 mb-3">
                 <p class="mb-0">First name</p>

@@ -3,9 +3,9 @@
 @section("body")
 
 <!-- cart + summary -->
-<section class="bg-light my-5">
-  <div class="container">
-    <div class="row justify-content-center">
+<section class="bg-light my-5 pt-5">
+  <div class="container py-5">
+    <div class="row justify-content-center mt-5">
       <!-- cart -->
       <div class="col-lg-9">
         <div class="card border shadow-0">
@@ -122,7 +122,7 @@
             <a href="#" class="nav-link">ROMAND Han All Sharp Brow</a>
             <div class="price-wrap mb-2">
               <strong class="">Rp. 179.550</strong>
-              <del class="">Rp. 189.000</del>
+              <del class="text-success">Rp. 189.000</del>
             </div>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
