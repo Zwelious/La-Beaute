@@ -27,21 +27,21 @@
               <div class="col-6 mb-3">
                 <p class="mb-0">First name</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Your First Name Here" class="form-control" />
                 </div>
               </div>
 
               <div class="col-6">
                 <p class="mb-0">Last name</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Your Last Name Here" class="form-control" />
                 </div>
               </div>
 
               <div class="col-6 mb-3">
                 <p class="mb-0">Phone</p>
                 <div class="form-outline">
-                  <input type="tel" id="typePhone" value="+48 " class="form-control" />
+                  <input type="tel" id="typePhone" value="+62 " class="form-control" />
                 </div>
               </div>
 
@@ -105,7 +105,7 @@
               <div class="col-sm-8 mb-3">
                 <p class="mb-0">Address</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Ypur Address Here" class="form-control" />
                 </div>
               </div>
 
@@ -121,7 +121,7 @@
               <div class="col-sm-4 mb-3">
                 <p class="mb-0">House</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Your House Here" class="form-control" />
                 </div>
               </div>
 
@@ -165,20 +165,20 @@
           <h6 class="mb-3">Summary</h6>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2">$195.90</p>
+            <p class="mb-2">Rp. 888.000</p>
           </div>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Discount:</p>
-            <p class="mb-2 text-danger">- $60.00</p>
+            <p class="mb-2 text-danger">- Free</p>
           </div>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Shipping cost:</p>
-            <p class="mb-2">+ $14.00</p>
+            <p class="mb-2">+ Free</p>
           </div>
           <hr />
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2 fw-bold">$149.90</p>
+            <p class="mb-2 fw-bold">Rp. 888.000</p>
           </div>
 
           <div class="input-group mt-3 mb-4">
@@ -187,21 +187,21 @@
           </div>
 
           <hr />
-          <h6 class="text-dark my-4">Items in cart</h6>
+          <h6 class="text-dark my-4">Items in Your Cart</h6>
 
           <div class="d-flex align-items-center mb-4">
             <div class="me-3 position-relative">
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
                 1
               </span>
-              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/7.webp" style="height: 96px; width: 96x;" class="img-sm rounded border" />
+              <img src="img\romand-shape.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
             </div>
             <div class="">
               <a href="#" class="nav-link">
-                Gaming Headset with Mic <br />
-                Darkblue color
+                ROMAND Better Than Shape <br />
+                Walnut Grain
               </a>
-              <div class="price text-muted">Total: $295.99</div>
+              <div class="price text-muted">Total: Rp. 199.000</div>
             </div>
           </div>
 
@@ -210,14 +210,14 @@
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
                 1
               </span>
-              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/5.webp" style="height: 96px; width: 96x;" class="img-sm rounded border" />
+              <img src="img\romand-glasting.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
             </div>
             <div class="">
               <a href="#" class="nav-link">
-                Apple Watch Series 4 Space <br />
-                Large size
+                ROMAND Glasting Melting Balm <br />
+                Sorbet Balm
               </a>
-              <div class="price text-muted">Total: $217.99</div>
+              <div class="price text-muted">Total: Rp.189.000</div>
             </div>
           </div>
 
@@ -226,11 +226,14 @@
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
                 3
               </span>
-              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/1.webp" style="height: 96px; width: 96x;" class="img-sm rounded border" />
+              <img src="img\romand-palette.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
             </div>
             <div class="">
-              <a href="#" class="nav-link">GoPro HERO6 4K Action Camera - Black</a>
-              <div class="price text-muted">Total: $910.00</div>
+              <a href="#" class="nav-link">
+                ROMAND Better Than Palette <br />
+                Secret Garden
+              </a>
+              <div class="price text-muted">Total: Rp. 500.000</div>
             </div>
           </div>
         </div>
