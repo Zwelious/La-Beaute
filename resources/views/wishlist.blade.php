@@ -5,7 +5,7 @@
 <!-- cart + summary -->
 <section class="bg-light my-5">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <!-- cart -->
       <div class="col-lg-9">
         <div class="card border shadow-0">
