@@ -15,10 +15,10 @@
               <div class="col-lg-5">
                 <div class="me-lg-5">
                   <div class="d-flex">
-                    <img src="vendor\img\01.jpeg" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                    <img src="img\01.jpeg" class="border rounded me-3" style="width: 96px; height: 96px;" />
                     <div class="">
-                      <a href="#" class="nav-link">Winter jacket for men and lady</a>
-                      <p class="text-muted">Yellow, Jeans</p>
+                      <a href="#" class="nav-link">PINKFLASH Care Plus Lip Oil</a>
+                      <p class="text-muted">01</p>
                     </div>
                   </div>
                 </div>
@@ -49,10 +49,10 @@
               <div class="col-lg-5">
                 <div class="me-lg-5">
                   <div class="d-flex">
-                    <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/12.webp" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                    <img src="img\000 LOOSE.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
                     <div class="">
-                      <a href="#" class="nav-link">Mens T-shirt Cotton Base</a>
-                      <p class="text-muted">Blue, Medium</p>
+                      <a href="#" class="nav-link">PINKFLASH LOOSE POWDER</a>
+                      <p class="text-muted">000 TRANSLUCENT</p>
                     </div>
                   </div>
                 </div>
@@ -83,10 +83,10 @@
               <div class="col-lg-5">
                 <div class="me-lg-5">
                   <div class="d-flex">
-                    <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/13.webp" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                    <img src="img\01 MANDARIN LATTE.jpeg" class="border rounded me-3" style="width: 96px; height: 96px;" />
                     <div class="">
-                      <a href="#" class="nav-link">Blazer Suit Dress Jacket for Men</a>
-                      <p class="text-muted">XL size, Jeans, Blue</p>
+                      <a href="#" class="nav-link">PINKFLASH Eyeshadow Palette</a>
+                      <p class="text-muted">01 Mandarin Latte</p>
                     </div>
                   </div>
                 </div>
@@ -107,7 +107,7 @@
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fa fa-heart fa-lg px-1 text-secondary"></i></a>
                   <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
@@ -187,13 +187,13 @@
             </div>
           </div>
           <a href="#" class="">
-            <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/7.webp" class="card-img-top rounded-2" />
+            <img src="img\4-in-4 PALETTE.jpeg" class="card-img-top rounded-2" />
           </a>
           <div class="card-body d-flex flex-column pt-3 border-top">
-            <a href="#" class="nav-link">Gaming Headset with Mic</a>
+            <a href="#" class="nav-link">4-in-4 Eyeshadow Palette</a>
             <div class="price-wrap mb-2">
               <strong class="">$18.95</strong>
-              <del class="">$24.99</del>
+              <del class="text-success">$24.99</del>
             </div>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
@@ -207,10 +207,10 @@
             <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
           </div>
           <a href="#" class="">
-          <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/10.webp" class="card-img-top rounded-2" />
+          <img src="img\2-in-1 DUAL ENDED.jpeg" class="card-img-top rounded-2" />
           </a>
           <div class="card-body d-flex flex-column pt-3 border-top">
-            <a href="#" class="nav-link">Mens T-shirt Cotton Base Layer Slim fit </a>
+            <a href="#" class="nav-link">2-In-1 Dual Ended Lip Cream</a>
             <div class="price-wrap mb-2">
               <strong class="">$13.90</strong>
             </div>
