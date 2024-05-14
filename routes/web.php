@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,14 +25,11 @@ Route::get('/checkout', function () {
 Route::get('/wishlist', function () {
     return view('wishlist');
 });
-  
+
 Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
 Route::get('/register', function () {
     return view('register');
 });
@@ -39,3 +37,5 @@ Route::get('/register', function () {
 Route::get('/forget', function () {
     return view('forget');
 });
+
+Route::get('/login', [LoginController::class, 'Login']);
