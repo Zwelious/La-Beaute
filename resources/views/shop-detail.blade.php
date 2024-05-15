@@ -34,8 +34,8 @@
         <div class="container-fluid page-header py-5">
             <h1 class="text-center text-white display-6">Shop Detail</h1>
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('/shop') }}">Shop</a></li>
                 <li class="breadcrumb-item active text-white">Shop Detail</li>
             </ol>
         </div>
@@ -198,7 +198,7 @@
                                 <div class="row g-4">
                                     <div class="col-lg-6">
                                         <div class="border-bottom rounded">
-                                            <input type="text" class="form-control border-0 me-4" placeholder="Yur Name *">
+                                            <input type="text" class="form-control border-0 me-4" placeholder="Your Name *">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -242,31 +242,37 @@
                                     <ul class="list-unstyled fruite-categorie">
                                         <li>
                                             <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Apples</a>
+                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Eyes</a>
                                                 <span>(3)</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Oranges</a>
+                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Lips</a>
                                                 <span>(5)</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Strawbery</a>
+                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Face</a>
                                                 <span>(2)</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Banana</a>
+                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Dior</a>
                                                 <span>(8)</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Pumpkin</a>
+                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Pinkflash</a>
+                                                <span>(5)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between fruite-name">
+                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Romand</a>
                                                 <span>(5)</span>
                                             </div>
                                         </li>
@@ -390,7 +396,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center my-4">
-                                    <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Vew More</a>
+                                    <a href="{{ url('/shop') }}" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">View More</a>
                                 </div>
                             </div>
                             <div class="col-lg-12">
