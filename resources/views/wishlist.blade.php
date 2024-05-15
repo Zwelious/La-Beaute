@@ -52,7 +52,7 @@
               </div>
               <div class="col-lg-2 col-sm-6 col-6">
                 <div class="">
-                  <text class="h6">Rp 199.000 / item</text> <br />
+                  <text class="h6">Rp 199.000</text> <br />
                 </div>
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
@@ -77,7 +77,7 @@
               </div>
               <div class="col-lg-2 col-sm-6 col-6">
                 <div class="">
-                  <text class="h6">Rp 229.000 / item</text> <br />
+                  <text class="h6">Rp 229.000</text> <br />
                 </div>
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
@@ -102,7 +102,7 @@
               </div>
               <div class="col-lg-2 col-sm-6 col-6">
                 <div class="">
-                <text class="h6">Rp 229.000 / item</text> <br />
+                <text class="h6">Rp 229.000</text> <br />
                 </div>
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
