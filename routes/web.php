@@ -7,6 +7,8 @@ use App\Http\Controllers\ForgetPassController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ShopDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,18 +31,12 @@ Route::get('/register', [RegisterController::class, 'Register']);
 
 Route::get('/forget', [ForgetPassController::class, 'ForgetPass']);
 
-<<<<<<< HEAD
-Route::get('/forget', function () {
-    return view('forget');
-});
-
-Route::get('/register1', function () {
-    return view('register1');
-});
-=======
 Route::get('/cart', [CartController::class, 'Cart']);
 
 Route::get('/checkout', [CheckoutController::class, 'Checkout']);
 
 Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
->>>>>>> 5b9a92881b12e78fadd26c0d6740001b176ade8c
+
+Route::get('/shop', [ShopController::class, 'Shop']);
+
+Route::get('/shop-details', [ShopDetailsController::class, 'ShopDetails']);
