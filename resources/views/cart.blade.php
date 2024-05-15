@@ -1,28 +1,29 @@
 @extends("main")
 
 @section("navbar")
-    <a href="index.html" class="nav-item nav-link">Home</a>
-    <a href="shop.html" class="nav-item nav-link">Shop</a>
-    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
-    <a href="contact.html" class="nav-item nav-link">Contact</a>
+    <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
+    <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
+    <a href="{{ url('/shop-details') }}" class="nav-item nav-link">Shop Detail</a>
+    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
+    <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="cart.html" class="dropdown-item">Shop Maintenance</a>
-            <a href="chackout.html" class="dropdown-item">Transaction History</a>
-            <a href="testimonial.html" class="dropdown-item">Log out</a>
+            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Dashboard</a>
+            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item">Shop Maintenance</a>
+            <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
         </div>
     </div>
     </div>
     <div class="d-flex m-3 me-0">
-    <a href="#" class="position-relative me-4 my-auto">
+    <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-heart fa-2x"></i>
     </a>
-    <a href="#" class="position-relative me-4 my-auto">
+    <a href="{{ url('/cart') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x text-secondary"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
-    <a href="#" class="my-auto">
+    <a href="{{ url('/login') }}" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
     </a>
 @endsection
@@ -96,7 +97,7 @@
                         </select>
                         </div>
                         <div class="">
-                        <text class="h6">Rp 27.550</text> 
+                        <text class="h6">Rp 27.550</text>
                         <del class="text-success">Rp 29.000</del> <br />
                         <small class="text-muted text-nowrap"> Rp 29.000 / per item </small>
                         </div>
@@ -190,8 +191,8 @@
                     </div>
 
                     <div class="mt-3">
-                    <a href="#" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
-                    <a href="#" class="btn btn-light w-100 border mt-2"> Back to shop </a>
+                    <a href="{{ url('/checkout') }}" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
+                    <a href="{{ url('/shop') }}" class="btn btn-light w-100 border mt-2"> Back to shop </a>
                     </div>
                 </div>
                 </div>
@@ -226,7 +227,7 @@
                     <del class="text-success">Rp 35.000</del>
                     </div>
                     <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-                    <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
+                    <a href="{{ url('/cart') }}" class="btn btn-outline-primary w-100">Add to cart</a>
                     </div>
                 </div>
                 </div>
@@ -245,7 +246,7 @@
                     <strong class="">Rp 75.000</strong>
                     </div>
                     <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-                    <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
+                    <a href="{{ url('/cart') }}" class="btn btn-outline-primary w-100">Add to cart</a>
                     </div>
                 </div>
                 </div>
