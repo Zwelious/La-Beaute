@@ -12,6 +12,8 @@ use App\Http\Controllers\ShopDetailsController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\AdminTransController;
 use App\Http\Controllers\AdminShopController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +51,5 @@ Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
 Route::get('/admin-dashboard', [AdminTransController::class, 'AdminTrans']);
 
 Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
+
+Route::get('/contact', [ContactController::class, 'Contact']);
