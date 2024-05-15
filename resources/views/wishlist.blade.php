@@ -1,28 +1,29 @@
 @extends("main")
 
 @section("navbar")
-    <a href="index.html" class="nav-item nav-link">Home</a>
-    <a href="shop.html" class="nav-item nav-link">Shop</a>
-    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
-    <a href="contact.html" class="nav-item nav-link">Contact</a>
+    <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
+    <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
+    <a href="{{ url('/shop-details') }}" class="nav-item nav-link">Shop Detail</a>
+    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
+    <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="cart.html" class="dropdown-item">Shop Maintenance</a>
-            <a href="chackout.html" class="dropdown-item">Transaction History</a>
-            <a href="testimonial.html" class="dropdown-item">Log out</a>
+            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Dashboard</a>
+            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item active">Shop Maintenance</a>
+            <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
         </div>
     </div>
     </div>
     <div class="d-flex m-3 me-0">
-    <a href="#" class="position-relative me-4 my-auto">
-        <i class="fa fa-heart fa-2x"></i>
+    <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
+        <i class="fa fa-heart fa-2x text-secondary"></i>
     </a>
-    <a href="#" class="position-relative me-4 my-auto">
+    <a href="{{ url('/cart') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
-    <a href="#" class="my-auto">
+    <a href="{{ url('/login') }}" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
     </a>
 @endsection

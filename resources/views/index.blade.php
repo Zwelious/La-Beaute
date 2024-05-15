@@ -740,19 +740,6 @@
     </div>
     <!-- Banner Section End -->
 
-
-    <!-- Bestsaler Product Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-                <h1 class="display-4">Bestseller Products</h1>
-                <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Bestsaler Product End -->
-
-
     <!-- Fact Start -->
     <div class="container-fluid py-5">
         <div class="container">
