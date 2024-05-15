@@ -217,7 +217,7 @@
                     </div>
                 </div>
                 <a href="#" class="">
-                    <img src="img\4-in-4 PALETTE.jpeg" class="card-img-top rounded-2" />
+                    <img src="img\2-in-1 DUAL ENDED.jpeg" class="card-img-top rounded-2" />
                 </a>
                 <div class="card-body d-flex flex-column pt-3 border-top">
                     <a href="#" class="nav-link">PINKFLASH 2 IN 1 Dual-ended Lipstik ombrelips Matte Velvet High Pigment</a>
@@ -237,7 +237,7 @@
                     <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
                 </div>
                 <a href="#" class="">
-                <img src="img\2-in-1 DUAL ENDED.jpeg" class="card-img-top rounded-2" />
+                <img src="img\4-in-4 PALETTE.jpeg" class="card-img-top rounded-2" />
                 </a>
                 <div class="card-body d-flex flex-column pt-3 border-top">
                     <a href="#" class="nav-link">PINKFLASH OhMyLove 4 in 1 Multiple Face Palette</a>
