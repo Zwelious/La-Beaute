@@ -1,16 +1,42 @@
 @extends("main")
 
+@section("navbar")
+    <a href="index.html" class="nav-item nav-link">Home</a>
+    <a href="shop.html" class="nav-item nav-link">Shop</a>
+    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+            <a href="cart.html" class="dropdown-item">Cart</a>
+            <a href="chackout.html" class="dropdown-item">Chackout</a>
+            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+            <a href="404.html" class="dropdown-item">404 Page</a>
+        </div>
+    </div>
+    <a href="contact.html" class="nav-item nav-link">Contact</a>
+    </div>
+    <div class="d-flex m-3 me-0">
+    <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+    <a href="#" class="position-relative me-4 my-auto">
+        <i class="fa fa-shopping-bag fa-2x"></i>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+    </a>
+    <a href="#" class="my-auto">
+        <i class="fas fa-user fa-2x"></i>
+    </a>
+@endsection
+
 @section("body")
 
 <!-- cart + summary -->
-<section class="bg-light my-5">
-  <div class="container">
-    <div class="row justify-content-center">
+<section class="bg-light my-5 pt-5">
+  <div class="container py-5">
+    <div class="row justify-content-center mt-5">
       <!-- cart -->
       <div class="col-lg-9">
         <div class="card border shadow-0">
           <div class="m-4">
-            <h4 class="card-title mb-4">Your shopping cart</h4>
+            <h4 class="card-title mb-4">Your wishlist</h4>
             <div class="row gy-3 mb-4">
               <div class="col-lg-5">
                 <div class="me-lg-5">
@@ -122,7 +148,7 @@
             <a href="#" class="nav-link">ROMAND Han All Sharp Brow</a>
             <div class="price-wrap mb-2">
               <strong class="">Rp. 179.550</strong>
-              <del class="">Rp. 189.000</del>
+              <del class="text-success">Rp. 189.000</del>
             </div>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
