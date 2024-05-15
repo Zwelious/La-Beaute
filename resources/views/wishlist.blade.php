@@ -39,7 +39,7 @@
           <div class="m-4">
             <h4 class="card-title mb-4">Your wishlist</h4>
             <div class="row gy-3 mb-4">
-              <div class="col-lg-5">
+              <div class="col-lg-6">
                 <div class="me-lg-5">
                   <div class="d-flex">
                     <img src="img\romand-veil.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
@@ -64,7 +64,7 @@
             </div>
 
             <div class="row gy-3 mb-4">
-              <div class="col-lg-5">
+              <div class="col-lg-6">
                 <div class="me-lg-5">
                   <div class="d-flex">
                     <img src="img\romand-universe.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
@@ -89,7 +89,7 @@
             </div>
 
             <div class="row gy-3">
-              <div class="col-lg-5">
+              <div class="col-lg-6">
                 <div class="me-lg-5">
                   <div class="d-flex">
                     <img src="img\romand-juicy.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
