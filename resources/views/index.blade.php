@@ -523,7 +523,7 @@
                             <div class="px-4 rounded-bottom">
                                 <div class="service-content bg-light text-center p-4 rounded">
                                     <h5 class="text-primary">Dior</h5>
-                                    <h3 class="mb-0">Free delivery</h3>
+                                    <h3 class="mb-0">Discount 5%</h3>
                                 </div>
                             </div>
                         </div>
