@@ -20,7 +20,7 @@
     </a>
     <a href="#" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x"></i>
-        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
     <a href="#" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
@@ -168,6 +168,15 @@
               </div>
 
               <hr class="my-4" />
+              <div class="col-sm-4 mb-3">
+                <p class="mb-0">City</p>
+                <select class="form-select">
+                  <option value="1">Indonesia</option>
+                  <option value="2">South Korea</option>
+                  <option value="3">Japan</option>
+                  <option value="3">Thailand</option>
+                </select>
+              </div>
 
               <h5 class="card-title mb-3">Payment Info</h5>
               <img src="img/payment.png" class="img-fluid mb-3" alt="">
@@ -206,31 +215,64 @@
           </div>
           <!-- Checkout -->
         </div>
-        <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
-          <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
-            <h6 class="mb-3">Summary</h6>
-            <div class="d-flex justify-content-between">
-              <p class="mb-2">Total price:</p>
-              <p class="mb-2">Rp. 888.000</p>
+        <!-- Checkout -->
+      </div>
+      <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
+        <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
+          <h6 class="mb-3">Summary</h6>
+          <div class="d-flex justify-content-between">
+            <p class="mb-2">Total price:</p>
+            <p class="mb-2">Rp 888.000</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="mb-2">Discount:</p>
+            <p class="mb-2 text-danger">-</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="mb-2">Shipping cost:</p>
+            <p class="mb-2">Free</p>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-between">
+            <p class="mb-2">Total price:</p>
+            <p class="mb-2 fw-bold">Rp 888.000</p>
+          </div>
+
+          <div class="input-group mt-3 mb-4">
+            <input type="text" class="form-control border" name="" placeholder="Promo code" />
+            <button class="btn btn-light text-primary border">Apply</button>
+          </div>
+
+          <hr />
+          <h6 class="text-dark my-4">Items in Your Cart</h6>
+
+          <div class="d-flex align-items-center mb-4">
+            <div class="me-3 position-relative">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
+                1
+              </span>
+              <img src="img\romand-shape.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
             </div>
-            <div class="d-flex justify-content-between">
-              <p class="mb-2">Discount:</p>
-              <p class="mb-2 text-danger">- Free</p>
-            </div>
-            <div class="d-flex justify-content-between">
-              <p class="mb-2">Shipping cost:</p>
-              <p class="mb-2">+ Free</p>
-            </div>
-            <hr />
-            <div class="d-flex justify-content-between">
-              <p class="mb-2">Total price:</p>
-              <p class="mb-2 fw-bold">Rp. 888.000</p>
+            <div class="">
+              <a href="#" class="nav-link">
+                ROMAND Better Than Shape <br />
+                Walnut Grain
+              </a>
+              <div class="price text-muted">Total: Rp 199.000</div>
             </div>
 
             <div class="input-group mt-3 mb-4">
               <input type="text" class="form-control border" name="" placeholder="Promo code" />
               <button class="btn btn-light text-primary border">Apply</button>
             </div>
+            <div class="">
+              <a href="#" class="nav-link">
+                ROMAND Glasting Melting Balm <br />
+                Sorbet Balm
+              </a>
+              <div class="price text-muted">Total: Rp 189.000</div>
+            </div>
+          </div>
 
             <hr />
             <h6 class="text-dark my-4">Items in Your Cart</h6>
@@ -263,7 +305,7 @@
                   ROMAND Glasting Melting Balm <br />
                   Sorbet Balm
                 </a>
-                <div class="price text-muted">Total: Rp. 189.000</div>
+                <div class="price text-muted">Total: Rp 189.000</div>
               </div>
             </div>
 

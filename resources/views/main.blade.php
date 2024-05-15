@@ -44,7 +44,7 @@
             <div class="container topbar bg-primary d-none d-lg-block">
                 <div class="d-flex justify-content-between">
                     <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Baker Street No.12, New York City, USA</a></small>
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Universitas Ciputra, Surabaya, IDN</a></small>
                         <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">labeaute@gmail.com</a></small>
                     </div>
                     <div class="top-link pe-2">
@@ -156,9 +156,9 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Contact</h4>
-                            <p>Address: Baker Street No. 12, New York City, USA</p>
+                            <p>Address: Universitas Ciputra, Surabaya, IDN</p>
                             <p>Email: labeaute@gmail.com</p>
-                            <p>Phone: +0123 4567 8910</p>
+                            <p>Phone: +6285 3567 8910</p>
                             <p>Payment Accepted</p>
                             <img src="img/payment.png" class="img-fluid" alt="">
                         </div>

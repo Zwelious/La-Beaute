@@ -20,7 +20,7 @@
     </a>
     <a href="#" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x"></i>
-        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
     <a href="#" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
@@ -34,8 +34,8 @@
       <div class="col col-xl-10">
         <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="img/login.png" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            <div class="col-md-6 col-lg-5 d-none d-md-flex justify-content-center align-items-center">
+              <img src="img/login.png" alt="Login Image" class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;" />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
