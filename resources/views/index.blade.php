@@ -1013,7 +1013,7 @@
                     <div class="position-relative">
                         <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                         <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">I'm absolutely thrilled with the products I purchased! The quality is top-notch, and my make up has never looked better! I highly recommend buying from La Beaute for anyone looking for original products!
+                            <p class="mb-0">I'm absolutely thrilled with the products I purchased! The quality is top-notch, and my make up has never looked better! I highly recommend buying from La Beaute for anyone looking for original products! Hope my reviews helped a lot of pretty girlies :D to check my make up routines and more pls check my IG!
                             </p>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap">
