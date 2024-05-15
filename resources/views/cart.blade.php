@@ -19,8 +19,8 @@
         <i class="fa fa-heart fa-2x"></i>
     </a>
     <a href="#" class="position-relative me-4 my-auto">
-        <i class="fa fa-shopping-bag fa-2x"></i>
-        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+        <i class="fa fa-shopping-bag fa-2x text-secondary"></i>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
     <a href="#" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
@@ -40,12 +40,12 @@
                 <div class="m-4">
                     <h4 class="card-title mb-4">Your shopping cart</h4>
                     <div class="row gy-3 mb-4">
-                    <div class="col-lg-5">
+                    <div class="col-lg-6">
                         <div class="me-lg-5">
                         <div class="d-flex">
                             <img src="img\01.jpeg" class="border rounded me-3" style="width: 96px; height: 96px;" />
                             <div class="">
-                            <a href="#" class="nav-link">PINKFLASH Care Plus Lip Oil</a>
+                            <a href="#" class="nav-link">PINKFLASH Natural Lip Oil Lip Balm Lip Gloss Moisturize</a>
                             <p class="text-muted">01</p>
                             </div>
                         </div>
@@ -61,25 +61,26 @@
                         </select>
                         </div>
                         <div class="">
-                        <text class="h6">$1156.00</text> <br />
-                        <small class="text-muted text-nowrap"> $460.00 / per item </small>
+                        <text class="h6">Rp 123.500</text>
+                        <del class="text-success">Rp 130.000</del> <br />
+                        <small class="text-muted text-nowrap"> Rp 130.000 / per item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                         <div class="float-md-end">
-                        <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                        <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-wishlist"></i></a>
                         <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                         </div>
                     </div>
                     </div>
 
                     <div class="row gy-3 mb-4">
-                    <div class="col-lg-5">
+                    <div class="col-lg-6">
                         <div class="me-lg-5">
                         <div class="d-flex">
                             <img src="img\000 LOOSE.jpg" class="border rounded me-3" style="width: 96px; height: 96px;" />
                             <div class="">
-                            <a href="#" class="nav-link">PINKFLASH LOOSE POWDER</a>
+                            <a href="#" class="nav-link">PINKFLASH Oil Controller Loose Powder</a>
                             <p class="text-muted">000 TRANSLUCENT</p>
                             </div>
                         </div>
@@ -95,25 +96,26 @@
                         </select>
                         </div>
                         <div class="">
-                        <text class="h6">$44.80</text> <br />
-                        <small class="text-muted text-nowrap"> $12.20 / per item </small>
+                        <text class="h6">Rp 27.550</text> 
+                        <del class="text-success">Rp 29.000</del> <br />
+                        <small class="text-muted text-nowrap"> Rp 29.000 / per item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                         <div class="float-md-end">
-                        <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                        <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-wishlist"></i></a>
                         <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                         </div>
                     </div>
                     </div>
 
                     <div class="row gy-3">
-                    <div class="col-lg-5">
+                    <div class="col-lg-6">
                         <div class="me-lg-5">
                         <div class="d-flex">
                             <img src="img\01 MANDARIN LATTE.jpeg" class="border rounded me-3" style="width: 96px; height: 96px;" />
                             <div class="">
-                            <a href="#" class="nav-link">PINKFLASH Eyeshadow Palette</a>
+                            <a href="#" class="nav-link">PINKFLASH OhMyLove 4 in 1 Multiple Face Palette</a>
                             <p class="text-muted">01 Mandarin Latte</p>
                             </div>
                         </div>
@@ -129,13 +131,13 @@
                         </select>
                         </div>
                         <div class="">
-                        <text class="h6">$1156.00</text> <br />
-                        <small class="text-muted text-nowrap"> $460.00 / per item </small>
+                        <text class="h6">Rp 75.000</text> <br />
+                        <small class="text-muted text-nowrap"> Rp 75.000 / per item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                         <div class="float-md-end">
-                        <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fa fa-heart fa-lg px-1 text-secondary"></i></a>
+                        <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fa fa-heart fa-lg px-1 text-wishlist"></i></a>
                         <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                         </div>
                     </div>
@@ -161,7 +163,7 @@
                         <label class="form-label">Have coupon?</label>
                         <div class="input-group">
                         <input type="text" class="form-control border" name="" placeholder="Coupon code" />
-                        <button class="btn btn-light border">Apply</button>
+                        <button class="btn btn-success border">Apply</button>
                         </div>
                     </div>
                     </form>
@@ -171,20 +173,20 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                     <p class="mb-2">Total price:</p>
-                    <p class="mb-2">$329.00</p>
+                    <p class="mb-2">Rp 226.050</p>
                     </div>
                     <div class="d-flex justify-content-between">
                     <p class="mb-2">Discount:</p>
-                    <p class="mb-2 text-success">-$60.00</p>
+                    <p class="mb-2 text-success">-</p>
                     </div>
                     <div class="d-flex justify-content-between">
                     <p class="mb-2">TAX:</p>
-                    <p class="mb-2">$14.00</p>
+                    <p class="mb-2">Free</p>
                     </div>
                     <hr />
                     <div class="d-flex justify-content-between">
                     <p class="mb-2">Total price:</p>
-                    <p class="mb-2 fw-bold">$283.00</p>
+                    <p class="mb-2 fw-bold">Rp 226.050</p>
                     </div>
 
                     <div class="mt-3">
@@ -211,17 +213,17 @@
                 <div class="mask px-2" style="height: 50px;">
                     <div class="d-flex justify-content-between">
                     <h6><span class="badge bg-danger pt-1 mt-3 ms-2">New</span></h6>
-                    <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+                    <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
                     </div>
                 </div>
                 <a href="#" class="">
                     <img src="img\4-in-4 PALETTE.jpeg" class="card-img-top rounded-2" />
                 </a>
                 <div class="card-body d-flex flex-column pt-3 border-top">
-                    <a href="#" class="nav-link">4-in-4 Eyeshadow Palette</a>
+                    <a href="#" class="nav-link">PINKFLASH 2 IN 1 Dual-ended Lipstik ombrelips Matte Velvet High Pigment</a>
                     <div class="price-wrap mb-2">
-                    <strong class="">$18.95</strong>
-                    <del class="text-success">$24.99</del>
+                    <strong class="">Rp 33.250</strong>
+                    <del class="text-success">Rp 35.000</del>
                     </div>
                     <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
                     <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
@@ -232,15 +234,15 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card px-4 border shadow-0 mb-4 mb-lg-0">
                 <div class="mask px-2" style="height: 50px;">
-                    <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+                    <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
                 </div>
                 <a href="#" class="">
                 <img src="img\2-in-1 DUAL ENDED.jpeg" class="card-img-top rounded-2" />
                 </a>
                 <div class="card-body d-flex flex-column pt-3 border-top">
-                    <a href="#" class="nav-link">2-In-1 Dual Ended Lip Cream</a>
+                    <a href="#" class="nav-link">PINKFLASH OhMyLove 4 in 1 Multiple Face Palette</a>
                     <div class="price-wrap mb-2">
-                    <strong class="">$13.90</strong>
+                    <strong class="">Rp 75.000</strong>
                     </div>
                     <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
                     <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>

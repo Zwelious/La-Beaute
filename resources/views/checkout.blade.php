@@ -20,7 +20,7 @@
     </a>
     <a href="#" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x"></i>
-        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
     <a href="#" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
@@ -127,9 +127,10 @@
               <div class="col-sm-4 mb-3">
                 <p class="mb-0">City</p>
                 <select class="form-select">
-                  <option value="1">New York</option>
-                  <option value="2">Moscow</option>
-                  <option value="3">Samarqand</option>
+                  <option value="1">Indonesia</option>
+                  <option value="2">South Korea</option>
+                  <option value="3">Japan</option>
+                  <option value="3">Thailand</option>
                 </select>
               </div>
 
@@ -180,20 +181,20 @@
           <h6 class="mb-3">Summary</h6>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2">Rp. 888.000</p>
+            <p class="mb-2">Rp 888.000</p>
           </div>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Discount:</p>
-            <p class="mb-2 text-danger">- Free</p>
+            <p class="mb-2 text-danger">-</p>
           </div>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Shipping cost:</p>
-            <p class="mb-2">+ Free</p>
+            <p class="mb-2">Free</p>
           </div>
           <hr />
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2 fw-bold">Rp. 888.000</p>
+            <p class="mb-2 fw-bold">Rp 888.000</p>
           </div>
 
           <div class="input-group mt-3 mb-4">
@@ -216,7 +217,7 @@
                 ROMAND Better Than Shape <br />
                 Walnut Grain
               </a>
-              <div class="price text-muted">Total: Rp. 199.000</div>
+              <div class="price text-muted">Total: Rp 199.000</div>
             </div>
           </div>
 
@@ -232,7 +233,7 @@
                 ROMAND Glasting Melting Balm <br />
                 Sorbet Balm
               </a>
-              <div class="price text-muted">Total: Rp.189.000</div>
+              <div class="price text-muted">Total: Rp 189.000</div>
             </div>
           </div>
 
@@ -248,7 +249,7 @@
                 ROMAND Better Than Palette <br />
                 Secret Garden
               </a>
-              <div class="price text-muted">Total: Rp. 500.000</div>
+              <div class="price text-muted">Total: Rp 500.000</div>
             </div>
           </div>
         </div>

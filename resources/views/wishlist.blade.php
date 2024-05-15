@@ -20,7 +20,7 @@
     </a>
     <a href="#" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x"></i>
-        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
     <a href="#" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
@@ -52,12 +52,12 @@
               </div>
               <div class="col-lg-2 col-sm-6 col-6">
                 <div class="">
-                  <text class="h6">Rp. 199.000 / per item</text> <br />
+                  <text class="h6">Rp 199.000 / per item</text> <br />
                 </div>
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-shopping-cart fa-lg px-1 text-secondary"></i></a>
+                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-shopping-cart fa-lg px-1 text-wishlist"></i></a>
                   <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
@@ -77,12 +77,12 @@
               </div>
               <div class="col-lg-2 col-sm-6 col-6">
                 <div class="">
-                  <text class="h6">Rp. 229.000 / per item</text> <br />
+                  <text class="h6">Rp 229.000 / per item</text> <br />
                 </div>
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-shopping-cart fa-lg px-1 text-secondary"></i></a>
+                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-shopping-cart fa-lg px-1 text-wishlist"></i></a>
                   <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
@@ -102,12 +102,12 @@
               </div>
               <div class="col-lg-2 col-sm-6 col-6">
                 <div class="">
-                <text class="h6">Rp. 229.000 / per item</text> <br />
+                <text class="h6">Rp 229.000 / per item</text> <br />
                 </div>
               </div>
               <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-shopping-cart fa-lg px-1 text-secondary"></i></a>
+                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-shopping-cart fa-lg px-1 text-wishlist"></i></a>
                   <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
@@ -148,8 +148,8 @@
           <div class="card-body d-flex flex-column pt-3 border-top">
             <a href="#" class="nav-link">ROMAND Han All Sharp Brow</a>
             <div class="price-wrap mb-2">
-              <strong class="">Rp. 179.550</strong>
-              <del class="text-success">Rp. 189.000</del>
+              <strong class="">Rp 179.550</strong>
+              <del class="text-success">Rp 189.000</del>
             </div>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
@@ -160,7 +160,7 @@
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card px-4 border shadow-0 mb-4 mb-lg-0">
           <div class="mask px-2" style="height: 50px;">
-            <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+            <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
           </div>
           <a href="#" class="">
             <img src="img\romand-dewyful.jpg" class="card-img-top rounded-2" />
@@ -168,7 +168,7 @@
           <div class="card-body d-flex flex-column pt-3 border-top">
             <a href="#" class="nav-link">ROMAND Dewyful Water Tint</a>
             <div class="price-wrap mb-2">
-              <strong class="">Rp. 189.000</strong>
+              <strong class="">Rp 189.000</strong>
             </div>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
@@ -179,7 +179,7 @@
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card px-4 border shadow-0">
           <div class="mask px-2" style="height: 50px;">
-            <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+            <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
           </div>
           <a href="#" class="">
             <img src="img\romand-sunscreen.jpg" class="card-img-top rounded-2" />
@@ -187,7 +187,7 @@
           <div class="card-body d-flex flex-column pt-3 border-top">
             <a href="#" class="nav-link">ROMAND Zero Sun Clean SPF50+</a>
             <div class="price-wrap mb-2">
-              <strong class="">Rp. 169.000</strong>
+              <strong class="">Rp 169.000</strong>
             </div>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
@@ -198,7 +198,7 @@
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card px-4 border shadow-0">
           <div class="mask px-2" style="height: 50px;">
-            <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+            <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
           </div>
           <a href="#" class="">
             <img src="img\romand-water.jpg" class="card-img-top rounded-2" />
@@ -206,7 +206,7 @@
           <div class="card-body d-flex flex-column pt-3 border-top">
             <a href="#" class="nav-link">ROMAND Bare Water Cushion</a>
             <div class="price-wrap mb-2">
-              <strong class="">Rp. 429.000</strong>
+              <strong class="">Rp 429.000</strong>
             </div>
             <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
               <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
