@@ -27,7 +27,6 @@
 @endsection
 
 @section("body")
-<<<<<<< HEAD
 <section class="vh-100" style="background-color: #E981A4;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -42,7 +41,6 @@
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-=======
 <!-- Section: Design Block -->
 <section class="text-center text-lg-start">
   <style>
@@ -96,7 +94,6 @@
               </div>
 
 
->>>>>>> 5b9a92881b12e78fadd26c0d6740001b176ade8c
 
                 <form>
 
