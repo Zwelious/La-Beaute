@@ -211,7 +211,7 @@
                                                 <h4>ROMAND Bare Water Cushion</h4>
                                                 <p>Long lasting cushion that perfectly hides your textured skin and even pores.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 429.000 / per item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 429.000 / item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -243,7 +243,7 @@
                             <h4>DIOR Backstage Glow Face Palette</h4>
                             <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-2">Rp. 950.000 / per item</p>
+                                <p class="text-dark fs-5 fw-bold mb-2">Rp. 950.000 / item</p>
                                 <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>
@@ -259,7 +259,7 @@
                                                 <h4>ROMAND Glasting Melting Balm</h4>
                                                 <p>The Glasting Melting Balm is a moisturizing balm with plant-based moisturizing oil that does not dry out! It provides a transparent and smooth watery glow without feeling stuffy.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 189.000 / per item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 189.000 / item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -275,7 +275,7 @@
                                                  <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
                                                  <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
                                                  <div class="d-flex justify-content-between flex-lg-wrap">
-                                                     <p class="text-dark fs-5 fw-bold mb-2">Rp. 2.640.000 / per item</p>
+                                                     <p class="text-dark fs-5 fw-bold mb-2">Rp. 2.640.000 / item</p>
                                                      <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -307,7 +307,7 @@
                                                 <h4>DIOR Addict Set</h4>
                                                 <p>Dior lip makeup star duo, Dior Addict Lip Glow lip balm and Dior Addict Lip Maximizer gloss are yours to discover in this case. Dior Addict Lip Glow is a lip balm that subtly revives the natural color of lips and hydrates them for 24h. The Dior Addict Lip Maximizer gloss visibly plumps lips and enhances them with a mirror-shine effect.</p>
                                                 <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 1.450.000 / per item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 1.450.000 / item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary mt-2">
                                                         <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
                                                     </a>
