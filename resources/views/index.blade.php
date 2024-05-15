@@ -285,7 +285,7 @@
                                                 <h4>DIOR Backstage Glow Face Palette</h4>
                                                 <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp. 950.000 / item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -327,7 +327,7 @@
                             <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
                             <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">Rp. 2.640.000 / item</p>
+                                <p class="text-dark fs-5 fw-bold mb-2">Rp. 2.640.000 / item</p>
                                 <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>
@@ -409,7 +409,7 @@
                                                 <h4>DIOR Backstage Glow Face Palette</h4>
                                                 <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp. 950.000 / item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -535,7 +535,7 @@
                             <img src="img/MEGAN - ROMAND.jpg" class="img-fluid rounded-top w-100" alt="">
                             <div class="px-4 rounded-bottom">
                                 <div class="service-content bg-light text-center p-4 rounded">
-                                    <h5 class="text-primary">Rom&nd</h5>
+                                    <h5 class="text-primary">Romand</h5>
                                     <h3 class="mb-0">Discount 5%</h3>
                                 </div>
                             </div>
@@ -664,7 +664,7 @@
                         <h4>DIOR Addict Lip Glow</h4>
                         <p>The 1st Dior lip balm formulated with 97% natural-origin ingredients that subtly revives the natural color of lips with a custom glow and hydrates lips for 24h.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                        <div class="price-wrap mb-0">
+                        <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
                             <del class="text-success">Rp. 700.000</del>
                         </div>
@@ -681,7 +681,7 @@
                         <h4>DIOR Addict Lip Tint</h4>
                         <p>Dior Addict Lip Tint is the first no-transfer Dior lip tint with 12h wear, that highlights the lips with a bold color in a semi-matte finish and fuses with the skin for a bare-lip sensation.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                        <div class="price-wrap mb-0">
+                        <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
                             <del class="text-success">Rp. 700.000</del>
                         </div>
@@ -698,7 +698,7 @@
                         <h4>DIOR Forever Compact Foundation</h4>
                         <p>Dior Forever Natural Velvet is the 1st no-transfer Dior compact foundation with 24h* wear, composed with 90%** natural-origin ingredients. Ultra-soft and light, it brings a naturally matte perfection to the complexion, with a fine and creamy texture that lets the skin breathe while offering a sensation of comfort that lasts all day. Its high coverage corrects blemishes, smooths and evens out the complexion.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                        <div class="price-wrap mb-0">
+                        <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 1.215.000</strong>
                             <del class="text-success">Rp. 1.350.000</del>
                         </div>
