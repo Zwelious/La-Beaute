@@ -216,7 +216,7 @@
                                             <div class="fruite-img">
                                                 <img src="img/romand-water.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
                                                 <h4>ROMAND Bare Water Cushion</h4>
                                                 <p>Long lasting cushion that perfectly hides your textured skin and even pores.</p>
@@ -523,7 +523,7 @@
                             <div class="px-4 rounded-bottom">
                                 <div class="service-content bg-light text-center p-4 rounded">
                                     <h5 class="text-primary">Dior</h5>
-                                    <h3 class="mb-0">Free delivery</h3>
+                                    <h3 class="mb-0">Discount 5%</h3>
                                 </div>
                             </div>
                         </div>
