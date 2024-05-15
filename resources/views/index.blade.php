@@ -269,28 +269,28 @@
                                                  <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
                                                  <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
                                                  <div class="d-flex justify-content-between flex-lg-wrap">
-                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp. 2.640.000 / per item</p>
+                                                     <p class="text-dark fs-5 fw-bold mb-2">Rp. 2.640.000 / per item</p>
                                                      <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="rounded position-relative fruite-item">
-                        <div class="fruite-img">
-                            <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                            <h4>DIOR Backstage Glow Face Palette</h4>
-                            <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / per item</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 col-xl-3">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>DIOR Backstage Glow Face Palette</h4>
+                                                <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp. 950.000 / per item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -559,7 +559,7 @@
                     </div>
                     <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
                     <div class="p-4 rounded-bottom">
-                        <h4>ROMAND See-Throgh Veil Lighter</h4>
+                        <h4>ROMAND See-Through Veil Lighter</h4>
                         <p>A new powder highlighter to brighten, draw attention, and stun. This Veilighter contours and reflects light beautifully for a goddess-like glow.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
                         <div class="price-wrap mb-2">

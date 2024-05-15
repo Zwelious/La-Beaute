@@ -139,7 +139,7 @@
           <div class="mask px-2" style="height: 50px;">
             <div class="d-flex justify-content-between">
               <h6><span class="badge bg-danger pt-1 mt-3 ms-2">New</span></h6>
-              <a href="#"><i class="fas fa-heart text-primary fa-lg float-end pt-3 m-2"></i></a>
+              <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
             </div>
           </div>
           <a href="#" class="">
