@@ -1,28 +1,29 @@
 @extends("main")
 
 @section("navbar")
-    <a href="index.html" class="nav-item nav-link">Home</a>
-    <a href="shop.html" class="nav-item nav-link">Shop</a>
-    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
-    <a href="contact.html" class="nav-item nav-link">Contact</a>
+    <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
+    <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
+    <a href="{{ url('/shop-details') }}" class="nav-item nav-link">Shop Detail</a>
+    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
+    <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="cart.html" class="dropdown-item">Shop Maintenance</a>
-            <a href="chackout.html" class="dropdown-item">Transaction History</a>
-            <a href="testimonial.html" class="dropdown-item">Log out</a>
+            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Dashboard</a>
+            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item">Shop Maintenance</a>
+            <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
         </div>
     </div>
     </div>
     <div class="d-flex m-3 me-0">
-    <a href="#" class="position-relative me-4 my-auto">
+    <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-heart fa-2x"></i>
     </a>
-    <a href="#" class="position-relative me-4 my-auto">
-        <i class="fa fa-shopping-bag fa-2x"></i>
+    <a href="{{ url('/checkout') }}" class="position-relative me-4 my-auto">
+        <i class="fa fa-shopping-bag fa-2x text-secondary"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
-    <a href="#" class="my-auto">
+    <a href="{{ url('/login') }}" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
     </a>
 @endsection
@@ -38,7 +39,8 @@
           <div class="card shadow-0 border">
             <div class="p-4">
               <h5 class="card-title mb-3">Checkout</h5>
-              <div class="row">
+              <a class="btn-link" href="{{ url('/cart') }}">Back to cart.</a>
+              <div class="row pt-3">
                 <div class="col-6 mb-3">
                   <p class="mb-0">First name</p>
                   <div class="form-outline">
@@ -215,117 +217,88 @@
           </div>
           <!-- Checkout -->
         </div>
+        <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
+            <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
+              <h6 class="mb-3">Summary</h6>
+              <div class="d-flex justify-content-between">
+                <p class="mb-2">Total price:</p>
+                <p class="mb-2">Rp 888.000</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="mb-2">Discount:</p>
+                <p class="mb-2 text-danger">-</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="mb-2">Shipping cost:</p>
+                <p class="mb-2">Free</p>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between">
+                <p class="mb-2">Total price:</p>
+                <p class="mb-2 fw-bold">Rp 888.000</p>
+              </div>
+
+              <div class="input-group mt-3 mb-4">
+                <input type="text" class="form-control border" name="" placeholder="Promo code" />
+                <button class="btn btn-light text-primary border">Apply</button>
+              </div>
+
+              <hr />
+
+                <hr />
+                <h6 class="text-dark my-4">Items in Your Cart</h6>
+
+                <div class="d-flex align-items-center mb-4">
+                  <div class="me-3 position-relative">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
+                      1
+                    </span>
+                    <img src="img/romand-shape.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
+                  </div>
+                  <div class="">
+                    <a href="#" class="nav-link">
+                      ROMAND Better Than Shape <br />
+                      Walnut Grain
+                    </a>
+                    <div class="price text-muted">Total: Rp. 199.000</div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-4">
+                  <div class="me-3 position-relative">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
+                      1
+                    </span>
+                    <img src="img/romand-glasting.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
+                  </div>
+                  <div class="">
+                    <a href="#" class="nav-link">
+                      ROMAND Glasting Melting Balm <br />
+                      Sorbet Balm
+                    </a>
+                    <div class="price text-muted">Total: Rp 189.000</div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-4">
+                  <div class="me-3 position-relative">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
+                      3
+                    </span>
+                    <img src="img/romand-palette.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
+                  </div>
+                  <div class="">
+                    <a href="#" class="nav-link">
+                      ROMAND Better Than Palette <br />
+                      Secret Garden
+                    </a>
+                    <div class="price text-muted">Total: Rp. 500.000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
         <!-- Checkout -->
       </div>
-      <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
-        <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
-          <h6 class="mb-3">Summary</h6>
-          <div class="d-flex justify-content-between">
-            <p class="mb-2">Total price:</p>
-            <p class="mb-2">Rp 888.000</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p class="mb-2">Discount:</p>
-            <p class="mb-2 text-danger">-</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p class="mb-2">Shipping cost:</p>
-            <p class="mb-2">Free</p>
-          </div>
-          <hr />
-          <div class="d-flex justify-content-between">
-            <p class="mb-2">Total price:</p>
-            <p class="mb-2 fw-bold">Rp 888.000</p>
-          </div>
-
-          <div class="input-group mt-3 mb-4">
-            <input type="text" class="form-control border" name="" placeholder="Promo code" />
-            <button class="btn btn-light text-primary border">Apply</button>
-          </div>
-
-          <hr />
-          <h6 class="text-dark my-4">Items in Your Cart</h6>
-
-          <div class="d-flex align-items-center mb-4">
-            <div class="me-3 position-relative">
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                1
-              </span>
-              <img src="img\romand-shape.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
-            </div>
-            <div class="">
-              <a href="#" class="nav-link">
-                ROMAND Better Than Shape <br />
-                Walnut Grain
-              </a>
-              <div class="price text-muted">Total: Rp 199.000</div>
-            </div>
-
-            <div class="input-group mt-3 mb-4">
-              <input type="text" class="form-control border" name="" placeholder="Promo code" />
-              <button class="btn btn-light text-primary border">Apply</button>
-            </div>
-            <div class="">
-              <a href="#" class="nav-link">
-                ROMAND Glasting Melting Balm <br />
-                Sorbet Balm
-              </a>
-              <div class="price text-muted">Total: Rp 189.000</div>
-            </div>
-          </div>
-
-            <hr />
-            <h6 class="text-dark my-4">Items in Your Cart</h6>
-
-            <div class="d-flex align-items-center mb-4">
-              <div class="me-3 position-relative">
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                  1
-                </span>
-                <img src="img/romand-shape.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-              </div>
-              <div class="">
-                <a href="#" class="nav-link">
-                  ROMAND Better Than Shape <br />
-                  Walnut Grain
-                </a>
-                <div class="price text-muted">Total: Rp. 199.000</div>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center mb-4">
-              <div class="me-3 position-relative">
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                  1
-                </span>
-                <img src="img/romand-glasting.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-              </div>
-              <div class="">
-                <a href="#" class="nav-link">
-                  ROMAND Glasting Melting Balm <br />
-                  Sorbet Balm
-                </a>
-                <div class="price text-muted">Total: Rp 189.000</div>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center mb-4">
-              <div class="me-3 position-relative">
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                  3
-                </span>
-                <img src="img/romand-palette.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-              </div>
-              <div class="">
-                <a href="#" class="nav-link">
-                  ROMAND Better Than Palette <br />
-                  Secret Garden
-                </a>
-                <div class="price text-muted">Total: Rp. 500.000</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
