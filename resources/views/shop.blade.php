@@ -1,28 +1,29 @@
 @extends("main")
 
 @section("navbar")
-    <a href="index.html" class="nav-item nav-link">Home</a>
-    <a href="shop.html" class="nav-item nav-link active">Shop</a>
-    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
-    <a href="contact.html" class="nav-item nav-link">Contact</a>
+    <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
+    <a href="{{ url('/shop') }}" class="nav-item nav-link active">Shop</a>
+    <a href="{{ url('/shop-details') }}" class="nav-item nav-link">Shop Detail</a>
+    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
+    <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="cart.html" class="dropdown-item">Shop Maintenance</a>
-            <a href="chackout.html" class="dropdown-item">Transaction History</a>
-            <a href="testimonial.html" class="dropdown-item">Log out</a>
+            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Dashboard</a>
+            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item active">Shop Maintenance</a>
+            <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
         </div>
     </div>
     </div>
     <div class="d-flex m-3 me-0">
-    <a href="#" class="position-relative me-4 my-auto">
+    <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-heart fa-2x"></i>
     </a>
-    <a href="#" class="position-relative me-4 my-auto">
+    <a href="{{ url('/cart') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
-    <a href="#" class="my-auto">
+    <a href="{{ url('/login') }}" class="my-auto">
         <i class="fas fa-user fa-2x"></i>
     </a>
 @endsection
@@ -308,7 +309,7 @@
                                                 <p>Dior lip makeup star duo, Dior Addict Lip Glow lip balm and Dior Addict Lip Maximizer gloss are yours to discover in this case. Dior Addict Lip Glow is a lip balm that subtly revives the natural color of lips and hydrates them for 24h. The Dior Addict Lip Maximizer gloss visibly plumps lips and enhances them with a mirror-shine effect.</p>
                                                 <div class="d-flex flex-column">
                                                     <p class="text-dark fs-5 fw-bold mb-2">Rp 1.450.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary mt-2">
+                                                    <a href="{{ url('/shop-details') }}" class="btn border border-secondary rounded-pill px-3 text-primary mt-2">
                                                         <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
                                                     </a>
                                                 </div>
