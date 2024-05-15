@@ -9,8 +9,8 @@
     <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Dashboard</a>
-            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item">Shop Maintenance</a>
+            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item">Dashboard</a>
+            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Shop Maintenance</a>
             <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
         </div>
     </div>
