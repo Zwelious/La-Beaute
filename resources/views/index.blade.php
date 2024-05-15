@@ -1,5 +1,31 @@
 @extends("main")
 
+@section("navbar")
+    <a href="index.html" class="nav-item nav-link active">Home</a>
+    <a href="shop.html" class="nav-item nav-link">Shop</a>
+    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+            <a href="cart.html" class="dropdown-item">Cart</a>
+            <a href="chackout.html" class="dropdown-item">Chackout</a>
+            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+            <a href="404.html" class="dropdown-item">404 Page</a>
+        </div>
+    </div>
+    <a href="contact.html" class="nav-item nav-link">Contact</a>
+    </div>
+    <div class="d-flex m-3 me-0">
+    <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+    <a href="#" class="position-relative me-4 my-auto">
+        <i class="fa fa-shopping-bag fa-2x"></i>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+    </a>
+    <a href="#" class="my-auto">
+        <i class="fas fa-user fa-2x"></i>
+    </a>
+@endsection
+
 @section("body")
     <!-- Hero Start -->
     <div class="container-fluid py-5 mb-5 hero-header">
@@ -7,7 +33,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-md-12 col-lg-7">
                     <h4 class="mb-3 text-secondary">100% Quality Beauty Products</h4>
-                    <h1 class="mb-5 display-3 text-primary">Your Beauty Journey Starts Here</h1>
+                    <h1 class="mb-5 display-3 text-primary">Your Beauty Journey Starts Here!</h1>
                     <div class="position-relative mx-auto">
                         <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search">
                         <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Submit Now</button>
@@ -23,6 +49,10 @@
                             <div class="carousel-item rounded">
                                 <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
                                 <a href="#" class="btn px-4 py-2 text-white rounded">Dior</a>
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="img/hero-img-3.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                <a href="#" class="btn px-4 py-2 text-white rounded">Romand</a>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -40,9 +70,8 @@
     </div>
     <!-- Hero End -->
 
-
     <!-- Featurs Section Start -->
-    <div class="container-fluid featurs py-5">
+    <div class="container-fluid featurs py-2">
         <div class="container py-5">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
@@ -631,8 +660,8 @@
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
                     <div class="py-4">
-                        <h1 class="display-3 text-white">Fresh Exotic Fruits</h1>
-                        <p class="fw-normal display-3 text-dark mb-4">in Our Store</p>
+                        <h1 class="display-3 text-white">Only Original Products</h1>
+                        <p class="fw-normal display-3 text-dark mb-4">in Our Beauty Store</p>
                         <p class="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
                         <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
                     </div>
@@ -641,10 +670,8 @@
                     <div class="position-relative">
                         <img src="img/baner-1.png" class="img-fluid w-100 rounded" alt="">
                         <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 140px; height: 140px; top: 0; left: 0;">
-                            <h1 style="font-size: 100px;">1</h1>
+                            <h1 style="font-size: 40px;">5~15%</h1>
                             <div class="d-flex flex-column">
-                                <span class="h2 mb-0">50$</span>
-                                <span class="h4 text-muted mb-0">kg</span>
                             </div>
                         </div>
                     </div>
@@ -915,7 +942,7 @@
                     <div class="position-relative">
                         <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                         <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            <p class="mb-0">As someone who's always been cautious about where I buy my makeup, I'm delighted to have found La Beaute. Their commitment to sell original products really shows in the results. I've seen a noticeable improvement in my complexion since being a customer here.
                             </p>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap">
@@ -923,8 +950,8 @@
                                 <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                             </div>
                             <div class="ms-4 d-block">
-                                <h4 class="text-dark">Client Name</h4>
-                                <p class="m-0 pb-3">Profession</p>
+                                <h4 class="text-dark">Woodie</h4>
+                                <p class="m-0 pb-3">Youtuber</p>
                                 <div class="d-flex pe-5">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
@@ -940,7 +967,7 @@
                     <div class="position-relative">
                         <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                         <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            <p class="mb-0">I've been a loyal customer of La Beaute for years, and I can't imagine buying anywhere else. Not only do their cosmetics enhance my features beautifully, but they also make me feel confident and empowered. The compliments I receive whenever I wear their products are just the cherry on top!
                             </p>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap">
@@ -948,8 +975,8 @@
                                 <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                             </div>
                             <div class="ms-4 d-block">
-                                <h4 class="text-dark">Client Name</h4>
-                                <p class="m-0 pb-3">Profession</p>
+                                <h4 class="text-dark">Vanilla</h4>
+                                <p class="m-0 pb-3">Writer</p>
                                 <div class="d-flex pe-5">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>
@@ -965,7 +992,7 @@
                     <div class="position-relative">
                         <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                         <div class="mb-4 pb-4 border-bottom border-secondary">
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            <p class="mb-0">I'm absolutely thrilled with the products I purchased! The quality is top-notch, and my make up has never looked better! I highly recommend buying from La Beaute for anyone looking for original products!
                             </p>
                         </div>
                         <div class="d-flex align-items-center flex-nowrap">
@@ -973,8 +1000,8 @@
                                 <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                             </div>
                             <div class="ms-4 d-block">
-                                <h4 class="text-dark">Client Name</h4>
-                                <p class="m-0 pb-3">Profession</p>
+                                <h4 class="text-dark">Lily</h4>
+                                <p class="m-0 pb-3">Make Up Artist</p>
                                 <div class="d-flex pe-5">
                                     <i class="fas fa-star text-primary"></i>
                                     <i class="fas fa-star text-primary"></i>

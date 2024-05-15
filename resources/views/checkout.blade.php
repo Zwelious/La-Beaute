@@ -1,47 +1,61 @@
 @extends("main")
 
+@section("navbar")
+    <a href="index.html" class="nav-item nav-link">Home</a>
+    <a href="shop.html" class="nav-item nav-link">Shop</a>
+    <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+            <a href="cart.html" class="dropdown-item">Cart</a>
+            <a href="chackout.html" class="dropdown-item">Chackout</a>
+            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+            <a href="404.html" class="dropdown-item">404 Page</a>
+        </div>
+    </div>
+    <a href="contact.html" class="nav-item nav-link">Contact</a>
+    </div>
+    <div class="d-flex m-3 me-0">
+    <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+    <a href="#" class="position-relative me-4 my-auto">
+        <i class="fa fa-shopping-bag fa-2x"></i>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+    </a>
+    <a href="#" class="my-auto">
+        <i class="fas fa-user fa-2x"></i>
+    </a>
+@endsection
+
 @section("body")
 
 <section class="bg-light py-5">
-  <div class="container">
-    <div class="row">
+  <div class="container pt-5">
+    <div class="row mt-5">
       <div class="col-xl-8 col-lg-8 mb-4">
-        <div class="card mb-4 border shadow-0">
-          <div class="p-4 d-flex justify-content-between">
-            <div class="">
-              <h5>Have an account?</h5>
-              <p class="mb-0 text-wrap ">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-            </div>
-            <div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
-              <a href="#" class="btn btn-outline-primary me-0 me-md-2 mb-2 mb-md-0 w-100">Register</a>
-              <a href="#" class="btn btn-primary shadow-0 text-nowrap w-100">Sign in</a>
-            </div>
-          </div>
-        </div>
 
         <!-- Checkout -->
         <div class="card shadow-0 border">
           <div class="p-4">
-            <h5 class="card-title mb-3">Guest checkout</h5>
+            <h5 class="card-title mb-3">Checkout</h5>
             <div class="row">
               <div class="col-6 mb-3">
                 <p class="mb-0">First name</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Your First Name Here" class="form-control" />
                 </div>
               </div>
 
               <div class="col-6">
                 <p class="mb-0">Last name</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Your Last Name Here" class="form-control" />
                 </div>
               </div>
 
               <div class="col-6 mb-3">
                 <p class="mb-0">Phone</p>
                 <div class="form-outline">
-                  <input type="tel" id="typePhone" value="+48 " class="form-control" />
+                  <input type="tel" id="typePhone" value="+62 " class="form-control" />
                 </div>
               </div>
 
@@ -105,7 +119,7 @@
               <div class="col-sm-8 mb-3">
                 <p class="mb-0">Address</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Ypur Address Here" class="form-control" />
                 </div>
               </div>
 
@@ -121,7 +135,7 @@
               <div class="col-sm-4 mb-3">
                 <p class="mb-0">House</p>
                 <div class="form-outline">
-                  <input type="text" id="typeText" placeholder="Type here" class="form-control" />
+                  <input type="text" id="typeText" placeholder="Type Your House Here" class="form-control" />
                 </div>
               </div>
 
@@ -165,20 +179,20 @@
           <h6 class="mb-3">Summary</h6>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2">$195.90</p>
+            <p class="mb-2">Rp. 888.000</p>
           </div>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Discount:</p>
-            <p class="mb-2 text-danger">- $60.00</p>
+            <p class="mb-2 text-danger">- Free</p>
           </div>
           <div class="d-flex justify-content-between">
             <p class="mb-2">Shipping cost:</p>
-            <p class="mb-2">+ $14.00</p>
+            <p class="mb-2">+ Free</p>
           </div>
           <hr />
           <div class="d-flex justify-content-between">
             <p class="mb-2">Total price:</p>
-            <p class="mb-2 fw-bold">$149.90</p>
+            <p class="mb-2 fw-bold">Rp. 888.000</p>
           </div>
 
           <div class="input-group mt-3 mb-4">
@@ -187,21 +201,21 @@
           </div>
 
           <hr />
-          <h6 class="text-dark my-4">Items in cart</h6>
+          <h6 class="text-dark my-4">Items in Your Cart</h6>
 
           <div class="d-flex align-items-center mb-4">
             <div class="me-3 position-relative">
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
                 1
               </span>
-              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/7.webp" style="height: 96px; width: 96x;" class="img-sm rounded border" />
+              <img src="img\romand-shape.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
             </div>
             <div class="">
               <a href="#" class="nav-link">
-                Gaming Headset with Mic <br />
-                Darkblue color
+                ROMAND Better Than Shape <br />
+                Walnut Grain
               </a>
-              <div class="price text-muted">Total: $295.99</div>
+              <div class="price text-muted">Total: Rp. 199.000</div>
             </div>
           </div>
 
@@ -210,14 +224,14 @@
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
                 1
               </span>
-              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/5.webp" style="height: 96px; width: 96x;" class="img-sm rounded border" />
+              <img src="img\romand-glasting.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
             </div>
             <div class="">
               <a href="#" class="nav-link">
-                Apple Watch Series 4 Space <br />
-                Large size
+                ROMAND Glasting Melting Balm <br />
+                Sorbet Balm
               </a>
-              <div class="price text-muted">Total: $217.99</div>
+              <div class="price text-muted">Total: Rp.189.000</div>
             </div>
           </div>
 
@@ -226,11 +240,14 @@
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
                 3
               </span>
-              <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/1.webp" style="height: 96px; width: 96x;" class="img-sm rounded border" />
+              <img src="img\romand-palette.jpg" style="height: 96px; width: 96x;" class="img-sm rounded border" />
             </div>
             <div class="">
-              <a href="#" class="nav-link">GoPro HERO6 4K Action Camera - Black</a>
-              <div class="price text-muted">Total: $910.00</div>
+              <a href="#" class="nav-link">
+                ROMAND Better Than Palette <br />
+                Secret Garden
+              </a>
+              <div class="price text-muted">Total: Rp. 500.000</div>
             </div>
           </div>
         </div>
