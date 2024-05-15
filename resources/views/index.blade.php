@@ -132,7 +132,7 @@
             <div class="tab-class text-center">
                 <div class="row g-4">
                     <div class="col-lg-4 text-start">
-                        <h1>Our Best selling Products Here!</h1>
+                        <h1>Best selling Products</h1>
                     </div>
                     <div class="col-lg-8 text-end">
                         <ul class="nav nav-pills d-inline-flex text-center mb-5">
@@ -524,7 +524,7 @@
                             <div class="px-4 rounded-bottom">
                                 <div class="service-content bg-light text-center p-4 rounded">
                                     <h5 class="text-primary">Dior</h5>
-                                    <h3 class="mb-0">Discount 5%</h3>
+                                    <h3 class="mb-0">UP TO 5% OFF</h3>
                                 </div>
                             </div>
                         </div>
@@ -537,7 +537,7 @@
                             <div class="px-4 rounded-bottom">
                                 <div class="service-content bg-light text-center p-4 rounded">
                                     <h5 class="text-primary">Romand</h5>
-                                    <h3 class="mb-0">Discount 5%</h3>
+                                    <h3 class="mb-0">UP TO 5% OFF</h3>
                                 </div>
                             </div>
                         </div>
@@ -719,8 +719,8 @@
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
                     <div class="py-4">
-                        <h1 class="display-3 text-white">Only Original Products</h1>
-                        <p class="fw-normal display-3 text-white mb-4">in La Beaute</p>
+                        <h1 class="display-3 text-white">Original Products</h1>
+                        <p class="fw-normal display-3 text-white mb-4">only in La Beaute</p>
                         <p class="mb-4 text-white">Start your beauty goals with us, right here right now.</p>
                         <a href="{{ url('/shop') }}" class="banner-btn btn border-2 border-white rounded-pill text-white py-3 px-5">BUY</a>
                     </div>
@@ -729,7 +729,7 @@
                     <div class="position-relative">
                         <img src="img/baner-1.jpg" class="img-fluid w-100 rounded" alt="">
                         <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 140px; height: 140px; top: 0; left: 0;">
-                            <h1 style="font-size: 40px;">5~15%</h1>
+                            <h1 style="font-size: 40px;">NEW</h1>
                             <div class="d-flex flex-column">
                             </div>
                         </div>
@@ -785,7 +785,7 @@
         <div class="container py-5">
             <div class="testimonial-header text-center">
                 <h4 class="text-primary">Our Testimonial</h4>
-                <h1 class="display-5 mb-5 text-dark">Our Client Saying!</h1>
+                <h1 class="display-5 mb-5 text-dark">Pretty People Reviews</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item img-border-radius bg-light rounded p-4">

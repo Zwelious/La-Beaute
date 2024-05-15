@@ -229,7 +229,7 @@
                 <p class="mb-2 text-danger">-</p>
               </div>
               <div class="d-flex justify-content-between">
-                <p class="mb-2">Shipping cost:</p>
+                <p class="mb-2">TAX:</p>
                 <p class="mb-2">Free</p>
               </div>
               <hr />

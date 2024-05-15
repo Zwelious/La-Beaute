@@ -64,7 +64,7 @@
                         <div class="">
                         <text class="h6">Rp 123.500</text>
                         <del class="text-success">Rp 130.000</del> <br />
-                        <small class="text-muted text-nowrap"> Rp 130.000 / per item </small>
+                        <small class="text-muted text-nowrap"> Rp 130.000 / item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
@@ -99,7 +99,7 @@
                         <div class="">
                         <text class="h6">Rp 27.550</text>
                         <del class="text-success">Rp 29.000</del> <br />
-                        <small class="text-muted text-nowrap"> Rp 29.000 / per item </small>
+                        <small class="text-muted text-nowrap"> Rp 29.000 / item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
@@ -133,7 +133,7 @@
                         </div>
                         <div class="">
                         <text class="h6">Rp 75.000</text> <br />
-                        <small class="text-muted text-nowrap"> Rp 75.000 / per item </small>
+                        <small class="text-muted text-nowrap"> Rp 75.000 / item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
