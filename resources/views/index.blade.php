@@ -248,7 +248,7 @@
                                             <div class="fruite-img">
                                                 <img src="img/romand-glasting.jpg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
                                                 <h4>ROMAND Glasting Melting Balm</h4>
                                                 <p>The Glasting Melting Balm is a moisturizing balm with plant-based moisturizing oil that does not dry out! It provides a transparent and smooth watery glow without feeling stuffy.</p>
@@ -316,7 +316,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="rounded position-relative fruite-item">
                         <div class="fruite-img">
@@ -333,7 +333,7 @@
                         </div>
                     </div>
                 </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -378,7 +378,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div id="tab-4" class="tab-pane fade show p-0">
                         <div class="row g-4">
                             <div class="col-lg-12">
@@ -547,7 +547,7 @@
                     <div class="d-flex justify-content-between flex-lg-wrap">
                     <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 179.550</strong>
-                            <del class="text-success">Rp. 189.000</del>
+                            <del class="text-success">Rp 189.000</del>
                         </div>
                         <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                     </div>
@@ -564,7 +564,7 @@
                         <div class="d-flex justify-content-between flex-lg-wrap">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 189.050</strong>
-                            <del class="text-success">Rp. 199.000</del>
+                            <del class="text-success">Rp 199.000</del>
                         </div>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
