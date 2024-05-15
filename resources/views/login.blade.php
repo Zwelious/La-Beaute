@@ -43,7 +43,7 @@
                 <form>
 
                   <div class="d-flex align-items-center mb-3 pb-1">
-                    
+
                     <span class="h1 fw-bold mb-0">Log In</span>
                   </div>
 
