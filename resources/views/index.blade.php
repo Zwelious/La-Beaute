@@ -260,37 +260,37 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/fruite-item-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Raspberries</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Grapes</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">$4.99 / kg</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                         <div class="rounded position-relative fruite-item">
+                                             <div class="fruite-img">
+                                                <img src="img/DR201501.png" class="img-fluid w-100 rounded-top" alt="">
+                                             </div>
+                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
+                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                 <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
+                                                 <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
+                                                 <div class="d-flex justify-content-between flex-lg-wrap">
+                                                     <p class="text-dark fs-5 fw-bold mb-0">Rp. 2.640.000 / per item</p>
+                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                            <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
+                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                            <h4>DIOR Backstage Glow Face Palette</h4>
+                            <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
+                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / per item</p>
+                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                                 </div>
                             </div>
                         </div>
@@ -636,28 +636,51 @@
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="img/DR100301.png" class="img-fluid w-100 rounded-top bg-light" alt="">
                     </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                     <div class="p-4 rounded-bottom">
-                        <h4>Potatoes</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                        <h4>DIOR Addict Lip Glow</h4>
+                        <p>The 1st Dior lip balm formulated with 97% natural-origin ingredients that subtly revives the natural color of lips with a custom glow and hydrates lips for 24h.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
+                        <div class="price-wrap mb-0">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
+                            <del class="text-success">Rp. 700.000</del>
+                        </div>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
                 </div>
                 <div class="border border-primary rounded position-relative vesitable-item">
                     <div class="vesitable-img">
-                        <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                        <img src="img/DR100401.png" class="img-fluid w-100 rounded-top bg-light" alt="">
                     </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                     <div class="p-4 rounded-bottom">
-                        <h4>Parsely</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                        <h4>DIOR Addict Lip Tint</h4>
+                        <p>Dior Addict Lip Tint is the first no-transfer Dior lip tint with 12h wear, that highlights the lips with a bold color in a semi-matte finish and fuses with the skin for a bare-lip sensation.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                            <p class="text-dark fs-5 fw-bold mb-0">$7.99 / kg</p>
+                        <div class="price-wrap mb-0">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
+                            <del class="text-success">Rp. 700.000</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/DR301001.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>DIOR Forever Compact Foundation</h4>
+                        <p>Dior Forever Natural Velvet is the 1st no-transfer Dior compact foundation with 24h* wear, composed with 90%** natural-origin ingredients. Ultra-soft and light, it brings a naturally matte perfection to the complexion, with a fine and creamy texture that lets the skin breathe while offering a sensation of comfort that lasts all day. Its high coverage corrects blemishes, smooths and evens out the complexion.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-0">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 1.215.000</strong>
+                            <del class="text-success">Rp. 1.350.000</del>
+                        </div>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
