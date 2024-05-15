@@ -34,8 +34,8 @@
       <div class="col col-xl-10">
         <div class="card" style="border-radius: 1rem;">
           <div class="row g-0">
-            <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="img/login.png" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            <div class="col-md-6 col-lg-5 d-none d-md-flex justify-content-center align-items-center">
+              <img src="img/login.png" alt="Login Image" class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;" />
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
@@ -43,7 +43,7 @@
                 <form>
 
                   <div class="d-flex align-items-center mb-3 pb-1">
-                    
+
                     <span class="h1 fw-bold mb-0">Log In</span>
                   </div>
 
