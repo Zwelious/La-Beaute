@@ -5,11 +5,11 @@
     <a href="shop.html" class="nav-item nav-link">Shop</a>
     <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
     <a href="contact.html" class="nav-item nav-link">Contact</a>
-    <div class="nav-item dropdown active">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Admin</a>
         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="cart.html" class="dropdown-item">Shop Maintenance</a>
-            <a href="chackout.html" class="dropdown-item">Transaction History</a>
+            <a href="cart.html" class="dropdown-item">Dashboard</a>
+            <a href="chackout.html" class="dropdown-item active">Shop Maintenance</a>
             <a href="testimonial.html" class="dropdown-item">Log out</a>
         </div>
     </div>
@@ -30,167 +30,87 @@
 
 @section("body")
 <div class="container-fluid pt-5">
-    <!-- Page Heading -->
-    <div class="container-fluid pt-5">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4 pt-5">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
-            </a>
-        </div>
-    </div>
-
-    <!-- Content Row -->
-    <div class="row">
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
+    <div class="container fluid pt-5">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800 mt-5">Shop Table</h1>
+        <p class="mb-4">DataTable with products data, to add, reduce, or remove La Beaute products.
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
             </div>
-        </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="productTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Shade</th>
+                            <th>Price</th>
+                            <th>Discount</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                        </table>
+                    </div>
 
-        <!-- Earnings (Annual) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                        var tableBody = document.querySelector('#productTable tbody');
 
-        <!-- Tasks Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                </div>
-                                <div class="col">
-                                    <div class="progress progress-sm mr-2">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        var products = [
+                            { ID_PROD: 'RM100101', NAMA_PROD: 'Juicy Lasting Tint', SHADE: 'Bare Grape', HARGA: 229000, DISKON: 0, KATEGORI: 'Lips', STOCK: 0 },
+                            { ID_PROD: 'RM200202', NAMA_PROD: 'Juicy Lasting Tint', SHADE: 'Nucademia', HARGA: 229000, DISKON: 0, KATEGORI: 'Lips', STOCK: 0 },
+                            // Add more products as needed
+                        ];
 
-        <!-- Pending Requests Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        products.forEach(function (product) {
+                            var row = document.createElement('tr');
+                            row.innerHTML = `
+                            <td>${product.ID_PROD}</td>
+                            <td>${product.NAMA_PROD}</td>
+                            <td>${product.SHADE}</td>
+                            <td>${product.HARGA}</td>
+                            <td>${product.DISKON}</td>
+                            <td>${product.KATEGORI}</td>
+                            <td>${product.STOCK}</td>
+                            <td>
+                                <button class="btn btn-sm btn-success" onclick="addStock('${product.ID_PROD}')">+</button>
+                                <button class="btn btn-sm btn-danger" onclick="reduceStock('${product.ID_PROD}')">-</button>
+                                <button class="btn btn-sm btn-danger" onclick="removeProduct('${product.ID_PROD}')">Remove</button>
+                            </td>
+                            `;
+                            tableBody.appendChild(row);
+                        });
+                        });
 
-    <!-- Content Row -->
-    <div class="row">
-        <!-- Area Chart -->
-        <div class="col-xl-8 col-lg-7">
-            <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                    <div class="dropdown no-arrow">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Dropdown Header:</div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="myAreaChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        // Function to add stock
+                        function addStock(productId) {
+                        // Implementation to add stock goes here
+                        console.log("Add stock for product ID:", productId);
+                        }
 
-        <!-- Pie Chart -->
-        <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                    <div class="dropdown no-arrow">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Dropdown Header:</div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                        <canvas id="myPieChart"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-primary"></i> Direct
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> Social
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-info"></i> Referral
-                        </span>
-                    </div>
+                        // Function to reduce stock
+                        function reduceStock(productId) {
+                        // Implementation to reduce stock goes here
+                        console.log("Reduce stock for product ID:", productId);
+                        }
+
+                        // Function to remove product
+                        function removeProduct(productId) {
+                        // Implementation to remove product goes here
+                        console.log("Remove product with ID:", productId);
+                        }
+                    </script>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

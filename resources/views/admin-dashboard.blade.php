@@ -5,11 +5,11 @@
     <a href="shop.html" class="nav-item nav-link">Shop</a>
     <a href="shop-detail.html" class="nav-item nav-link">Shop Detail</a>
     <a href="contact.html" class="nav-item nav-link">Contact</a>
-    <div class="nav-item dropdown active">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Admin</a>
         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="cart.html" class="dropdown-item">Shop Maintenance</a>
-            <a href="chackout.html" class="dropdown-item">Transaction History</a>
+            <a href="cart.html" class="dropdown-item active">Dashboard</a>
+            <a href="chackout.html" class="dropdown-item">Shop Maintenance</a>
             <a href="testimonial.html" class="dropdown-item">Log out</a>
         </div>
     </div>
@@ -146,7 +146,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-area">
-                        <canvas id="myAreaChart"></canvas>
+                        <canvas id="myBarChart" width="400" height="400;"></canvas>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div class="chart-pie pt-4 pb-2">
-                        <canvas id="myPieChart"></canvas>
+                        <canvas id="myPieChart" width="300" height="300"></canvas>
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
@@ -192,5 +192,62 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid pt-5">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Transaction Table</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>ID_TRANS</th>
+                                        <th>ID_CUST</th>
+                                        <th>TANGGAL</th>
+                                        <th>TOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tableBody = document.querySelector('#dataTable tbody');
+
+            var transactions = [
+                { ID_TRANS: 'T010424C001001', ID_CUST: 'C001', TANGGAL: '2024-04-01', TOTAL: 637550 },
+                { ID_TRANS: 'T020424C002002', ID_CUST: 'C002', TANGGAL: '2024-04-02', TOTAL: 179000 },
+                { ID_TRANS: 'T030424C003003', ID_CUST: 'C003', TANGGAL: '2024-04-03', TOTAL: 450000 },
+                { ID_TRANS: 'T040424C004004', ID_CUST: 'C004', TANGGAL: '2024-04-04', TOTAL: 567000 },
+                { ID_TRANS: 'T050424C005005', ID_CUST: 'C005', TANGGAL: '2024-04-05', TOTAL: 359100 }
+                // Add more transactions as needed
+            ];
+
+            transactions.forEach(function (transaction) {
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transaction.ID_TRANS}</td>
+                    <td>${transaction.ID_CUST}</td>
+                    <td>${transaction.TANGGAL}</td>
+                    <td>${transaction.TOTAL}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        });
+    </script>
 </div>
+
+<script src="{{ asset('js/chart-bar-demo.js') }}"></script>
+<script src="{{ asset('js/chart-pie-demo.js') }}"></script>
+
 @endsection
