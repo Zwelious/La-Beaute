@@ -271,26 +271,26 @@
                                                  <div class="d-flex justify-content-between flex-lg-wrap">
                                                      <p class="text-dark fs-5 fw-bold mb-0">Rp. 2.640.000 / per item</p>
                                                      <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="rounded position-relative fruite-item">
-                        <div class="fruite-img">
-                            <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                            <h4>DIOR Backstage Glow Face Palette</h4>
-                            <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / per item</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 col-xl-3">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>DIOR Backstage Glow Face Palette</h4>
+                                                <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / per item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +316,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="rounded position-relative fruite-item">
                         <div class="fruite-img">
@@ -333,7 +333,7 @@
                         </div>
                     </div>
                 </div>
-
+                                   
                                 </div>
                             </div>
                         </div>
@@ -345,14 +345,14 @@
                                     <div class="col-md-6 col-lg-4 col-xl-3">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img">
-                                                <img src="img/fruite-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                                <img src="img/PINKDIARY.jpeg" class="img-fluid w-100 rounded-top" alt="">
                                             </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>Oranges</h4>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                <h4>PINKFLASH PinkDiary Velvet Matte Lip Cream</h4>
+                                                <p>The lightweight, long-lasting velvet matte texture creates the same velvet makeup effect as Korean idols.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.900 / item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -400,25 +400,42 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="rounded position-relative fruite-item">
-                        <div class="fruite-img">
-                            <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                            <h4>DIOR Backstage Glow Face Palette</h4>
-                            <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / per item</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>DIOR Backstage Glow Face Palette</h4>
+                                                <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / per item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 col-xl-3">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="img/CONCEALER.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>PINKFLASH Breathable Liquid Concealer </h4>
+                                                <p>Effectively cover blemishes such as dark circles/acne/acne scar, make the face light and natural, easily create flawless makeup.</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.000 / item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+            
                     <div id="tab-5" class="tab-pane fade show p-0">
                         <div class="row g-4">
                             <div class="col-lg-12">
@@ -488,11 +505,11 @@
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <a href="#">
-                        <div class="service-item bg-secondary rounded border border-secondary">
-                            <img src="img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                        <div class="service-item bg-dark rounded border border-dark">
+                            <img src="img/FELI.jpg" class="img-fluid rounded-top w-100" alt="">
                             <div class="px-4 rounded-bottom">
-                                <div class="service-content bg-primary text-center p-4 rounded">
-                                    <h5 class="text-white">Fresh Apples</h5>
+                                <div class="service-content bg-light text-center p-4 rounded">
+                                    <h5 class="text-primary">Pinkflash</h5>
                                     <h3 class="mb-0">20% OFF</h3>
                                 </div>
                             </div>
@@ -502,10 +519,10 @@
                 <div class="col-md-6 col-lg-4">
                     <a href="#">
                         <div class="service-item bg-dark rounded border border-dark">
-                            <img src="img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                            <img src="img/JOY - DIOR.jpg" class="img-fluid rounded-top w-100" alt="">
                             <div class="px-4 rounded-bottom">
                                 <div class="service-content bg-light text-center p-4 rounded">
-                                    <h5 class="text-primary">Tasty Fruits</h5>
+                                    <h5 class="text-primary">Dior</h5>
                                     <h3 class="mb-0">Free delivery</h3>
                                 </div>
                             </div>
@@ -514,12 +531,12 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <a href="#">
-                        <div class="service-item bg-primary rounded border border-primary">
-                            <img src="img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="">
+                        <div class="service-item bg-dark rounded border border-dark">
+                            <img src="img/MEGAN - ROMAND.jpg" class="img-fluid rounded-top w-100" alt="">
                             <div class="px-4 rounded-bottom">
-                                <div class="service-content bg-secondary text-center p-4 rounded">
-                                    <h5 class="text-white">Exotic Vegitable</h5>
-                                    <h3 class="mb-0">Discount 30$</h3>
+                                <div class="service-content bg-light text-center p-4 rounded">
+                                    <h5 class="text-primary">Rom&nd</h5>
+                                    <h3 class="mb-0">Discount 5%</h3>
                                 </div>
                             </div>
                         </div>
