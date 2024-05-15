@@ -414,116 +414,140 @@
                 <div class="vesitable">
                     <div class="owl-carousel vegetable-carousel justify-content-center">
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Parsely</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                    <img src="img/romand-dewyful.jpg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>ROMAND Dewyful Water Tint</h4>
+                    <p>Boost the color with a glossy glow! A dewy-ful & long-lasting lip tint that forms like a welcome rain on my lips</p>
+                    <div class="d-flex justify-content-between flex-lg-wrap">
+                    <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 179.550</strong>
+                            <del class="text-success">Rp 189.000</del>
+                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    </div>
+                </div>
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Parsely</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$4.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                        <img src="img/romand-veil.jpg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>ROMAND See-Through Veil Lighter</h4>
+                        <p>A new powder highlighter to brighten, draw attention, and stun. This Veilighter contours and reflects light beautifully for a goddess-like glow.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 189.050</strong>
+                            <del class="text-success">Rp 199.000</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-3.png" class="img-fluid w-100 rounded-top bg-light" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Banana</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                        <img src="img/romand-blur.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>ROMAND Blur Fudge Tint</h4>
+                        <p>Fudge spreading on your lips! It''s a completely matte finish without any glow.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 179.550</strong>
+                            <del class="text-success">Rp. 189.000</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-4.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Bell Papper</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                        <img src="img/LOOSE POWDER.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>PINKFLASH Oil Controller Loose Powder</h4>
+                        <p>Matte and natural flawless makeup effect. 💫Oil Controller - It can control oil in 1 second and not feel oily in all day, creat a extreme matte makeup.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 31.350</strong>
+                            <del class="text-success">Rp 33.000</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Potatoes</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                        <img src="img/LIPOIL.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>PINKFLASH Natural Lip Oil Moisturize</h4>
+                        <p>Effectively repair the lip skin barrier, making lips look healthier, softer and smoother.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 24.605</strong>
+                            <del class="text-success">Rp 25.900</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Parsely</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                        <img src="img/2-in-1 DUAL ENDED.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>PINKFLASH 2 IN 1 Dual-ended Lipstik Matte Velvet</h4>
+                        <p>Brand new dual-ended design, more shades and more texture, satisfied with your variety of makeup finish. 💕TIPS：Before applying lipstick, use PINKFLASH lip oil to moisturize the lips.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 33.250</strong>
+                            <del class="text-success">Rp 35.000</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Potatoes</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                        <img src="img/DR100301.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>DIOR Addict Lip Glow</h4>
+                        <p>The 1st Dior lip balm formulated with 97% natural-origin ingredients that subtly revives the natural color of lips with a custom glow and hydrates lips for 24h.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
+                            <del class="text-success">Rp. 700.000</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
                         </div>
                         <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                            <div class="p-4 pb-0 rounded-bottom">
-                                <h4>Parsely</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                    <p class="text-dark fs-5 fw-bold">$7.99 / kg</p>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                </div>
-                            </div>
+                        <div class="vesitable-img">
+                        <img src="img/DR100401.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>DIOR Addict Lip Tint</h4>
+                        <p>Dior Addict Lip Tint is the first no-transfer Dior lip tint with 12h wear, that highlights the lips with a bold color in a semi-matte finish and fuses with the skin for a bare-lip sensation.</p>
+                        <div class="d-flex justify-content-between flex-lg-wrap">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
+                            <del class="text-success">Rp. 700.000</del>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </div>
