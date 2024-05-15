@@ -7,6 +7,8 @@ use App\Http\Controllers\ForgetPassController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ShopDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +36,7 @@ Route::get('/cart', [CartController::class, 'Cart']);
 Route::get('/checkout', [CheckoutController::class, 'Checkout']);
 
 Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
+
+Route::get('/shop', [ShopController::class, 'Shop']);
+
+Route::get('/shop-details', [ShopDetailsController::class, 'ShopDetails']);
