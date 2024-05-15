@@ -59,13 +59,14 @@
                     <label class="form-label" for="form2Example27">Password</label>
                   </div>
 
-                  <div class="pt-1 mb-4">
+                  <div class="pt-1 mb-4" style="text-align: center">
                   <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 text-center w-100">
                   Log In
                   </button>
+                  <a class="small text-muted" href="#!">Forgot password?</a>
                   </div>
 
-                  <a class="small text-muted" href="#!">Forgot password?</a>
+
                   <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
                       style="color: #393f81;">Register here</a></p>
 

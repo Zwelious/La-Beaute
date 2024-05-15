@@ -9,6 +9,9 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ShopDetailsController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\AdminTransController;
+use App\Http\Controllers\AdminShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +43,9 @@ Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
 Route::get('/shop', [ShopController::class, 'Shop']);
 
 Route::get('/shop-details', [ShopDetailsController::class, 'ShopDetails']);
+
+Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
+
+Route::get('/admin-dashboard', [AdminTransController::class, 'AdminTrans']);
+
+Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
