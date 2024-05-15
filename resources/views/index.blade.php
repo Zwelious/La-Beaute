@@ -173,7 +173,7 @@
                                                 <h4>ROMAND Better Than Palette</h4>
                                                 <p>Secret Garden eyeshadow palettes provide remarkable contrast between dark and light shades for improved layerability.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp 500.000 / item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp. 500.000 / item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -189,7 +189,7 @@
                                                 <h4>PINKFLASH PinkDiary Velvet Matte Lip Cream</h4>
                                                 <p>The lightweight, long-lasting velvet matte texture creates the same velvet makeup effect as Korean idols.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp 29.900 / item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">$4.99 / kg</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -205,7 +205,7 @@
                                                 <h4>PINKFLASH 3 Shades Eyeshadow Palette Giltter</h4>
                                                 <p>High color pigmentation and easy to apply. Smooth and even color in one swipe, easy to create stunning eye makeup.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp 45.900 / item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">$4.99 / kg</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -221,7 +221,7 @@
                                                 <h4>ROMAND Bare Water Cushion</h4>
                                                 <p>Long lasting cushion that perfectly hides your textured skin and even pores.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp 429.000 / per item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp. 429.000 / per item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -237,7 +237,7 @@
                                                 <h4>PINKFLASH Breathable Liquid Concealer </h4>
                                                 <p>Effectively cover blemishes such as dark circles/acne/acne scar, make the face light and natural, easily create flawless makeup.</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp 29.000 / item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">$4.99 / kg</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -253,7 +253,7 @@
                                                 <h4>ROMAND Zero Sun Clean SPF50+</h4>
                                                 <p>A daily sun cream that perfectly matches with different kinds of foundation for your changing skin condition every day. Its mild formula provides powerful UV protection (SPF 50+ / PA++++)</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp 169.000 / per item</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp. 169.000 / per item</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -269,7 +269,7 @@
                                                 <h4>Raspberries</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">$4.99 / kg</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -285,7 +285,7 @@
                                                 <h4>Grapes</h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">$4.99 / kg</p>
+                                                    <p class="text-dark fs-5 fw-bold mb-2">$4.99 / kg</p>
                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
                                             </div>
@@ -589,9 +589,9 @@
                     <h4>ROMAND Dewyful Water Tint</h4>
                     <p>Boost the color with a glossy glow! A dewy-ful & long-lasting lip tint that forms like a welcome rain on my lips</p>
                     <div class="d-flex justify-content-between flex-lg-wrap">
-                    <div class="price-wrap mb-0">
-                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 179.550</strong>
-                            <del class="text-success">Rp 189.000</del>
+                    <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 179.550</strong>
+                            <del class="text-success">Rp. 189.000</del>
                         </div>
                         <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                     </div>
@@ -606,9 +606,9 @@
                         <h4>ROMAND See-Throgh Veil Lighter</h4>
                         <p>A new powder highlighter to brighten, draw attention, and stun. This Veilighter contours and reflects light beautifully for a goddess-like glow.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                        <div class="price-wrap mb-0">
-                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 189.050</strong>
-                            <del class="text-success">Rp 199.000</del>
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 189.050</strong>
+                            <del class="text-success">Rp. 199.000</del>
                         </div>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -623,9 +623,9 @@
                         <h4>ROMAND Blur Fudge Tint</h4>
                         <p>Fudge spreading on your lips! It''s a completely matte finish without any glow.</p>
                         <div class="d-flex justify-content-between flex-lg-wrap">
-                        <div class="price-wrap mb-0">
-                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 179.550</strong>
-                            <del class="text-success">Rp 189.000</del>
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 179.550</strong>
+                            <del class="text-success">Rp. 189.000</del>
                         </div>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
