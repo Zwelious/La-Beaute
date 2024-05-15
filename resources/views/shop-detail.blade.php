@@ -52,7 +52,7 @@
                             <div class="col-lg-6">
                                 <div class="border rounded">
                                     <a href="#">
-                                        <img src="img/romand-brow.jpg" class="img-fluid rounded" alt="Image">
+                                        <img src="img/DR101601.png" class="img-fluid rounded" alt="Image">
                                     </a>
                                 </div>
                             </div>
@@ -332,7 +332,6 @@
                                 <div class="position-relative">
                                     <img src="img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="">
                                     <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
-                                        <h3 class="text-secondary fw-bold">Fresh <br> Fruits <br> Banner</h3>
                                     </div>
                                 </div>
                             </div>
