@@ -19,7 +19,7 @@
     <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-heart fa-2x"></i>
     </a>
-    <a href="{{ url('/cart') }}" class="position-relative me-4 my-auto">
+    <a href="{{ url('/checkout') }}" class="position-relative me-4 my-auto">
         <i class="fa fa-shopping-bag fa-2x text-secondary"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
@@ -46,7 +46,7 @@
                         <div class="d-flex">
                             <img src="img\01.jpeg" class="border rounded me-3" style="width: 96px; height: 96px;" />
                             <div class="">
-                            <a href="#" class="nav-link">PINKFLASH Natural Lip Oil Lip Balm Lip Gloss Moisturize</a>
+                            <a href="#" class="nav-link">PINKFLASH Natural Lip Oil Moisturize</a>
                             <p class="text-muted">01</p>
                             </div>
                         </div>
@@ -62,9 +62,9 @@
                         </select>
                         </div>
                         <div class="">
-                        <text class="h6">Rp 123.500</text>
-                        <del class="text-success">Rp 130.000</del> <br />
-                        <small class="text-muted text-nowrap"> Rp 130.000 / item </small>
+                        <text class="h6">Rp 24.605</text>
+                        <del class="text-success">Rp 25.900</del> <br />
+                        <small class="text-muted text-nowrap"> Rp 24.605 / per item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
@@ -97,9 +97,9 @@
                         </select>
                         </div>
                         <div class="">
-                        <text class="h6">Rp 27.550</text>
-                        <del class="text-success">Rp 29.000</del> <br />
-                        <small class="text-muted text-nowrap"> Rp 29.000 / item </small>
+                        <text class="h6">Rp 31.350</text> 
+                        <del class="text-success">Rp 33.000</del> <br />
+                        <small class="text-muted text-nowrap"> Rp 33.000 / per item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
@@ -133,7 +133,7 @@
                         </div>
                         <div class="">
                         <text class="h6">Rp 75.000</text> <br />
-                        <small class="text-muted text-nowrap"> Rp 75.000 / item </small>
+                        <small class="text-muted text-nowrap"> Rp 75.000 / per item </small>
                         </div>
                     </div>
                     <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
@@ -148,7 +148,8 @@
                 <div class="border-top pt-4 mx-4 mb-4">
                     <p><i class="fas fa-truck text-muted fa-lg"></i> Free Delivery within 1-2 weeks</p>
                     <p class="text-muted">
-                    Enjoy complimentary shipping on all orders with no minimum purchase required. Expedited shipping options are available at an additional cost. Free shipping applies automatically at checkout and is subject to change without prior notice.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
                     </p>
                 </div>
                 </div>
@@ -190,8 +191,8 @@
                     </div>
 
                     <div class="mt-3">
-                    <a href="{{ url('/checkout') }}" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
-                    <a href="{{ url('/shop') }}" class="btn btn-light w-100 border mt-2"> Back to shop </a>
+                    <a href="#" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
+                    <a href="#" class="btn btn-light w-100 border mt-2"> Back to shop </a>
                     </div>
                 </div>
                 </div>
@@ -220,13 +221,13 @@
                     <img src="img\2-in-1 DUAL ENDED.jpeg" class="card-img-top rounded-2" />
                 </a>
                 <div class="card-body d-flex flex-column pt-3 border-top">
-                    <a href="#" class="nav-link">PINKFLASH 2 IN 1 Dual-ended Lipstik ombrelips Matte Velvet High Pigment</a>
+                    <a href="#" class="nav-link">PINKFLASH 2 IN 1 Dual-ended Lipstik Matte Velvet</a>
                     <div class="price-wrap mb-2">
                     <strong class="">Rp 33.250</strong>
                     <del class="text-success">Rp 35.000</del>
                     </div>
                     <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-                    <a href="{{ url('/cart') }}" class="btn btn-outline-primary w-100">Add to cart</a>
+                    <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
                     </div>
                 </div>
                 </div>
@@ -245,7 +246,7 @@
                     <strong class="">Rp 75.000</strong>
                     </div>
                     <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-                    <a href="{{ url('/cart') }}" class="btn btn-outline-primary w-100">Add to cart</a>
+                    <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
                     </div>
                 </div>
                 </div>
