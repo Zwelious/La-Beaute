@@ -31,6 +31,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [LoginController::class, 'Login']);
+Route::post('/login', [LoginController::class, 'LoginAction']);
 
 Route::get('/register', [RegisterController::class, 'Register']);
 
