@@ -61,6 +61,13 @@
                         <label class="form-label" for="form2Example27">Password</label>
                       </div>
 
+                      <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="rememberMe" />
+                        <label class="form-check-label" for="rememberMe">
+                        Remember me
+                      </label>
+                      </div>
+
                       <div class="pt-1 mb-4" style="text-align: center">
                       <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 text-center w-100">
                       Log In
