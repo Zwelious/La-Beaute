@@ -53,7 +53,7 @@
                         <div class="position-relative">
                             <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                             <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                <p class="mb-0">As someone who's always been cautious about where I buy my makeup, I'm delighted to have found La Beaute. Their commitment to sell original products really shows in the results. I've seen a noticeable improvement in my complexion since being a customer here.
                                 </p>
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
@@ -61,8 +61,8 @@
                                     <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
+                                    <h4 class="text-dark">Woodie</h4>
+                                    <p class="m-0 pb-3">Youtuber</p>
                                     <div class="d-flex pe-5">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
@@ -78,7 +78,7 @@
                         <div class="position-relative">
                             <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                             <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                <p class="mb-0">As someone who's always been cautious about where I buy my makeup, I'm delighted to have found La Beaute. Their commitment to sell original products really shows in the results. I've seen a noticeable improvement in my complexion since being a customer here.
                                 </p>
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
@@ -86,8 +86,8 @@
                                     <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
+                                    <h4 class="text-dark">Vanilla</h4>
+                                    <p class="m-0 pb-3">Writer</p>
                                     <div class="d-flex pe-5">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
@@ -103,7 +103,7 @@
                         <div class="position-relative">
                             <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                             <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                <p class="mb-0">I'm absolutely thrilled with the products I purchased! The quality is top-notch, and my make up has never looked better! I highly recommend buying from La Beaute for anyone looking for original products! Hope my reviews helped a lot of pretty girlies :D to check my make up routines and more pls check my IG!
                                 </p>
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
@@ -111,8 +111,8 @@
                                     <img src="img/testimonial-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
+                                    <h4 class="text-dark">Lily</h4>
+                                    <p class="m-0 pb-3">Make Up Artist</p>
                                     <div class="d-flex pe-5">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
