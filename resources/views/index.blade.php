@@ -37,8 +37,8 @@
                     <h4 class="mb-3 text-secondary">100% Quality Beauty Products</h4>
                     <h1 class="mb-5 display-3 text-primary">Your Beauty Journey Starts Here!</h1>
                     <div class="position-relative mx-auto">
-                        <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search">
-                        <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Submit Now</button>
+                        <!-- <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search"> -->
+                        <button type="submit" class="btn btn-primary border-2 border-secondary w-40 py-2 px-4 rounded-pill text-white h-100" style="top: 0; right: 25%;">Shop Now!</button>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-5">
