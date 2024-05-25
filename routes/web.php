@@ -30,11 +30,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login', [LoginController::class, 'Login']);
-Route::post('/login', [LoginController::class, 'LoginAction']);
+Route::get('/login', [LoginController::class, 'Login'])->name('login');
+Route::post('/login', [LoginController::class, 'LoginAction'])->name('login');
 
-Route::get('/register', [RegisterController::class, 'Register']);
-Route::post('/register', [RegisterController::class, 'RegisterAction']);
+Route::get('/register', [RegisterController::class, 'Register'])->name('register');
+Route::post('/register', [RegisterController::class, 'RegisterAction'])->name('register');
 
 // Route::post('/register', 'Auth\RegisterController@register')->name('register');
 

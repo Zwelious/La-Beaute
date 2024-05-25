@@ -42,7 +42,7 @@
                   <div class="col-md-6 col-lg-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black">
 
-                    <form method="POST" action="{{ view('register') }}">
+                    <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="d-flex align-items-center mb-3 pb-1">
                             <span class="h1 fw-bold mb-0">Register</span>
@@ -73,6 +73,20 @@
                             <input type="password" id="password" class="form-control form-control-lg" name="password" required pattern="(?=.*\d).{8,}" />
                             <label class="form-label" for="password">Password</label>
                         </div>
+
+                        @if($errors->any())
+                        <div class="alert alert-danger">
+                            @foreach( $errors->all() as $e)
+                            {{ $e }} <br>
+                            @endforeach
+                        </div>
+                        @endif
+
+                        @if(session()->has('error'))
+                            <div class="alert alert-danger">
+                                {{ session()->get('error') }}
+                            </div>
+                        @endif
 
                         <!-- Submit Button -->
                         <button type="submit" class="btn btn-primary btn-block mb-4 text-center w-100">
