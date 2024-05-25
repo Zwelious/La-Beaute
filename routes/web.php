@@ -34,10 +34,11 @@ Route::get('/login', [LoginController::class, 'Login']);
 Route::post('/login', [LoginController::class, 'LoginAction']);
 
 Route::get('/register', [RegisterController::class, 'Register']);
+Route::post('/register', [RegisterController::class, 'RegisterAction']);
 
-Route::post('/register', 'Auth\RegisterController@register')->name('register');
+// Route::post('/register', 'Auth\RegisterController@register')->name('register');
 
-Route::post('/register', 'AuthController@register')->name('register');
+// Route::post('/register', 'AuthController@register')->name('register');
 
 Route::get('/forget', [ForgetPassController::class, 'ForgetPass']);
 

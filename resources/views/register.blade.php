@@ -42,30 +42,24 @@
                   <div class="col-md-6 col-lg-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black">
 
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ view('register') }}">
                         @csrf
                         <div class="d-flex align-items-center mb-3 pb-1">
                             <span class="h1 fw-bold mb-0">Register</span>
                         </div>
 
                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign up your account</h5>
-                                            
+
                         <!-- First Name Field -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="firstName" class="form-control form-control-lg" name="first_name" required />
-                            <label class="form-label" for="firstName">First Name</label>
-                        </div>
-
-                        <!-- Last Name Field -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="lastName" class="form-control form-control-lg" name="last_name" required />
-                            <label class="form-label" for="lastName">Last Name</label>
+                            <input type="text" id="name" class="form-control form-control-lg" name="name" required />
+                            <label class="form-label" for="name">Name</label>
                         </div>
 
                         <!-- Phone Number Field -->
                         <div class="form-outline mb-4">
-                            <input type="tel" id="phoneNumber" class="form-control form-control-lg" name="phone_number" required />
-                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control form-control-lg" name="phone_number" required />
+                            <label class="form-label" for="phone">Phone Number</label>
                         </div>
 
                         <!-- Email Address Field -->
