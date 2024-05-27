@@ -159,302 +159,144 @@
                         </ul>
                     </div>
                 </div>
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="row g-4">
-                            <div class="col-lg-12">
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/romand-brow.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>ROMAND Han All Brow Cara</h4>
-                                                <p>Comb, shape, and texturize your eyebrows with rom&nd''s Han All Brow Cara. Leaves a non-greasy, natural-looking matte finish without clumping or stickiness.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 199.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/PINKDIARY.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>PINKFLASH PinkDiary Velvet Matte Lip Cream</h4>
-                                                <p>The lightweight, long-lasting velvet matte texture creates the same velvet makeup effect as Korean idols.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.900 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/2-in-1 EYEBROW.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>PINKFLASH 2-in-1 Eyebrow Cream & Powder Gel</h4>
-                                                <p>The two textures can be used alone or in combination to easily create different styles of eyebrow makeup!</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 40.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/romand-water.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>ROMAND Bare Water Cushion</h4>
-                                                <p>Long lasting cushion that perfectly hides your textured skin and even pores.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 429.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/CONCEALER.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>PINKFLASH Breathable Liquid Concealer </h4>
-                                                <p>Effectively cover blemishes such as dark circles/acne/acne scar, make the face light and natural, easily create flawless makeup.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/romand-glasting.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>ROMAND Glasting Melting Balm</h4>
-                                                <p>The Glasting Melting Balm is a moisturizing balm with plant-based moisturizing oil that does not dry out! It provides a transparent and smooth watery glow without feeling stuffy.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 189.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                         <div class="rounded position-relative fruite-item">
-                                             <div class="fruite-img">
-                                                <img src="img/DR201501.png" class="img-fluid w-100 rounded-top" alt="">
-                                             </div>
-                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
-                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                 <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
-                                                 <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
-                                                 <div class="d-flex flex-column">
-                                                     <p class="text-dark fs-5 fw-bold mb-2">Rp. 2.640.000 / item</p>
-                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>DIOR Backstage Glow Face Palette</h4>
-                                                <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp. 950.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div id="tab-2" class="tab-pane fade show p-0">
-                        <div class="row g-4">
-                            <div class="col-lg-12">
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/romand-brow.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>ROMAND Han All Brow Cara</h4>
-                                                <p>Comb, shape, and texturize your eyebrows with rom&nd''s Han All Brow Cara. Leaves a non-greasy, natural-looking matte finish without clumping or stickiness.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 199.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/2-in-1 EYEBROW.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>PINKFLASH 2-in-1 Eyebrow Cream & Powder Gel</h4>
-                                                <p>The two textures can be used alone or in combination to easily create different styles of eyebrow makeup!</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 40.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/DR201501.png" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
-                                                <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
-                                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. 2.640.000 / per item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div id="tab-1" class="tab-pane fade show p-0 active">   
+            <div class="container-fluid vesitable pt-5">
+            <div class="owl-carousel vegetable-carousel justify-content-center">
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/romand-brow.jpg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Eyes</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>ROMAND Han All Brow Cara</h4>
+                    <p>Comb, shape, and texturize your eyebrows with rom&nd''s Han All Brow Cara. Leaves a non-greasy, natural-looking matte finish without clumping or stickiness.</p>
+                    <div class="d-flex flex-column">
+                    <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 199.000 / item</strong>
+                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    </div>
+                </div>
+            </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/PINKDIARY.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>PINKFLASH PinkDiary Velvet Matte Lip Cream</h4>
+                        <p>The lightweight, long-lasting velvet matte texture creates the same velvet makeup effect as Korean idols.</p>
+                        <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 29.900 / item</strong>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
-                    <div id="tab-3" class="tab-pane fade show p-0">
-                        <div class="row g-4">
-                            <div class="col-lg-12">
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/PINKDIARY.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>PINKFLASH PinkDiary Velvet Matte Lip Cream</h4>
-                                                <p>The lightweight, long-lasting velvet matte texture creates the same velvet makeup effect as Korean idols.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.900 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                        <div class="fruite-img">
-                                                <img src="img/romand-glasting.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>ROMAND Glasting Melting Balm</h4>
-                                                <p>The Glasting Melting Balm is a moisturizing balm with plant-based moisturizing oil that does not dry out! It provides a transparent and smooth watery glow without feeling stuffy.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 189.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/2-in-1 EYEBROW.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Eyes</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>PINKFLASH 2-in-1 Eyebrow Cream & Powder Gel</h4>
+                        <p>The two textures can be used alone or in combination to easily create different styles of eyebrow makeup!</p>
+                        <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 40.000 / item</strong>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
-
-                    <div id="tab-4" class="tab-pane fade show p-0">
-                        <div class="row g-4">
-                            <div class="col-lg-12">
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/romand-water.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>ROMAND Bare Water Cushion</h4>
-                                                <p>Long lasting cushion that perfectly hides your textured skin and even pores.</p>
-                                                <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 429.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/CONCEALER.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>PINKFLASH Breathable Liquid Concealer </h4>
-                                                <p>Effectively cover blemishes such as dark circles/acne/acne scar, make the face light and natural, easily create flawless makeup.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.000 / item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
-                                        <div class="rounded position-relative fruite-item">
-                                            <div class="fruite-img">
-                                                <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
-                                            </div>
-                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
-                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                <h4>DIOR Backstage Glow Face Palette</h4>
-                                                <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
-                                                <div class="d-flex flex-column">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / per item</p>
-                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/romand-water.jpg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>ROMAND Bare Water Cushion</h4>
+                        <p>Long lasting cushion that perfectly hides your textured skin and even pores.</p>
+                        <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 429.000 / item</strong>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/CONCEALER.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>PINKFLASH Breathable Liquid Concealer </h4>
+                        <p>Effectively cover blemishes such as dark circles/acne/acne scar, make the face light and natural, easily create flawless makeup.</p>
+                        <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 29.000 / item</strong>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/romand-glasting.jpg" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>ROMAND Glasting Melting Balm</h4>
+                        <p>The Glasting Melting Balm is a moisturizing balm with plant-based moisturizing oil that does not dry out! It provides a transparent and smooth watery glow without feeling stuffy.</p>
+                        <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp 189.000 / item</strong>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/DR201501.png" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Eyes</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
+                        <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
+                        <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 2.640.000 / item</strong>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
+                        <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                    <div class="p-4 rounded-bottom">
+                        <h4>DIOR Backstage Glow Face Palette</h4>
+                        <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
+                        <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 950.000 / item</strong>
+                        </div>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Fruits Shop End-->
+</div>
+</div>
+<!-- Fruits Shop End-->
 
 
     <!-- Featurs Start -->
