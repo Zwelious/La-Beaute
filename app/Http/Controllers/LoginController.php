@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cookie;
 
 class LoginController extends Controller
 {
@@ -13,8 +15,10 @@ class LoginController extends Controller
 
     public function LoginAction(Request $request)
     {
-        $user = $request->only("email","password");
-        //$DBuser= DB::table('Account')->where('email', '=', $user['email'])->first();
+        $user = $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
         $DBuser = DB::table('customer')
         ->where('email', '=', $user['email'])
         ->first();
