@@ -161,10 +161,10 @@
                 </div>
 
             <div id="tab-1" class="tab-pane fade show p-0 active">   
-            <div class="container-fluid vesitable pt-5">
-            <div class="owl-carousel vegetable-carousel justify-content-center">
-            <div class="border border-primary rounded position-relative vesitable-item">
-                <div class="vesitable-img">
+                <div class="container-fluid vesitable pt-5">
+                    <div class="owl-carousel vegetable-carousel justify-content-center">
+                        <div class="border border-primary rounded position-relative vesitable-item">
+                    <div class="vesitable-img">
                     <img src="img/romand-brow.jpg" class="img-fluid w-100 rounded-top" alt="">
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Eyes</div>
@@ -296,6 +296,8 @@
     </div>
 </div>
 </div>
+
+
 <!-- Fruits Shop End-->
 
 
@@ -310,7 +312,7 @@
                             <div class="px-4 rounded-bottom">
                                 <div class="service-content bg-light text-center p-4 rounded">
                                     <h5 class="text-primary">Pinkflash</h5>
-                                    <h3 class="mb-0">Under 100K/item</h3>
+                                    <h3 class="mb-0">Under 100k/item</h3>
                                 </div>
                             </div>
                         </div>
