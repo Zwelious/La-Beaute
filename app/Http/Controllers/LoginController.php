@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -15,48 +17,37 @@ class LoginController extends Controller
 
     public function LoginAction(Request $request)
     {
-        $user = $request->validate([
-            'email' => 'required',
+        // Validate the request data
+        $credentials = $request->validate([
+            'email' => 'required|email',
             'password' => 'required',
         ]);
-        $DBuser = DB::table('customer')
-        ->where('email', '=', $user['email'])
-        ->first();
-        $remember = ($request->has('remember')) ? true : false;
-        $request->validate([
-            "email" => "required|email",
-            "password" => "required"
-        ]);
 
-        if($DBuser !== null) {
-            if(password_verify($request->password, $DBuser->password) )
-            {
-                if ($remember == true) {
-                    Cookie::queue('id_cust', $DBuser->id_cust, 60 * 24 * 7);
-                    Cookie::queue('email', $DBuser->email, 60 * 24 * 7);
-                    Cookie::queue('password_hash', $DBuser->password_hash, 60 * 24 * 7);
+        // Retrieve the user from the database
+        $DBuser = DB::table('customer')->where('email', $credentials['email'])->first();
+
+        // Check if the user exists and the password_hash field is available
+        if ($DBuser !== null) {
+            // Verify the password
+            if (Hash::check($credentials['password'], $DBuser->PASSWORD_HASH)) {
+                // Handle "remember me" functionality
+                if ($request->has('remember')) {
+                    Cookie::queue('id_cust', $DBuser->ID_CUST, 60 * 24 * 7);
+                    Cookie::queue('email', $DBuser->EMAIL, 60 * 24 * 7);
+                    // Do not store password or password hashes in cookies
+                } else {
+                    $request->session()->put('id_cust', $DBuser->ID_CUST);
+                    $request->session()->put('email', $DBuser->EMAIL);
+                    // Do not store password or password hashes in the session
                 }
-                else{
-                    $request->session()->put('id_cust', $DBuser->id_cust );
-                    $request->session()->put('email', $DBuser->email);
-                    $request->session()->put('password_hash', $DBuser->password_hash );
-                }
-                return redirect('/')->with('success','Login Succesfull');
-                //dd($request->cookies->all());
-                // if($DBuser->ROLES == 'User')
-                //     return redirect('/')->with('success','Login Succesfull');
-                // else
-                // {
-                //     return redirect('/admin/transaction')->with('success','Login Succesfull');
-                // }
+
+                return redirect('/')->with('success', 'Login Successful');
+            } else {
+                return redirect('/login')->with('error', 'Login Failed! Please Try Again.');
             }
-            else{
-                //dd($request->cookies->all());
-                return redirect('/login')->with('error','Login Failed! Please Try Again.');
-            }
-        }
-        else{
-            return redirect('/login')->with('error','Login Failed! Please Try Again.');
+        } else {
+            return redirect('/login')->with('error', 'Login Failed! Please Try Again.');
         }
     }
+
 }

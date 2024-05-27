@@ -58,7 +58,7 @@
 
                         <!-- Phone Number Field -->
                         <div class="form-outline mb-4">
-                            <input type="tel" id="phone" class="form-control form-control-lg" name="phone_number" required />
+                            <input type="tel" id="phone" class="form-control form-control-lg" name="phone" required />
                             <label class="form-label" for="phone">Phone Number</label>
                         </div>
 
@@ -66,6 +66,12 @@
                         <div class="form-outline mb-4">
                             <input type="email" id="email" class="form-control form-control-lg" name="email" required />
                             <label class="form-label" for="email">Email Address</label>
+                        </div>
+
+                        <!-- Address Field -->
+                        <div class="form-outline mb-4">
+                            <input type="address" id="address" class="form-control form-control-lg" name="address" required />
+                            <label class="form-label" for="address">Address</label>
                         </div>
 
                         <!-- Password Field -->
