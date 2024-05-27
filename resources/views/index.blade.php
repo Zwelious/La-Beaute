@@ -37,7 +37,7 @@
                     <h4 class="mb-3 text-secondary">100% Quality Beauty Products</h4>
                     <h1 class="mb-5 display-3 text-primary">Your Beauty Journey Starts Here!</h1>
                     <div class="position-relative mx-auto">
-                        <button type="button" class="btn btn-primary border-2 border-secondary py-3 px-4 rounded-pill text-white w-75">
+                        <button type="button" class="btn btn-primary border-2 border-secondary py-3 px-4 rounded-pill text-white w-50">
                         Start Shopping Now
                         </button>
                     </div>
@@ -523,8 +523,8 @@
                     <div class="py-4">
                         <h1 class="display-3 text-white">Original Products</h1>
                         <p class="fw-normal display-3 text-white mb-4">only in La Beaute</p>
-                        <p class="mb-4 text-white">Start your beauty goals with us, right here right now.</p>
-                        <a href="{{ url('/shop') }}" class="banner-btn btn border-2 border-white rounded-pill text-white py-3 px-5">BUY</a>
+                        <p class="mb-4 text-white">Start your beauty goals with us, right here right now. Get in touch with us!</p>
+                        <a href="{{ url('/shop') }}" class="banner-btn btn border-2 border-white rounded-pill text-white py-3 px-5">Contact Us Now</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
