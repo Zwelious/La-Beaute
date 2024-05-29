@@ -75,7 +75,22 @@
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p class="mb-4">Dior lip makeup star duo, Dior Addict Lip Glow lip balm and Dior Addict Lip Maximizer gloss are yours to discover in this case. Dior Addict Lip Glow is a lip balm that subtly revives the natural color of lips and hydrates them for 24h. The Dior Addict Lip Maximizer gloss visibly plumps lips and enhances them with a mirror-shine effect.</p>
+                                <p class="product-description">
+                                    Dior lip makeup star duo, Dior Addict Lip Glow lip balm and Dior Addict Lip Maximizer gloss are yours to discover in this case. Dior Addict Lip Glow is a lip balm that subtly revives the natural color of lips and hydrates them for 24h. The Dior Addict Lip Maximizer gloss visibly plumps lips and enhances them with a mirror-shine effect.
+                                    <span class="more-text d-none"></span>
+                                </p>
+                                <div class="mb-4">
+                                     <label for="shadeSelect" class="form-label">Select Shade</label>
+                                     <select class="form-select" id="shadeSelect" style="width: 200px;">
+                                        <option selected>Choose a shade...</option>
+                                        <option value="1">Pink</option>
+                                        <option value="2">Coral</option>
+                                        <option value="3">Berry</option>
+                                        <option value="4">Rosewood</option>
+                                        <option value="5">Cherry</option>
+                                    </select>
+                                </div>
+
                                 <div class="input-group quantity mb-5" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-minues rounded-circle bg-light border" >
@@ -91,6 +106,30 @@
                                 </div>
                                 <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
+                            
+                            <script>
+                            document.querySelectorAll('.product-description').forEach(function(element) {
+                                var words = element.innerText.split(' ');
+                                if (words.length > 25) {
+                                    var visibleText = words.slice(0, 25).join(' ');
+                                    var hiddenText = words.slice(25).join(' ');
+                                    element.innerHTML = `
+                                        ${visibleText}
+                                        <span class="more-text-description d-none">${hiddenText}</span>
+                                        <a href="#" class="read-more-description">Read more</a>
+                                    `;
+                                }
+                            });
+
+                            document.querySelectorAll('.read-more-description').forEach(function(element) {
+                                element.addEventListener('click', function(e) {
+                                    e.preventDefault();
+                                    var moreText = this.previousElementSibling;
+                                    moreText.classList.toggle('d-none');
+                                    this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                                });
+                            });
+                            </script>
                             <div class="col-lg-12">
                                 <nav>
                                     <div class="nav nav-tabs mb-3">
@@ -137,7 +176,7 @@
                                                             <p class="mb-0">Shade</p>
                                                         </div>
                                                         <div class="col-6">
-                                                            <p class="mb-0">Beige</p>
+                                                            <p class="mb-0">Pink</p>
                                                         </div>
                                                     </div>
                                                 </div>
