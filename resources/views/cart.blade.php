@@ -158,34 +158,17 @@
             <div class="col-lg-3">
                 <div class="card mb-3 border shadow-0">
                 <div class="card-body">
-                    <form>
-                    <div class="form-group">
-                        <label class="form-label">Have coupon?</label>
-                        <div class="input-group">
-                        <input type="text" class="form-control border" name="" placeholder="Coupon code" />
-                        <button class="btn btn-success border">Apply</button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                </div>
-                <div class="card shadow-0 border">
-                <div class="card-body">
                     <div class="d-flex justify-content-between">
                     <p class="mb-2">Total price:</p>
                     <p class="mb-2">Rp 226.050</p>
                     </div>
                     <div class="d-flex justify-content-between">
-                    <p class="mb-2">Discount:</p>
-                    <p class="mb-2 text-success">-</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                    <p class="mb-2">TAX:</p>
+                    <p class="mb-2">Tax:</p>
                     <p class="mb-2">Free</p>
                     </div>
                     <hr />
                     <div class="d-flex justify-content-between">
-                    <p class="mb-2">Total price:</p>
+                    <p class="mb-2">Total payment:</p>
                     <p class="mb-2 fw-bold">Rp 226.050</p>
                     </div>
 
