@@ -46,6 +46,8 @@ Route::get('/cart', [CartController::class, 'Cart']);
 
 Route::get('/checkout', [CheckoutController::class, 'Checkout']);
 
+Route::post('/checkout', [CheckoutController::class, 'CheckoutSubmit'])->name('checkout');
+
 Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
 
 Route::get('/shop', [ShopController::class, 'Shop']);

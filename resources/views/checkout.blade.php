@@ -36,6 +36,9 @@
         <div class="col-xl-8 col-lg-8 mb-4">
 
           <!-- Checkout -->
+          <form method="post" action="{{ route('checkout') }}">
+          @csrf
+
           <div class="card shadow-0 border">
             <div class="p-4">
               <h5 class="card-title mb-3">Checkout</h5>
@@ -44,28 +47,40 @@
                 <div class="col-6 mb-3">
                   <p class="mb-0">First name</p>
                   <div class="form-outline">
-                    <input type="text" id="firstName" placeholder="Type Your First Name Here" class="form-control" />
+                    <input type="text" id="firstName" name="firstName" placeholder="Type Your First Name Here" class="form-control" />
+                    @if($errors->has('firstName'))
+                    <div class="text-danger">{{ $errors->first('firstName') }}</div>
+                    @endif
                   </div>
                 </div>
 
                 <div class="col-6">
                   <p class="mb-0">Last name</p>
                   <div class="form-outline">
-                    <input type="text" id="lastName" placeholder="Type Your Last Name Here" class="form-control" />
+                    <input type="text" id="lastName" name="lastName" placeholder="Type Your Last Name Here" class="form-control" />
+                    @if($errors->has('lastName'))
+                    <div class="text-danger">{{ $errors->first('lastName') }}</div>
+                    @endif
                   </div>
                 </div>
 
                 <div class="col-6 mb-3">
                   <p class="mb-0">Phone</p>
                   <div class="form-outline">
-                    <input type="tel" id="phone" value="+62 " class="form-control" />
+                    <input type="tel" id="phone" name="phone" value="+62 " class="form-control" />
+                    @if($errors->has('phone'))
+                    <div class="text-danger">{{ $errors->first('phone') }}</div>
+                    @endif
                   </div>
                 </div>
 
                 <div class="col-6 mb-3">
                   <p class="mb-0">Email</p>
                   <div class="form-outline">
-                    <input type="email" id="email" placeholder="example@gmail.com" class="form-control" />
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                    @if($errors->has('email'))
+                    <div class="text-danger">{{ $errors->first('email') }}</div>
+                    @endif
                   </div>
                 </div>
               </div>
@@ -96,7 +111,7 @@
                   <!-- Default radio -->
                   <div class="form-check h-100 border rounded-3">
                     <div class="p-3">
-                      <input class="form-check-input" type="radio" name="shippingMethod" id="flexRadioDefault2" />
+                      <input class="form-check-input" type="radio" name="shippingMethod" id="flexRadioDefault2" />   
                       <label class="form-check-label" for="flexRadioDefault2">
                         Post office <br />
                         <small class="text-muted">20-30 days via post </small>
@@ -122,7 +137,10 @@
                 <div class="col-sm-8 mb-3">
                   <p class="mb-0">Address</p>
                   <div class="form-outline">
-                    <input type="text" id="address" placeholder="Type Your Address Here" class="form-control" />
+                    <input type="text" id="address" name="address" placeholder="Type Your Address Here" class="form-control" />
+                    @if($errors->has('address'))
+                    <div class="text-danger">{{ $errors->first('address') }}</div>
+                    @endif
                   </div>
                 </div>
 
@@ -138,21 +156,30 @@
                 <div class="col-sm-4 mb-3">
                   <p class="mb-0">House</p>
                   <div class="form-outline">
-                    <input type="text" id="house" placeholder="Type Your House Here" class="form-control" />
+                    <input type="text" id="house" name="house" placeholder="Type Your House Here" class="form-control" />
+                    @if($errors->has('house'))
+                    <div class="text-danger">{{ $errors->first('house') }}</div>
+                    @endif
                   </div>
                 </div>
 
                 <div class="col-sm-4 col-6 mb-3">
                   <p class="mb-0">Postal code</p>
                   <div class="form-outline">
-                    <input type="text" id="postalCode" class="form-control" />
+                    <input type="text" id="postalCode" name="postalCode" class="form-control" />
+                    @if($errors->has('postalCode'))
+                    <div class="text-danger">{{ $errors->first('postalCode') }}</div>
+                    @endif
                   </div>
                 </div>
 
                 <div class="col-sm-4 col-6 mb-3">
                   <p class="mb-0">Zip</p>
                   <div class="form-outline">
-                    <input type="text" id="zip" class="form-control" />
+                    <input type="text" id="zip" name="zip" class="form-control" />
+                    @if($errors->has('zip'))
+                    <div class="text-danger">{{ $errors->first('zip') }}</div>
+                    @endif
                   </div>
                 </div>
               </div>
@@ -186,25 +213,37 @@
                 <div class="col-sm-6 mb-3">
                   <p class="mb-0">Cardholder Name</p>
                   <div class="form-outline">
-                    <input type="text" id="cardholderName" placeholder="Name on Card" class="form-control" />
+                    <input type="text" id="cardholderName" name="cardholderName" placeholder="Name on Card" class="form-control" />
+                    @if($errors->has('cardholderName'))
+                    <div class="text-danger">{{ $errors->first('cardholderName') }}</div>
+                    @endif
                   </div>
                 </div>
                 <div class="col-sm-6 mb-3">
                   <p class="mb-0">Card Number</p>
                   <div class="form-outline">
-                    <input type="text" id="cardNumber" placeholder="Card Number" class="form-control" />
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" class="form-control" />
+                    @if($errors->has('cardNumber'))
+                    <div class="text-danger">{{ $errors->first('cardNumber') }}</div>
+                    @endif
                   </div>
                 </div>
                 <div class="col-sm-4 mb-3">
                   <p class="mb-0">Expiration Date</p>
                   <div class="form-outline">
-                    <input type="text" id="expirationDate" placeholder="MM/YY" class="form-control" />
+                    <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" class="form-control" />
+                    @if($errors->has('expirationDate'))
+                    <div class="text-danger">{{ $errors->first('expirationDate') }}</div>
+                    @endif
                   </div>
                 </div>
                 <div class="col-sm-4 mb-3">
                   <p class="mb-0">CVV</p>
                   <div class="form-outline">
-                    <input type="text" id="cvv" placeholder="CVV" class="form-control" />
+                    <input type="text" id="cvv" placeholder="CVV" name="cvv" class="form-control" />
+                    @if($errors->has('cvv'))
+                    <div class="text-danger">{{ $errors->first('cvv') }}</div>
+                    @endif
                   </div>
                 </div>
               </div>
@@ -215,6 +254,7 @@
               </div>
             </div>
           </div>
+        </form>
           <!-- Checkout -->
         </div>
         <div class="col-lg-3">
@@ -297,6 +337,4 @@
       </div>
     </div>
   </section>
-
-
 @endsection
