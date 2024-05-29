@@ -22,13 +22,22 @@ class RegisterController extends Controller
             'phone' => 'required|min:8',
             'address' => 'required',
         ]);
-        $insert = DB::table('customer')->insert([
-            'email' => $validatedData['email'],
-            'password_hash' => Hash::make($validatedData['password']),
-            'name' => $validatedData['name'],
-            'phone' => $validatedData['phone'],
-            'address' => $validatedData['address'],
-        ]);
+
+        $existingCustomer = DB::table('customer')->where('email', $validatedData['email'])->first();
+
+        if ($existingCustomer) {
+            return redirect('/register')->with('error', 'Email exists. Try logging in instead.');
+        }
+        else{
+            $insert = DB::table('customer')->insert([
+                'email' => $validatedData['email'],
+                'password_hash' => Hash::make($validatedData['password']),
+                'name' => $validatedData['name'],
+                'phone' => $validatedData['phone'],
+                'address' => $validatedData['address'],
+            ]);
+        }
+
         if ($insert) {
             return redirect('/login')->with('success', 'Registration successful!');
         } else {

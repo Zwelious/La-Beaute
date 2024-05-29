@@ -57,9 +57,17 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3">DIOR Addict Set</h4>
-                                <p class="mb-3">Category: Eyes</p>
-                                <h5 class="fw-bold mb-3">Rp 1.450.000</h5>
+                                <h4 class="fw-bold mb-3">{{ $product->NAMA_PROD }}</h4>
+                                <h4 class="fw-bold mb-3">{{ $product->NAMA_PROD }}</h4>
+                                <p class="mb-3">Category: </p>
+                                @if ($product->DISKON > 0)
+                                    <div class="price-wrap mb-2">
+                                        <strong class="text-dark fs-5 fw-bold mb-0">Rp {{ number_format($product->HARGA - ($product->HARGA * $product->DISKON / 100), 0, ',', '.') }}</strong>
+                                        <del class="text-success">Rp {{ number_format($product->HARGA, 0, ',', '.') }}</del>
+                                    </div>
+                                @else
+                                    <h5 class="fw-bold mb-3">Rp {{ number_format($product->HARGA , 0, ',', '.') }}</h5>
+                                @endif
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star text-secondary"></i>
@@ -85,7 +93,7 @@
 
                                 <div class="input-group quantity mb-5" style="width: 100px;">
                                     <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                        <button class="btn btn-sm btn-minues rounded-circle bg-light border" >
                                             <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
@@ -258,51 +266,8 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-xl-3">
+                    <!-- <div class="col-lg-4 col-xl-3">
                         <div class="row g-4 fruite">
-                            <div class="col-lg-12">
-                                <div class="mb-4">
-                                    <h4>Categories</h4>
-                                    <ul class="list-unstyled fruite-categorie">
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Eyes</a>
-                                                <span>(3)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Lips</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Face</a>
-                                                <span>(2)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Dior</a>
-                                                <span>(8)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Pinkflash</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                <a href="#"><i class="fas fa-apple-alt me-2"></i>Romand</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="col-lg-12">
                                 <h4 class="mb-4">Featured products</h4>
                                 <div class="d-flex align-items-center justify-content-start">
@@ -375,9 +340,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <h1 class="fw-bold mb-0">Related products</h1>
+                <h1 class="fw-bold mb-0">Simillar products</h1>
                 <div class="vesitable">
                     <div class="owl-carousel vegetable-carousel justify-content-center">
                         <div class="border border-primary rounded position-relative vesitable-item">

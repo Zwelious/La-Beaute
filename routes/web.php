@@ -50,7 +50,7 @@ Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
 
 Route::get('/shop', [ShopController::class, 'Shop']);
 
-Route::get('/shop-details', [ShopDetailsController::class, 'ShopDetails']);
+Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
 
 Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
 
