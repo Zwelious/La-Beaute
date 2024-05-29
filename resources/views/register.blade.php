@@ -49,23 +49,17 @@
                         </div>
 
                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign up your account</h5>
-                                            
+
                         <!-- First Name Field -->
                         <div class="form-outline mb-4">
-                            <input type="text" id="firstName" class="form-control form-control-lg" name="first_name" required />
-                            <label class="form-label" for="firstName">First Name</label>
-                        </div>
-
-                        <!-- Last Name Field -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="lastName" class="form-control form-control-lg" name="last_name" required />
-                            <label class="form-label" for="lastName">Last Name</label>
+                            <input type="text" id="name" class="form-control form-control-lg" name="name" required />
+                            <label class="form-label" for="name">Name</label>
                         </div>
 
                         <!-- Phone Number Field -->
                         <div class="form-outline mb-4">
-                            <input type="tel" id="phoneNumber" class="form-control form-control-lg" name="phone_number" required />
-                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control form-control-lg" name="phone" required />
+                            <label class="form-label" for="phone">Phone Number</label>
                         </div>
 
                         <!-- Email Address Field -->
@@ -74,11 +68,31 @@
                             <label class="form-label" for="email">Email Address</label>
                         </div>
 
+                        <!-- Address Field -->
+                        <div class="form-outline mb-4">
+                            <input type="address" id="address" class="form-control form-control-lg" name="address" required />
+                            <label class="form-label" for="address">Address</label>
+                        </div>
+
                         <!-- Password Field -->
                         <div class="form-outline mb-4">
                             <input type="password" id="password" class="form-control form-control-lg" name="password" required pattern="(?=.*\d).{8,}" />
                             <label class="form-label" for="password">Password</label>
                         </div>
+
+                        @if($errors->any())
+                        <div class="alert alert-danger">
+                            @foreach( $errors->all() as $e)
+                            {{ $e }} <br>
+                            @endforeach
+                        </div>
+                        @endif
+
+                        @if(session()->has('error'))
+                            <div class="alert alert-danger">
+                                {{ session()->get('error') }}
+                            </div>
+                        @endif
 
                         <!-- Submit Button -->
                         <button type="submit" class="btn btn-primary btn-block mb-4 text-center w-100">

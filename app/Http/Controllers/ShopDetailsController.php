@@ -3,11 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ShopController;
 
 class ShopDetailsController extends Controller
 {
-    public function ShopDetails()
+    protected $shopController;
+
+    public function __construct(ShopController $shopController)
     {
-        return view('shop-detail');
+        $this->shopController = $shopController;
+    }
+
+    public function ShopDetails($id_prod)
+    {
+        $products = $this->shopController->dataProducts;
+
+        $product = $products->firstWhere('ID_PROD', $id_prod);
+
+        return view('shop-detail', ['product' => $product]);
     }
 }

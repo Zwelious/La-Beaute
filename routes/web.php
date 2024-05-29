@@ -30,13 +30,15 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login', [LoginController::class, 'Login']);
+Route::get('/login', [LoginController::class, 'Login'])->name('login');
+Route::post('/login', [LoginController::class, 'LoginAction'])->name('login');
 
-Route::get('/register', [RegisterController::class, 'Register']);
+Route::get('/register', [RegisterController::class, 'Register'])->name('register');
+Route::post('/register', [RegisterController::class, 'RegisterAction'])->name('register');
 
-Route::post('/register', 'Auth\RegisterController@register')->name('register');
+// Route::post('/register', 'Auth\RegisterController@register')->name('register');
 
-Route::post('/register', 'AuthController@register')->name('register');
+// Route::post('/register', 'AuthController@register')->name('register');
 
 Route::get('/forget', [ForgetPassController::class, 'ForgetPass']);
 
@@ -48,7 +50,7 @@ Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
 
 Route::get('/shop', [ShopController::class, 'Shop']);
 
-Route::get('/shop-details', [ShopDetailsController::class, 'ShopDetails']);
+Route::get('/shop-details/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
 
 Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
 
