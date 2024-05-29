@@ -37,6 +37,7 @@
 
           <!-- Checkout -->
           <form method="post" action="{{ route('checkout') }}">
+            
           @csrf
 
           <div class="card shadow-0 border">
