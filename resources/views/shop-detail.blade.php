@@ -57,9 +57,17 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3">DIOR Addict Set</h4>
-                                <p class="mb-3">Category: Eyes</p>
-                                <h5 class="fw-bold mb-3">Rp 1.450.000</h5>
+                                <h4 class="fw-bold mb-3">{{ $product->NAMA_PROD }}</h4>
+                                <h4 class="fw-bold mb-3">{{ $product->NAMA_PROD }}</h4>
+                                <p class="mb-3">Category: </p>
+                                @if ($product->DISKON > 0)
+                                    <div class="price-wrap mb-2">
+                                        <strong class="text-dark fs-5 fw-bold mb-0">Rp {{ number_format($product->HARGA - ($product->HARGA * $product->DISKON / 100), 0, ',', '.') }}</strong>
+                                        <del class="text-success">Rp {{ number_format($product->HARGA, 0, ',', '.') }}</del>
+                                    </div>
+                                @else
+                                    <h5 class="fw-bold mb-3">Rp {{ number_format($product->HARGA , 0, ',', '.') }}</h5>
+                                @endif
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star text-secondary"></i>
