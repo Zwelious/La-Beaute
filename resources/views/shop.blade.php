@@ -75,19 +75,19 @@
                                                 <li>
                                                     <div class="d-flex justify-content-between fruite-name">
                                                         <a href="#"><i class="fas fa-apple-alt me-2"></i>Eyes</a>
-                                                        <span>({{ $dataProducts->filter(function($product) { return $product->KATEGORI == 'Eyes'; })->count() }})</span>
+                                                        <span>(3)</span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="d-flex justify-content-between fruite-name">
                                                         <a href="#"><i class="fas fa-apple-alt me-2"></i>Lips</a>
-                                                        <span>({{ $dataProducts->filter(function($product) { return $product->KATEGORI == 'Lips'; })->count() }})</span>
+                                                        <span>(5)</span>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="d-flex justify-content-between fruite-name">
                                                         <a href="#"><i class="fas fa-apple-alt me-2"></i>Face</a>
-                                                        <span>({{ $dataProducts->filter(function($product) { return $product->KATEGORI == 'Face'; })->count() }})</span>
+                                                        <span>(2)</span>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -109,13 +109,6 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h4 class="mb-2">Price</h4>
-                                            <input type="range" class="form-range w-100" id="rangeInput" name="rangeInput" min="Rp 0" max="Rp 2.640.000" value="0" oninput="amount.value=rangeInput.value">
-                                            <output id="amount" name="amount" min-velue="0" max-value="2.640.000" for="rangeInput">0</output>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -202,59 +195,166 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="row g-4 justify-content-center">
-
-                                    @foreach($dataProducts as $product)
-                                        <div class="col-md-6 col-lg-6 col-xl-4">
-                                            <a href="{{ route('shop-details', ['id_prod' => $product->ID_PROD]) }}" class="text-decoration-none text-dark"> <!-- Anchor tag starts here -->
-                                                <div class="rounded position-relative fruite-item">
-                                                    <div class="fruite-img">
-                                                        <img src={{ $product->FOTO_PROD }} class="img-fluid w-100 rounded-top" alt="">
-                                                    </div>
-                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">{{ $product->KATEGORI }}</div>
-                                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                        <h4>{{ $product->NAMA_PROD }}</h4>
-                                                        <p>{{ $product->DESKRIPSI }}</p>
-                                                        <div class="d-flex flex-column">
-                                                            @if ($product->DISKON > 0)
-                                                                <div class="price-wrap mb-2">
-                                                                    <strong class="text-dark fs-5 fw-bold mb-0">Rp {{ number_format($product->HARGA - ($product->HARGA * $product->DISKON / 100), 0, ',', '.') }}</strong>
-                                                                    <del class="text-success">Rp {{ number_format($product->HARGA, 0, ',', '.') }}</del>
-                                                                </div>
-                                                            @else
-                                                                <p class="text-dark fs-5 fw-bold mb-2">Rp {{ number_format($product->HARGA, 0, ',', '.') }}</p>
-                                                            @endif
-                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                                                        </div>
-                                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="img/romand-water.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>ROMAND Bare Water Cushion</h4>
+                                                <p>Long lasting cushion that perfectly hides your textured skin and even pores.</p>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 429.000 / item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                                 </div>
-                                            </a> <!-- Anchor tag ends here -->
+                                            </div>
                                         </div>
-                                    @endforeach
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                                <img src="img/CONCEALER.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>PINKFLASH Breathable Liquid Concealer </h4>
+                                                <p>Effectively cover blemishes such as dark circles/acne/acne scar, make the face light and natural, easily create flawless makeup.</p>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.000 / item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                        <img src="img/DR300502.png" class="img-fluid w-100 rounded-top" alt="">
+                                    </div>
+                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Face</div>
+                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                        <h4>DIOR Backstage Glow Face Palette</h4>
+                                        <p>The iconic multi-use face makeup palette. The Dior Backstage Glow Face Palette is the Dior makeup artists secret for adding instant radiance with professional results, from a natural healthy glow to an intense luminosity.</p>
+                                        <div class="d-flex flex-column">
+                                            <p class="text-dark fs-5 fw-bold mb-2">Rp. 950.000 / item</p>
+                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                                <img src="img/romand-glasting.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>ROMAND Glasting Melting Balm</h4>
+                                                <p>The Glasting Melting Balm is a moisturizing balm with plant-based moisturizing oil that does not dry out! It provides a transparent and smooth watery glow without feeling stuffy.</p>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 189.000 / item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                                <img src="img/DR201501.png" class="img-fluid w-100 rounded-top" alt="">
+                                             </div>
+                                             <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
+                                             <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                 <h4>DIOR show 10 Couleurs - Blooming Boudoir Limited Edition</h4>
+                                                 <p>Dior unveils the Diorshow 10 Couleurs eye palette featuring a Blooming Boudoir couture pattern created by artist Pietro Ruffo in which a lush floral decoration blossoms with a baroque aesthetic, reflected by the profusion of flowers and the vibrancy of their colours.</p>
+                                                 <div class="d-flex flex-column">
+                                                     <p class="text-dark fs-5 fw-bold mb-2">Rp. 2.640.000 / item</p>
+                                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                                <img src="img/2-in-1 EYEBROW.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>PINKFLASH 2-in-1 Eyebrow Cream & Powder Gel</h4>
+                                                <p>The two textures can be used alone or in combination to easily create different styles of eyebrow makeup!</p>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 40.000 / item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                            <div class="fruite-img">
+                                                <img src="img/DR101601.png" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>DIOR Addict Set</h4>
+                                                <p>Dior lip makeup star duo, Dior Addict Lip Glow lip balm and Dior Addict Lip Maximizer gloss are yours to discover in this case. Dior Addict Lip Glow is a lip balm that subtly revives the natural color of lips and hydrates them for 24h. The Dior Addict Lip Maximizer gloss visibly plumps lips and enhances them with a mirror-shine effect.</p>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 1.450.000 / item</p>
+                                                    <a href="{{ url('/shop-details') }}" class="btn border border-secondary rounded-pill px-3 text-primary mt-2">
+                                                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                                <img src="img/romand-brow.jpg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Eyes</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>ROMAND Han All Brow Cara</h4>
+                                                <p>Comb, shape, and texturize your eyebrows with rom&nd''s Han All Brow Cara. Leaves a non-greasy, natural-looking matte finish without clumping or stickiness.</p>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 199.000 / item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                                <img src="img/PINKDIARY.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Lips</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <h4>PINKFLASH PinkDiary Velvet Matte Lip Cream</h4>
+                                                <p>The lightweight, long-lasting velvet matte texture creates the same velvet makeup effect as Korean idols.</p>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-dark fs-5 fw-bold mb-2">Rp 29.900 / item</p>
+                                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="pagination d-flex justify-content-center mt-5">
-                                    @if ($dataProducts->onFirstPage())
-                                        <span class="rounded">&laquo;</span>
-                                    @else
-                                        <a href="{{ $dataProducts->previousPageUrl() }}" class="rounded">&laquo;</a>
-                                    @endif
-
-                                    @foreach (range(1, $dataProducts->lastPage()) as $page)
-                                        @if ($page == $dataProducts->currentPage())
-                                            <a class="active rounded">{{ $page }}</a>
-                                        @else
-                                            <a href="{{ $dataProducts->url($page) }}" class="rounded">{{ $page }}</a>
-                                        @endif
-                                    @endforeach
-
-                                    @if ($dataProducts->hasMorePages())
-                                        <a href="{{ $dataProducts->nextPageUrl() }}" class="rounded">&raquo;</a>
-                                    @else
-                                        <span class="rounded">&raquo;</span>
-                                    @endif
-                                </div>
-                            </div>
+                                    <div class="col-12">
+                                        <div class="pagination d-flex justify-content-center mt-5">
+                                            <a href="#" class="rounded">&laquo;</a>
+                                            <a href="#" class="active rounded">1</a>
+                                            <a href="#" class="rounded">2</a>
+                                            <a href="#" class="rounded">3</a>
+                                            <a href="#" class="rounded">4</a>
+                                            <a href="#" class="rounded">5</a>
+                                            <a href="#" class="rounded">6</a>
+                                            <a href="#" class="rounded">&raquo;</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -262,6 +362,6 @@
                 </div>
             </div>
         </div>
-        <!--Shop End-->
+        <!-- Fruits Shop End-->
 
 @endsection
