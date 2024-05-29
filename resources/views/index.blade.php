@@ -362,156 +362,282 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
-                    <h4>ROMAND Dewyful Water Tint</h4>
-                    <p>Boost the color with a glossy glow! A dewy-ful & long-lasting lip tint that forms like a welcome rain on my lips</p>
+                    <h4 class="product-title">
+                        ROMAND Dewyful Water Tint</h4>
+                    <p class="product-description">
+                        Boost the color with a glossy glow! A dewy-ful & long-lasting lip tint that forms like a welcome rain on my lips
+                        <span class="more-text d-none"></span>
+                    
+                    </p>
                     <div class="d-flex flex-column">
-                    <div class="price-wrap mb-2">
+                        <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 179.550</strong>
                             <del class="text-success">Rp 189.000</del>
                         </div>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
             </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/romand-veil.jpg" class="img-fluid w-100 rounded-top" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>ROMAND See-Through Veil Lighter</h4>
-                        <p>A new powder highlighter to brighten, draw attention, and stun. This Veilighter contours and reflects light beautifully for a goddess-like glow.</p>
-                        <div class="d-flex flex-column">
-                        <div class="price-wrap mb-2">
-                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 189.050</strong>
-                            <del class="text-success">Rp 199.000</del>
-                        </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
+            
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/romand-blur.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
                 </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/romand-blur.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>ROMAND Blur Fudge Tint</h4>
-                        <p>Fudge spreading on your lips! It''s a completely matte finish without any glow.</p>
-                        <div class="d-flex flex-column">
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                <div class="p-4 rounded-bottom">
+                    <h4 class="product-title">
+                        ROMAND Blur Fudge Tint
+                    </h4>
+                    <p class="product-description">
+                        Fudge spreading on your lips! It's a completely matte finish without any glow
+                        <span class="more-text d-none"></span>
+                    </p>
+                    <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 179.550</strong>
                             <del class="text-success">Rp. 189.000</del>
                         </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/LOOSE POWDER.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>PINKFLASH Oil Controller Loose Powder</h4>
-                        <p>Matte and natural flawless makeup effect. 💫Oil Controller - It can control oil in 1 second and not feel oily in all day, creat a extreme matte makeup.</p>
-                        <div class="d-flex flex-column">
+            </div>
+
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/LOOSE POWDER.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                <div class="p-4 rounded-bottom">
+                    <h4 class="product-title">
+                        PINKFLASH Oil Controller Loose Powder
+                    </h4>
+                    <p class="product-description">
+                        Matte and natural flawless makeup effect. 💫Oil Controller - It can control oil in 1 second and not feel oily all day, creating an extreme matte makeup.
+                        <span class="more-text d-none"></span>
+                    </p>
+                    <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp 31.350</strong>
                             <del class="text-success">Rp 33.000</del>
                         </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/LIPOIL.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>PINKFLASH Natural Lip Oil Moisturize</h4>
-                        <p>Effectively repair the lip skin barrier, making lips look healthier, softer and smoother.</p>
-                        <div class="d-flex flex-column">
+            </div>
+
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/LIPOIL.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                <div class="p-4 rounded-bottom">
+                    <h4 class="product-title">
+                        PINKFLASH Natural Lip Oil Moisturize 
+                    </h4>
+                    <p class="product-description">
+                        Effectively repair the lip skin barrier, making lips look healthier, softer, and smoother
+                        <span class="more-text d-none"></span>
+                    </p>
+                    <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp 24.605</strong>
                             <del class="text-success">Rp 25.900</del>
                         </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/2-in-1 DUAL ENDED.jpeg" class="img-fluid w-100 rounded-top" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>PINKFLASH 2 IN 1 Dual-ended Lipstik Matte Velvet</h4>
-                        <p>Brand new dual-ended design, more shades and more texture, satisfied with your variety of makeup finish. 💕TIPS：Before applying lipstick, use PINKFLASH lip oil to moisturize the lips.</p>
-                        <div class="d-flex flex-column">
+            </div>
+
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/2-in-1 DUAL ENDED.jpeg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                <div class="p-4 rounded-bottom">
+                    <h4 class="product-title">
+                        PINKFLASH 2 IN 1 Dual-ended Lipstik Matte Velvet
+                    </h4>
+                    <p class="product-description">
+                        Brand new dual-ended design, more shades and more texture, satisfied with your variety of makeup finish. 💕TIPS: before applying lipstick, use PINKFLASH lip oil to moisturize the lips.
+                        <span class="more-text d-none"></span>
+                    </p>
+                    <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp 33.250</strong>
                             <del class="text-success">Rp 35.000</del>
-                        </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+                        </div>            
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/DR100301.png" class="img-fluid w-100 rounded-top bg-light" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>DIOR Addict Lip Glow</h4>
-                        <p>The 1st Dior lip balm formulated with 97% natural-origin ingredients that subtly revives the natural color of lips with a custom glow and hydrates lips for 24h.</p>
-                        <div class="d-flex flex-column">
+            </div>
+
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/DR100301.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                <div class="p-4 rounded-bottom">
+                    <h4 class="product-title">
+                        DIOR Addict Lip Glow
+                    </h4>
+                    <p class="product-description">
+                        The 1st Dior lip balm formulated with 97% natural-origin ingredients that subtly revives the natural color of lips with a custom glow and hydrates lips for 24h.
+                        <span class="more-text d-none"></span>
+                    </p>
+                    <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
                             <del class="text-success">Rp. 700.000</del>
                         </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/DR100401.png" class="img-fluid w-100 rounded-top bg-light" alt="">
-                    </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>DIOR Addict Lip Tint</h4>
-                        <p>Dior Addict Lip Tint is the first no-transfer Dior lip tint with 12h wear, that highlights the lips with a bold color in a semi-matte finish and fuses with the skin for a bare-lip sensation.</p>
-                        <div class="d-flex flex-column">
+            </div>
+
+            
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/DR100401.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
+                <div class="p-4 rounded-bottom">
+                    <h4 class="product-title">
+                        DIOR Addict Lip Tint
+                    </h4>
+                    <p class="product-description">
+                    Dior Addict Lip Tint is the first no-transfer Dior lip tint with 12h wear,that highlights the lips with a bold color in a semi-matte finish and fuses with the skin for a bare-lip sensation.
+                        <span class="more-text d-none"></span>
+                        <a href="#" class="read-more">Read more</a>
+                    </p>
+                    <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 665.000</strong>
                             <del class="text-success">Rp. 700.000</del>
                         </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
-                <div class="border border-primary rounded position-relative vesitable-item">
-                    <div class="vesitable-img">
-                        <img src="img/DR301001.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+            </div>
+
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/romand-veil.jpg" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                <div class="p-4 rounded-bottom">
+                    <h4 class="product-title">
+                    ROMAND See-Through Veil Lighter</h4>
+                    <p class="product-description">
+                    A new powder highlighter to brighten, draw attention, and stun. This Veilighter contours and reflects light beautifully for a goddess-like glow.
+                        <span class="more-text d-none"></span>
+                    </p>
+                    <div class="d-flex flex-column">
+                        <div class="price-wrap mb-2">
+                            <strong class="text-dark fs-5 fw-bold mb-0">Rp. 189.050</strong>
+                            <del class="text-success">Rp 199.000</del>
+                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
-                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
-                    <div class="p-4 rounded-bottom">
-                        <h4>DIOR Forever Compact Foundation</h4>
-                        <p>Dior Forever Natural Velvet is the 1st no-transfer Dior compact foundation with 24h* wear, composed with 90%** natural-origin ingredients. Ultra-soft and light, it brings a naturally matte perfection to the complexion, with a fine and creamy texture that lets the skin breathe while offering a sensation of comfort that lasts all day. Its high coverage corrects blemishes, smooths and evens out the complexion.</p>
-                        <div class="d-flex flex-column">
+                </div>
+            </div>
+            <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="img/DR301001.png" class="img-fluid w-100 rounded-top bg-light" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
+                <div class="p-4 rounded-bottom">
+                    <h4>DIOR Forever Compact Foundation</h4>
+                    <p class="product-description">
+                        Dior Forever Natural Velvet is the 1st no-transfer Dior compact foundationwith 24h wear,composed with 90% natural-origin ingredients. Ultra-soft and light, it brings a naturally matte perfection to the complexion, with a fine and creamy texture that lets the skin breathe while offering a sensation of comfort that lasts all day. Its high coverage corrects blemishes, smooths and evens out the complexion.
+                        <span class="more-text d-none"></span>
+                    </p>
+                    <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp. 1.215.000</strong>
                             <del class="text-success">Rp. 1.350.000</del>
                         </div>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
+                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.product-title').forEach(function(element) {
+        var words = element.innerText.split(' ');
+        if (words.length > 4) {
+            var visibleText = words.slice(0, 4).join(' ');
+            var hiddenText = words.slice(4).join(' ');
+            element.innerHTML = `
+                ${visibleText}
+                <span class="more-text d-none"> ${hiddenText}</span>
+                <a href="#" class="read-more-title">...</a>
+            `;
+        }
+    });
+
+    document.querySelectorAll('.product-description').forEach(function(element) {
+            var words = element.innerText.split(' ');
+            if (words.length > 12) {
+                var visibleText = words.slice(0, 12).join(' ');
+                var hiddenText = words.slice(12).join(' ');
+                element.innerHTML = `
+                    ${visibleText}
+                    <span class="more-text-description d-none"> ${hiddenText}</span>
+                    <a href="#" class="read-more-description">Read more</a>
+                `;
+            }
+        });
+
+    document.querySelectorAll('.read-more').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            var moreText = this.previousElementSibling;
+            moreText.classList.toggle('d-none');
+            this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+        });
+    });
+
+    document.querySelectorAll('.read-more-title').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            var moreText = this.previousElementSibling;
+            moreText.classList.toggle('d-none');
+            this.innerText = this.innerText === '...' ? 'Read less' : '...';
+        });
+    });
+
+    document.querySelectorAll('.read-more-description').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            var moreText = this.previousElementSibling;
+            moreText.classList.toggle('d-none');
+            this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+        });
+    });
+});
+
+</script>
     <!-- Vesitable Shop End -->
 
 
