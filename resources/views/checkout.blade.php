@@ -32,7 +32,7 @@
 
 <section class="bg-light py-5">
     <div class="container pt-5">
-      <div class="row mt-5">
+      <div class="row mt-5 justify-content-center">
         <div class="col-xl-8 col-lg-8 mb-4">
 
           <!-- Checkout -->
@@ -217,87 +217,82 @@
           </div>
           <!-- Checkout -->
         </div>
-        <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
-            <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
+        <div class="col-lg-3">
+                <div class="card mb-3 border shadow-0">
+                <div class="card-body">
               <h6 class="mb-3">Summary</h6>
               <div class="d-flex justify-content-between">
                 <p class="mb-2">Total price:</p>
                 <p class="mb-2">Rp 888.000</p>
               </div>
               <div class="d-flex justify-content-between">
-                <p class="mb-2">Discount:</p>
-                <p class="mb-2 text-danger">-</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="mb-2">TAX:</p>
+                <p class="mb-2">Tax:</p>
                 <p class="mb-2">Free</p>
               </div>
               <hr />
               <div class="d-flex justify-content-between">
-                <p class="mb-2">Total price:</p>
+                <p class="mb-2">Total payment:</p>
                 <p class="mb-2 fw-bold">Rp 888.000</p>
               </div>
-
-              <div class="input-group mt-3 mb-4">
-                <input type="text" class="form-control border" name="" placeholder="Promo code" />
-                <button class="btn btn-light text-primary border">Apply</button>
-              </div>
-
               <hr />
-
                 <hr />
                 <h6 class="text-dark my-4">Items in Your Cart</h6>
 
-                <div class="d-flex align-items-center mb-4">
-                  <div class="me-3 position-relative">
+                <!-- First Item -->
+            <div class="d-flex align-items-center mb-4">
+                <div class="me-3 position-relative">
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                      1
+                        1
                     </span>
                     <img src="img/romand-shape.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-                  </div>
-                  <div class="">
+                </div>
+                <div class="">
                     <a href="#" class="nav-link">
-                      ROMAND Better Than Shape <br />
-                      Walnut Grain
+                        ROMAND Better Than Shape <br />
+                        Walnut Grain
                     </a>
                     <div class="price text-muted">Total: Rp. 199.000</div>
-                  </div>
                 </div>
+            </div>
 
-                <div class="d-flex align-items-center mb-4">
-                  <div class="me-3 position-relative">
+                 <!-- Second Item -->
+            <div class="d-flex align-items-center mb-4">
+                <div class="me-3 position-relative">
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                      1
+                        2
                     </span>
                     <img src="img/romand-glasting.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-                  </div>
-                  <div class="">
+                </div>
+                <div class="">
                     <a href="#" class="nav-link">
-                      ROMAND Glasting Melting Balm <br />
-                      Sorbet Balm
+                        ROMAND Glasting Melting Balm <br />
+                        Sorbet Balm
                     </a>
                     <div class="price text-muted">Total: Rp 189.000</div>
-                  </div>
                 </div>
+            </div>
 
-                <div class="d-flex align-items-center mb-4">
-                  <div class="me-3 position-relative">
+                <!-- Third Item -->
+            <div class="d-flex align-items-center mb-4">
+                <div class="me-3 position-relative">
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                      3
+                        3
                     </span>
                     <img src="img/romand-palette.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-                  </div>
-                  <div class="">
+                </div>
+                <div class="">
                     <a href="#" class="nav-link">
-                      ROMAND Better Than Palette <br />
-                      Secret Garden
+                        ROMAND Better Than Palette <br />
+                        Secret Garden
                     </a>
                     <div class="price text-muted">Total: Rp. 500.000</div>
-                  </div>
                 </div>
-              </div>
             </div>
+        </div>
+    </div>
+</div>
         <!-- Checkout -->
+        
       </div>
       </div>
     </div>
