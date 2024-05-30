@@ -49,7 +49,7 @@
         <div class="container">
             <div class="col-md-12">
                 <div class="text-center">
-                    <p class="pt-0 text-primary" style="font-size: 24px;">Thank You For Your Purchase With La Beaute!</p>
+                    <p class="pt-0 text-primary" style="font-size: 24px;">Receipt</p>
                 </div>
             </div>
         </div>
@@ -131,11 +131,7 @@
         <hr>
         <div class="row">
           <div class="col-xl-10">
-            <p>Thank you for your purchase</p>
-          </div>
-          <div class="col-xl-2">
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary text-capitalize"
-              style="background-color:#60bdf3 ;">Pay Now</button>
+            <p>Thank You For Your Purchase With La Beaute!</p>
           </div>
         </div>
 
