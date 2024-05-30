@@ -562,7 +562,12 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
                 <div class="p-4 rounded-bottom">
+<<<<<<< Updated upstream
                     <h4 class="product-title">DIOR Forever Compact Foundation</h4>
+=======
+                <h4 class="product-title">
+                    DIOR Forever Compact Foundation</h4>
+>>>>>>> Stashed changes
                     <p class="product-description">
                         Dior Forever Natural Velvet is the 1st no-transfer Dior compact foundationwith 24h wear,composed with 90% natural-origin ingredients. Ultra-soft and light, it brings a naturally matte perfection to the complexion, with a fine and creamy texture that lets the skin breathe while offering a sensation of comfort that lasts all day. Its high coverage corrects blemishes, smooths and evens out the complexion.
                         <span class="more-text d-none"></span>
