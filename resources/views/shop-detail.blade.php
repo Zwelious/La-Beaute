@@ -81,14 +81,16 @@
                                 <p class="mb-4">{{ $product->DESKRIPSI }}</p>
 
                                 <div class="mb-4">
-                                     <label for="shadeSelect" class="form-label">Select Shade</label>
-                                     <select class="form-select" id="shadeSelect" style="width: 200px;">
+                                    <label for="shadeSelect" class="form-label">Select Shade</label>
+                                    <select class="form-select" id="shadeSelect" style="width: 200px;">
                                         <option selected>Choose a shade...</option>
-                                        <option value="1">Pink</option>
-                                        <option value="2">Coral</option>
-                                        <option value="3">Berry</option>
-                                        <option value="4">Rosewood</option>
-                                        <option value="5">Cherry</option>
+                                        @foreach ($dataProducts as $shadeProduct)
+                                            Shade Product: {{ $shadeProduct->NAMA_PROD }} <!-- Debugging -->
+                                            @if ($shadeProduct->NAMA_PROD == $product->NAMA_PROD)
+                                                <option value="{{ $shadeProduct->SHADE }}">{{ $shadeProduct->SHADE }}
+                                                </option>
+                                            @endif
+                                        @endforeach
                                     </select>
                                 </div>
 
@@ -112,27 +114,27 @@
                             </div>
 
                             <script>
-                            document.querySelectorAll('.product-description').forEach(function(element) {
-                                var words = element.innerText.split(' ');
-                                if (words.length > 25) {
-                                    var visibleText = words.slice(0, 25).join(' ');
-                                    var hiddenText = words.slice(25).join(' ');
-                                    element.innerHTML = `
+                                document.querySelectorAll('.product-description').forEach(function(element) {
+                                    var words = element.innerText.split(' ');
+                                    if (words.length > 25) {
+                                        var visibleText = words.slice(0, 25).join(' ');
+                                        var hiddenText = words.slice(25).join(' ');
+                                        element.innerHTML = `
                                         ${visibleText}
                                         <span class="more-text-description d-none">${hiddenText}</span>
                                         <a href="#" class="read-more-description">Read more</a>
                                     `;
-                                }
-                            });
-
-                            document.querySelectorAll('.read-more-description').forEach(function(element) {
-                                element.addEventListener('click', function(e) {
-                                    e.preventDefault();
-                                    var moreText = this.previousElementSibling;
-                                    moreText.classList.toggle('d-none');
-                                    this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                                    }
                                 });
-                            });
+
+                                document.querySelectorAll('.read-more-description').forEach(function(element) {
+                                    element.addEventListener('click', function(e) {
+                                        e.preventDefault();
+                                        var moreText = this.previousElementSibling;
+                                        moreText.classList.toggle('d-none');
+                                        this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                                    });
+                                });
                             </script>
                             <div class="col-lg-12">
                                 <nav>
