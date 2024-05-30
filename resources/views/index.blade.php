@@ -463,7 +463,7 @@
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
                     <h4 class="product-title">
-                        PINKFLASH 2 IN 1 Dual-ended Lipstik Matte Velvet
+                        PINKFLASH 2IN1 Dual-ended Lipstik Matte Velvet
                     </h4>
                     <p class="product-description">
                         Brand new dual-ended design, more shades and more texture, satisfied with your variety of makeup finish. 💕TIPS: before applying lipstick, use PINKFLASH lip oil to moisturize the lips.
