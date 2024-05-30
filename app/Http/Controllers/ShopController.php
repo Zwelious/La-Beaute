@@ -23,4 +23,9 @@ class ShopController extends Controller
         ->paginate(9);
         return view('shop', compact('dataProducts'));
     }
+
+    public function getProductById($id_prod)
+    {
+        return $this->dataProducts->firstWhere('ID_PROD', $id_prod);
+    }
 }

@@ -50,7 +50,7 @@
                         <div class="row g-4">
                             <div class="col-xl-3">
                                 <div class="input-group w-100 mx-auto d-flex">
-                                    <input type="search" class="form-control p-3" placeholder="Search" aria-describedby="search-icon-1">
+                                    <input type="search" class="form-control p-3" placeholder="Search" aria-describedby="search-icon-1" id="search">
                                     <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                             <div class="col-xl-3">
                                 <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
                                     <label for="fruits">Default Sorting:</label>
-                                    <select id="fruits" name="fruitlist" class="border-0 form-select-sm bg-light me-3" form="fruitform">
+                                    <select id="fruits" name="fruitlist" class="border-0 form-select-sm bg-light me-3" form="fruitform" id="filter">
                                         <option value="volvo">Nothing</option>
                                         <option value="saab">Discount</option>
                                     </select>
