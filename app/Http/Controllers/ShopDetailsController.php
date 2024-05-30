@@ -16,9 +16,11 @@ class ShopDetailsController extends Controller
 
     public function ShopDetails($id_prod)
     {
-        $products = $this->shopController->dataProducts;
+        $product = $this->shopController->getProductById($id_prod);
 
-        $product = $products->firstWhere('ID_PROD', $id_prod);
+        if (!$product) {
+            return abort(404, 'Product not found.');
+        }
 
         return view('shop-detail', ['product' => $product]);
     }
