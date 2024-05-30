@@ -297,7 +297,7 @@
     </div>
 </div>
 </div>
-        
+
 
 <!-- Fruits Shop End-->
 
@@ -367,7 +367,7 @@
                     <p class="product-description">
                         Boost the color with a glossy glow! A dewy-ful & long-lasting lip tint that forms like a welcome rain on my lips
                         <span class="more-text d-none"></span>
-                    
+
                     </p>
                     <div class="d-flex flex-column">
                         <div class="price-wrap mb-2">
@@ -380,7 +380,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
                     <img src="img/romand-blur.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
@@ -438,7 +438,7 @@
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
                     <h4 class="product-title">
-                        PINKFLASH Natural Lip Oil Moisturize 
+                        PINKFLASH Natural Lip Oil Moisturize
                     </h4>
                     <p class="product-description">
                         Effectively repair the lip skin barrier, making lips look healthier, softer, and smoother
@@ -463,7 +463,7 @@
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
                     <h4 class="product-title">
-                        PINKFLASH 2 IN 1 Dual-ended Lipstik Matte Velvet
+                        PINKFLASH 2IN1 Dual-ended Lipstik Matte Velvet
                     </h4>
                     <p class="product-description">
                         Brand new dual-ended design, more shades and more texture, satisfied with your variety of makeup finish. 💕TIPS: before applying lipstick, use PINKFLASH lip oil to moisturize the lips.
@@ -473,7 +473,7 @@
                         <div class="price-wrap mb-2">
                             <strong class="text-dark fs-5 fw-bold mb-0">Rp 33.250</strong>
                             <del class="text-success">Rp 35.000</del>
-                        </div>            
+                        </div>
                         <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
                             <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
                         </a>
@@ -506,7 +506,7 @@
                 </div>
             </div>
 
-            
+
             <div class="border border-primary rounded position-relative vesitable-item">
                 <div class="vesitable-img">
                     <img src="img/DR100401.png" class="img-fluid w-100 rounded-top bg-light" alt="">
@@ -562,7 +562,12 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
                 <div class="p-4 rounded-bottom">
-                    <h4>DIOR Forever Compact Foundation</h4>
+<<<<<<< Updated upstream
+                    <h4 class="product-title">DIOR Forever Compact Foundation</h4>
+=======
+                <h4 class="product-title">
+                    DIOR Forever Compact Foundation</h4>
+>>>>>>> Stashed changes
                     <p class="product-description">
                         Dior Forever Natural Velvet is the 1st no-transfer Dior compact foundationwith 24h wear,composed with 90% natural-origin ingredients. Ultra-soft and light, it brings a naturally matte perfection to the complexion, with a fine and creamy texture that lets the skin breathe while offering a sensation of comfort that lasts all day. Its high coverage corrects blemishes, smooths and evens out the complexion.
                         <span class="more-text d-none"></span>
