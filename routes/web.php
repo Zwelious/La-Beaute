@@ -13,6 +13,7 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\AdminTransController;
 use App\Http\Controllers\AdminShopController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ReceiptController;
 
 
 /*
@@ -29,6 +30,8 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/', [HomeController::class, 'Home']);
 
 Route::get('/login', [LoginController::class, 'Login'])->name('login');
 Route::post('/login', [LoginController::class, 'LoginAction'])->name('login');
@@ -61,3 +64,5 @@ Route::get('/admin-dashboard', [AdminTransController::class, 'AdminTrans']);
 Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
 
 Route::get('/contact', [ContactController::class, 'Contact']);
+
+Route::get('/receipt', [ReceiptController::class, 'Receipt']);
