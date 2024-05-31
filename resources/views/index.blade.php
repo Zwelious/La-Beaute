@@ -362,7 +362,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
                         ROMAND Dewyful Water Tint</h4>
                     <p class="product-description">
                         Boost the color with a glossy glow! A dewy-ful & long-lasting lip tint that forms like a welcome rain on my lips
@@ -387,7 +387,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
                         ROMAND Blur Fudge Tint
                     </h4>
                     <p class="product-description">
@@ -412,7 +412,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
                         PINKFLASH Oil Controller Loose Powder
                     </h4>
                     <p class="product-description">
@@ -437,7 +437,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
                         PINKFLASH Natural Lip Oil Moisturize
                     </h4>
                     <p class="product-description">
@@ -462,7 +462,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
                         PINKFLASH 2IN1 Dual-ended Lipstik Matte Velvet
                     </h4>
                     <p class="product-description">
@@ -487,7 +487,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
                         DIOR Addict Lip Glow
                     </h4>
                     <p class="product-description">
@@ -513,7 +513,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Lips</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title"style="min-height: 2em; line-height: 1em; overflow: hidden;">
                         DIOR Addict Lip Tint
                     </h4>
                     <p class="product-description">
@@ -539,7 +539,7 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
                 <div class="p-4 rounded-bottom">
-                    <h4 class="product-title">
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
                     ROMAND See-Through Veil Lighter</h4>
                     <p class="product-description">
                     A new powder highlighter to brighten, draw attention, and stun. This Veilighter contours and reflects light beautifully for a goddess-like glow.
@@ -562,12 +562,8 @@
                 </div>
                 <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Face</div>
                 <div class="p-4 rounded-bottom">
-<<<<<<< Updated upstream
-                    <h4 class="product-title">DIOR Forever Compact Foundation</h4>
-=======
-                <h4 class="product-title">
-                    DIOR Forever Compact Foundation</h4>
->>>>>>> Stashed changes
+                    <h4 class="product-title" style="min-height: 2em; line-height: 1em; overflow: hidden;">
+                        DIOR Forever Compact Foundation</h4>
                     <p class="product-description">
                         Dior Forever Natural Velvet is the 1st no-transfer Dior compact foundationwith 24h wear,composed with 90% natural-origin ingredients. Ultra-soft and light, it brings a naturally matte perfection to the complexion, with a fine and creamy texture that lets the skin breathe while offering a sensation of comfort that lasts all day. Its high coverage corrects blemishes, smooths and evens out the complexion.
                         <span class="more-text d-none"></span>
@@ -587,19 +583,19 @@
     </div>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.product-title').forEach(function(element) {
-        var words = element.innerText.split(' ');
-        if (words.length > 4) {
-            var visibleText = words.slice(0, 4).join(' ');
-            var hiddenText = words.slice(4).join(' ');
-            element.innerHTML = `
-                ${visibleText}
-                <span class="more-text d-none"> ${hiddenText}</span>
-                <a href="#" class="read-more-title">...</a>
-            `;
-        }
-    });
+     document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.product-title').forEach(function(element) {
+            var words = element.innerText.split(' ');
+            if (words.length > 4) {
+                var visibleText = words.slice(0, 4).join(' ');
+                var hiddenText = words.slice(4).join(' ');
+                element.innerHTML = `
+                    ${visibleText}
+                    <span class="more-text d-none"> ${hiddenText}</span>
+                    <a href="#" class="read-more-title">...</a>
+                `;
+            }
+        });
 
     document.querySelectorAll('.product-description').forEach(function(element) {
             var words = element.innerText.split(' ');
