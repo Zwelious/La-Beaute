@@ -55,6 +55,8 @@ Route::get('/shop', [ShopController::class, 'Shop']);
 
 Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
 
+Route::get('/search', [App\Http\Controllers\ShopController::class, 'search'])->name('search');
+
 Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
 
 Route::get('/admin-dashboard', [AdminTransController::class, 'AdminTrans']);

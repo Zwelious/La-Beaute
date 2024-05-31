@@ -50,12 +50,36 @@
                     <div class="col-lg-12">
                         <div class="row g-4">
                             <div class="col-xl-3">
-                                <div class="input-group w-100 mx-auto d-flex">
-                                    <input type="search" class="form-control p-3" placeholder="Search"
-                                        aria-describedby="search-icon-1" id="search">
-                                    <span id="search-icon-1" class="input-group-text p-3"><i
-                                            class="fa fa-search"></i></span>
+                                                        <form action="{{ route('search') }}" method="GET" class="w-100 mx-auto d-flex">
+                            <div class="input-group w-100 mx-auto d-flex">
+                                    <input type="search" name="query" class="form-control p-3" placeholder="Search" aria-describedby="search-icon-1" id="search" value="{{ request('query') }}">
+                                    <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                                 </div>
+                            </form>
+
+                            @if(isset($query) && $query != '')
+                                @if($products->isEmpty())
+                                    <p>No products found</p>
+                                @else
+                                    <div class="row">
+                                        @foreach($products as $product)
+                                            <div class="col-md-4">
+                                                <div class="card mb-4">
+                                                    <img src="{{ $product->FOTO_PROD }}" class="card-img-top" alt="{{ $product->NAMA_PROD }}">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{ $product->NAMA_PROD }}</h5>
+                                                        <p class="card-text">{{ $product->DESKRIPSI }}</p>
+                                                        <p class="card-text">${{ $product->HARGA }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @endif
+                            @elseif(!isset($query))
+                                <p>Enter a query to find products.</p>
+                            @endif
+
                             </div>
                             <div class="col-6"></div>
                             <div class="col-xl-3">
