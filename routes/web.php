@@ -30,6 +30,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/', [HomeController::class, 'Home']);
+
 Route::get('/login', [LoginController::class, 'Login'])->name('login');
 Route::post('/login', [LoginController::class, 'LoginAction'])->name('login');
 
