@@ -85,7 +85,6 @@
                                     <select class="form-select" id="shadeSelect" style="width: 200px;">
                                         <option selected>Choose a shade...</option>
                                         @foreach ($dataProducts as $shadeProduct)
-                                            Shade Product: {{ $shadeProduct->NAMA_PROD }} <!-- Debugging -->
                                             @if ($shadeProduct->NAMA_PROD == $product->NAMA_PROD)
                                                 <option value="{{ $shadeProduct->SHADE }}">{{ $shadeProduct->SHADE }}
                                                 </option>
