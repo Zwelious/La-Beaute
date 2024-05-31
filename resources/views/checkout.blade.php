@@ -30,7 +30,7 @@
 
 @section("body")
 
-<section class="bg-light py-5">
+<section class="bg-light py-5 mt-10">
     <div class="container pt-5">
       <div class="row mt-5 justify-content-center">
         <div class="col-xl-8 col-lg-8 mb-4">
@@ -68,7 +68,7 @@
                 <div class="col-6 mb-3">
                   <p class="mb-0">Phone</p>
                   <div class="form-outline">
-                    <input type="tel" id="phone" name="phone" value="+62 " class="form-control" />
+                    <input type="tel" id="phone" name="phone" placeholder="Type Your Phone Number Here" class="form-control" />
                     @if($errors->has('phone'))
                     <div class="text-danger">{{ $errors->first('phone') }}</div>
                     @endif
@@ -135,7 +135,7 @@
               </div>
 
               <div class="row">
-                <div class="col-sm-8 mb-3">
+                <div class="col-sm-15 mb-3">
                   <p class="mb-0">Address</p>
                   <div class="form-outline">
                     <input type="text" id="address" name="address" placeholder="Type Your Address Here" class="form-control" />
@@ -147,39 +147,20 @@
 
                 <div class="col-sm-4 mb-3">
                   <p class="mb-0">City</p>
-                  <select class="form-select">
-                    <option value="1">New York</option>
-                    <option value="2">Moscow</option>
-                    <option value="3">Samarqand</option>
-                  </select>
-                </div>
-
-                <div class="col-sm-4 mb-3">
-                  <p class="mb-0">House</p>
                   <div class="form-outline">
-                    <input type="text" id="house" name="house" placeholder="Type Your House Here" class="form-control" />
-                    @if($errors->has('house'))
-                    <div class="text-danger">{{ $errors->first('house') }}</div>
+                    <input type="text" id="city" name="city" placeholder="Type Your City Here" class="form-control" />
+                    @if($errors->has('city'))
+                    <div class="text-danger">{{ $errors->first('city') }}</div>
                     @endif
                   </div>
                 </div>
 
                 <div class="col-sm-4 col-6 mb-3">
-                  <p class="mb-0">Postal code</p>
+                  <p class="mb-0">Country</p>
                   <div class="form-outline">
-                    <input type="text" id="postalCode" name="postalCode" class="form-control" />
-                    @if($errors->has('postalCode'))
-                    <div class="text-danger">{{ $errors->first('postalCode') }}</div>
-                    @endif
-                  </div>
-                </div>
-
-                <div class="col-sm-4 col-6 mb-3">
-                  <p class="mb-0">Zip</p>
-                  <div class="form-outline">
-                    <input type="text" id="zip" name="zip" class="form-control" />
-                    @if($errors->has('zip'))
-                    <div class="text-danger">{{ $errors->first('zip') }}</div>
+                    <input type="text" id="country" name="country" placeholder="Type Your Country Here" class="form-control" />
+                    @if($errors->has('country'))
+                    <div class="text-danger">{{ $errors->first('country') }}</div>
                     @endif
                   </div>
                 </div>
@@ -193,20 +174,11 @@
               <div class="mb-3">
                 <p class="mb-0">Message to seller</p>
                 <div class="form-outline">
-                  <textarea class="form-control" id="messageToSeller" rows="2"></textarea>
+                  <textarea class="form-control" id="messageToSeller" placeholder="Describe your request (e.g. 'Give more freebies in my package plz')" rows="2"></textarea>
                 </div>
               </div>
 
               <hr class="my-4" />
-              <div class="col-sm-4 mb-3">
-                <p class="mb-0">City</p>
-                <select class="form-select">
-                  <option value="1">Indonesia</option>
-                  <option value="2">South Korea</option>
-                  <option value="3">Japan</option>
-                  <option value="3">Thailand</option>
-                </select>
-              </div>
 
               <h5 class="card-title mb-3">Payment Info</h5>
               <img src="img/payment.png" class="img-fluid mb-3" alt="">
