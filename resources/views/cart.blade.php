@@ -105,8 +105,8 @@
                     </div>
 
                     <div class="mt-3">
-                    <a href="{{ route('checkout', ['id_prod' => $cart->ID_PROD]) }}" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
-                    <a href="{{ route('shop', ['id_prod' => $cart->ID_PROD]) }}" class="btn btn-light w-100 border mt-2"> Back to shop </a>
+                    <a href="{{ route('checkout') }}" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
+                    <a href="{{ route('shop') }}" class="btn btn-light w-100 border mt-2"> Back to shop </a>
                     </div>
                 </div>
                 </div>
