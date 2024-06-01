@@ -3,17 +3,8 @@
 @section("navbar")
     <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
     <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
-    <a href="{{ url('/shop-details') }}" class="nav-item nav-link">Shop Detail</a>
     <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
     <a href="{{ url('/contact') }}" class="nav-item nav-link active">Contact</a>
-    <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
-        <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item">Dashboard</a>
-            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Shop Maintenance</a>
-            <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
-        </div>
-    </div>
     </div>
     <div class="d-flex m-3 me-0">
     <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">

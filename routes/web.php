@@ -14,6 +14,7 @@ use App\Http\Controllers\AdminTransController;
 use App\Http\Controllers\AdminShopController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReceiptController;
+use App\Http\Controllers\HomeController;
 
 
 /*
