@@ -30,10 +30,10 @@
                         <h4 class="mb-3 text-secondary">100% Quality Beauty Products</h4>
                         <h1 class="mb-5 display-3 text-primary">Your Beauty Journey Starts Here!</h1>
                         <div class="position-relative mx-auto">
-                            <button type="button"
-                                class="btn btn-primary border-2 border-secondary py-3 px-4 rounded-pill text-white w-50">
+                            <a type="button"
+                                href="{{ url('/shop') }}" class="btn btn-primary border-2 border-secondary py-3 px-4 rounded-pill text-white w-50">
                                 Start Shopping Now
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-5">
