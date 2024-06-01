@@ -101,7 +101,7 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <p class="mb-2">Total price:</p>
-                        <p id="total-price" class="mb-2"></p>
+                        <p class="mb-2">Rp 1.564.100</p>
                     </div>
                     <div class="d-flex justify-content-between">
                     <p class="mb-2">Tax:</p>
@@ -110,7 +110,7 @@
                     <hr />
                     <div class="d-flex justify-content-between">
                     <p class="mb-2">Total payment:</p>
-                    <p class="mb-2 fw-bold">Rp 226.050</p>
+                    <p class="mb-2 fw-bold">Rp 1.564.100</p>
                     </div>
 
                     <div class="mt-3">
