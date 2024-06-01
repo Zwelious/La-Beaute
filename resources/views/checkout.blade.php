@@ -162,13 +162,6 @@
                 <label class="form-check-label" for="saveAddress">Save this address</label>
               </div>
 
-              <div class="mb-3">
-                <p class="mb-0">Message to seller</p>
-                <div class="form-outline">
-                  <textarea class="form-control" id="messageToSeller" placeholder="Describe your request (e.g. 'Give more freebies in my package plz')" rows="2"></textarea>
-                </div>
-              </div>
-
               <hr class="my-4" />
 
               <h5 class="card-title mb-3">Payment Info</h5>

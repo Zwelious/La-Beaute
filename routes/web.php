@@ -54,9 +54,11 @@ Route::post('/checkout', [CheckoutController::class, 'CheckoutSubmit'])->name('c
 
 Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
 
-Route::get('/shop', [ShopController::class, 'Shop']);
+Route::get('/shop', [ShopController::class, 'Shop'])->name('shop');
 
 Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
+
+Route::get('/search', [App\Http\Controllers\ShopController::class, 'search'])->name('search');
 
 Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
 
