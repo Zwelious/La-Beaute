@@ -14,6 +14,7 @@ use App\Http\Controllers\AdminTransController;
 use App\Http\Controllers\AdminShopController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReceiptController;
+use App\Http\Controllers\HomeController;
 
 
 /*
@@ -56,6 +57,8 @@ Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
 Route::get('/shop', [ShopController::class, 'Shop'])->name('shop');
 
 Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
+
+Route::get('/search', [App\Http\Controllers\ShopController::class, 'search'])->name('search');
 
 Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
 

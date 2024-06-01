@@ -3,17 +3,8 @@
 @section("navbar")
     <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
     <a href="{{ url('/shop') }}" class="nav-item nav-link active">Shop</a>
-    <a href="{{ url('/shop-details') }}" class="nav-item nav-link">Shop Detail</a>
     <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
     <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
-    <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
-        <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item">Dashboard</a>
-            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Shop Maintenance</a>
-            <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
-        </div>
-    </div>
     </div>
     <div class="d-flex m-3 me-0">
     <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
@@ -50,9 +41,36 @@
                         <div class="row g-4">
                             <div class="col-xl-3">
                                 <div class="input-group w-100 mx-auto d-flex">
-                                    <input type="search" class="form-control p-3" placeholder="Search" aria-describedby="search-icon-1">
-                                    <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                                    <input type="search" class="form-control p-3" placeholder="Search"
+                                        aria-describedby="search-icon-1" id="search">
+                                    <span id="search-icon-1" class="input-group-text p-3"><i
+                                            class="fa fa-search"></i></span>
                                 </div>
+                            </form>
+
+                            @if(isset($query) && $query != '')
+                                @if($products->isEmpty())
+                                    <p>No products found</p>
+                                @else
+                                    <div class="row">
+                                        @foreach($products as $product)
+                                            <div class="col-md-4">
+                                                <div class="card mb-4">
+                                                    <img src="{{ $product->FOTO_PROD }}" class="card-img-top" alt="{{ $product->NAMA_PROD }}">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{ $product->NAMA_PROD }}</h5>
+                                                        <p class="card-text">{{ $product->DESKRIPSI }}</p>
+                                                        <p class="card-text">${{ $product->HARGA }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @endif
+                            @elseif(!isset($query))
+                                <p>Enter a query to find products.</p>
+                            @endif
+
                             </div>
                             <div class="col-6"></div>
                             <div class="col-xl-3">

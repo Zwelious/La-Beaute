@@ -3,17 +3,8 @@
 @section("navbar")
     <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
     <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
-    <a href="{{ url('/shop-details') }}" class="nav-item nav-link">Shop Detail</a>
     <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
     <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
-    <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
-        <div class="dropdown-menu m-0 bg-secondary rounded-0">
-            <a href="{{ url('/admin-dashboard') }}" class="dropdown-item">Dashboard</a>
-            <a href="{{ url('/admin-shop') }}" class="dropdown-item">Shop Maintenance</a>
-            <a href="{{ url('/') }}" class="dropdown-item">Log out</a>
-        </div>
-    </div>
     </div>
     <div class="d-flex m-3 me-0">
     <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
@@ -114,8 +105,8 @@
                     </div>
 
                     <div class="mt-3">
-                    <a href="{{ route('checkout', ['id_prod' => $cart->ID_PROD]) }}" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
-                    <a href="{{ route('shop', ['id_prod' => $cart->ID_PROD]) }}" class="btn btn-light w-100 border mt-2"> Back to shop </a>
+                    <a href="{{ route('checkout') }}" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
+                    <a href="{{ route('shop') }}" class="btn btn-light w-100 border mt-2"> Back to shop </a>
                     </div>
                 </div>
                 </div>
@@ -180,18 +171,18 @@
     </section>
     <!-- Recommend -->
 <script>
-    function changeQuantity(id, currentqty, change) 
+    function changeQuantity(id, currentqty, change)
     {
         const inputField = document.querySelector(`#quantity-${id}`);
-        if (inputField) 
+        if (inputField)
         {
-            let currentQty = parseInt(inputField.value, 10); 
+            let currentQty = parseInt(inputField.value, 10);
             let newQuantity = currentQty + change;
             if (newQuantity < 1) {
                 newQuantity = 1;
             }
             inputField.value = newQuantity;
-            
+
             inputField.setAttribute('data-current-qty', newQuantity);
             updateTotalPrice();
         }
@@ -217,6 +208,6 @@
     // Update the total price element
     document.getElementById('total-price').innerText = formattedTotalPrice;
 }
-    
+
 </script>
 @endsection
