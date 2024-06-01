@@ -323,6 +323,7 @@
 
                                     </div>
                                 </div>
+                            </div>
 
                                 <div id="tab-4" class="tab-pane fade p-0">
                                     <div class="container-fluid vesitable pt-3">
@@ -379,7 +380,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
 
 
