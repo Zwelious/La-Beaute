@@ -526,7 +526,7 @@
                             <p class="mb-4 text-white">Start your beauty goals with us, right here right now. Get in touch
                                 with
                                 us!</p>
-                            <a href="{{ url('/shop') }}"
+                            <a href="{{ url('/contact') }}"
                                 class="banner-btn btn border-2 border-white rounded-pill text-white py-3 px-5">Contact Us
                                 Now</a>
                         </div>
