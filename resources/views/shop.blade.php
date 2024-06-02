@@ -231,7 +231,7 @@
                                                     <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">{{ $product->KATEGORI }}</div>
                                                     <div class="p-4 border border-secondary border-top-0 rounded-bottom">
                                                         <h4>{{ $product->NAMA_PROD }}</h4>
-                                                        <p>{{ $product->DESKRIPSI }}</p>
+                                                        <p class="product-description">{{ $product->DESKRIPSI }}<span class="more-text d-none"></span></p>
                                                         <div class="d-flex flex-column">
                                                             @if ($product->DISKON > 0)
                                                                 <div class="price-wrap mb-2">
@@ -281,5 +281,30 @@
             </div>
         </div>
         <!--Shop End-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                document.querySelectorAll('.product-description').forEach(function(element) {
+                    var words = element.innerText.split(' ');
+                    if (words.length > 12) {
+                        var visibleText = words.slice(0, 12).join(' ');
+                        var hiddenText = words.slice(12).join(' ');
+                        element.innerHTML = `
+                        ${visibleText}
+                        <span class="more-text-description d-none"> ${hiddenText}</span>
+                        <a href="#" class="read-more-description">Read more</a>
+                    `;
+                    }
+                });
+                document.querySelectorAll('.read-more-description').forEach(function(element) {
+                    element.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        var moreText = this.previousElementSibling;
+                        moreText.classList.toggle('d-none');
+                        this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                    });
+                });
+            });
+        </script>
 
 @endsection
