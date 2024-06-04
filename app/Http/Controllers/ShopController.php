@@ -30,19 +30,24 @@ class ShopController extends Controller
         return $this->dataProducts->firstWhere('ID_PROD', $id_prod);
     }
 
-    public function search(Request $request)
+    public function shopSearch(Request $request)
     {
-        $query = $request->input('query');
-        $products = collect();
+        $query = $request->input('searchQuery');
 
-        if ($query) {
-            $products = DB::table('DETAIL_PRODUK')
+        if ($query != '') {
+            $dataProducts = DB::table('DETAIL_PRODUK')
+                ->select('ID_PROD', 'NAMA_PROD', 'SHADE', 'DESKRIPSI', 'HARGA', 'DISKON', 'KATEGORI', 'STOCK', 'FOTO_PROD')
                 ->where('NAMA_PROD', 'LIKE', "%{$query}%")
                 ->orWhere('DESKRIPSI', 'LIKE', "%{$query}%")
-                ->get();
+                ->paginate(9);
+        }
+        else{
+            $dataProducts = DB::table('DETAIL_PRODUK')
+            ->select('ID_PROD', 'NAMA_PROD', 'SHADE', 'DESKRIPSI', 'HARGA', 'DISKON', 'KATEGORI', 'STOCK', 'FOTO_PROD')
+            ->paginate(9);
         }
 
-        return view('shop', compact('products', 'query'));
+        return view('shop', compact('dataProducts', 'query'));
     }
 }
 
