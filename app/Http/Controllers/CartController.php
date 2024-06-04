@@ -14,6 +14,7 @@ class CartController extends Controller
         ->join('customer', 'keranjang.ID_CUST', '=', 'customer.ID_CUST')
         ->select('keranjang.ID_PROD', 'detail_produk.NAMA_PROD', 'detail_produk.SHADE', 'keranjang.QTY', 'detail_produk.HARGA', 'detail_produk.FOTO_PROD', 'detail_produk.DISKON')
         ->get();
+        
         return view('cart', compact('cartProducts'));
     }
 }

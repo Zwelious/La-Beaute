@@ -42,6 +42,7 @@
                                         $newPrice = $cart->HARGA;
                                     @endphp
                                 @endif
+                                
                         <div class="row gy-3 mb-4" data-id="{{ $cart->ID_PROD }}" data-price="{{ $newPrice }}">
                             <div class="col-lg-7">
                                 <div class="me-lg-5">
