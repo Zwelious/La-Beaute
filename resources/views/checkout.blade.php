@@ -206,8 +206,7 @@
               </div>
 
               <div class="float-end">
-                <button class="btn btn-light border">Cancel</button>
-                <button class="btn btn-success shadow-0 border">Continue</button>
+                <button class="btn btn-success shadow-0 border">Pay Now</button>
               </div>
             </div>
           </div>
