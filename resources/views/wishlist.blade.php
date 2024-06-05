@@ -14,9 +14,24 @@
         <i class="fa fa-shopping-bag fa-2x"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
-    <a href="{{ url('/login') }}" class="my-auto">
-        <i class="fas fa-user fa-2x"></i>
-    </a>
+    @if(session()->has('id_cust'))
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user fa-2x"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{{ url('/change-password') }}">Change Password</a>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+            </div>
+        </div>
+    @else
+        <a href="{{ url('/login') }}" class="my-auto">
+            <i class="fas fa-user fa-2x"></i>
+        </a>
+    @endif
 @endsection
 
 @section("body")
@@ -90,7 +105,7 @@
                 <h1 class="mb-0">Recommended Products</h1>
                 <div class="owl-carousel vegetable-carousel justify-content-center">
                 @foreach($recommendedProducts as $product)
-                        
+
                             <div class="border border-primary rounded position-relative vesitable-item">
                                 <div class="vesitable-img">
                                     <img src="{{ $product->FOTO_PROD }}" class="img-fluid w-100 rounded-top"

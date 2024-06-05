@@ -17,6 +17,7 @@ use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\HomeController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,3 +70,5 @@ Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
 Route::get('/contact', [ContactController::class, 'Contact']);
 
 Route::get('/receipt', [ReceiptController::class, 'Receipt']);
+
+Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');

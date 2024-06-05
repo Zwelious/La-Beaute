@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -34,13 +35,13 @@ class LoginController extends Controller
                 if ($request->has('remember')) {
                     Cookie::queue('id_cust', $DBuser->ID_CUST, 60 * 24 * 7);
                     Cookie::queue('email', $DBuser->EMAIL, 60 * 24 * 7);
+                    Cookie::queue('name', $DBuser->NAME, 60 * 24 * 7);
                     // Do not store password or password hashes in cookies
                 } else {
                     $request->session()->put('id_cust', $DBuser->ID_CUST);
                     $request->session()->put('email', $DBuser->EMAIL);
-                    // Do not store password or password hashes in the session
+                    $request->session()->put('name', $DBuser->NAME);
                 }
-
                 return redirect('/')->with('success', 'Login Successful');
             } else {
                 return redirect('/login')->with('error', 'Login Failed! Please Try Again.');
@@ -50,4 +51,17 @@ class LoginController extends Controller
         }
     }
 
+    public function Logout(Request $request)
+    {
+        if (session()->has('id_cust') || Cookie::get('id_cust') != null) {
+            session()->pull('id_cust');
+            session()->pull('name');
+            session()->pull('email');
+
+            Cookie::queue(Cookie::forget('id_cust'));
+            Cookie::queue(Cookie::forget('name'));
+            Cookie::queue(Cookie::forget('email'));
+        }
+        return redirect('/');
+    }
 }

@@ -48,9 +48,9 @@
                         <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">labeaute@gmail.com</a></small>
                     </div>
                     <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                        @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
+                            <small class="text-white mx-2" id="loginName">Welcome,<strong>{{ Session::get('name') ?? Cookie::get('name')}}</strong></small>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -94,10 +94,10 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="d-flex justify-content-end pt-3">
-                                <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn  btn-outline-primary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-primary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -173,6 +173,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
         <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
         <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
         <script src="{{ asset('lib/lightbox/js/lightbox.min.js') }}"></script>

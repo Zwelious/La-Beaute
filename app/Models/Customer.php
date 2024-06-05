@@ -49,9 +49,6 @@ class Customer extends Authenticatable
 		'IS_WAREHOUSE'
 	];
 
-    protected $hidden = [
-        'PASSWORD_HASH',
-    ];
 
 	public function keranjangs()
 	{
