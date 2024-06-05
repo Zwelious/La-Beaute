@@ -72,53 +72,40 @@
               </tr>
             </thead>
             <tbody>
+              <!-- Iterate over cartProducts to display products -->
+              @php
+                $totalPrice = 0;
+              @endphp
+              @foreach($cartProducts as $key => $product)
               <tr>
-                <th scope="row">1</th>
-                <td>Pro Package</td>
-                <td>4</td>
-                <td>$200</td>
-                <td>$800</td>
+                <th scope="row">{{ $key + 1 }}</th>
+                <td>{{ $product->NAMA_PROD }}</td>
+                <td>{{ $product->QTY }}</td>
+                <td>{{ $product->HARGA }}</td>
+                <!-- Calculate and display the total price per item -->
+                <td>{{ $product->HARGA * $product->QTY }}</td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Web hosting</td>
-                <td>1</td>
-                <td>$10</td>
-                <td>$10</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Consulting</td>
-                <td>1 year</td>
-                <td>$300</td>
-                <td>$300</td>
-              </tr>
+              @php
+                $totalPrice += $product->HARGA * $product->QTY;
+              @endphp
+              @endforeach
+              <!-- End of product iteration -->
             </tbody>
-
           </table>
         </div>
         <div class="row">
-          <div class="col-xl-8">
-            <p class="ms-3">Thank You For Your Purchase With La Beaute!</p>
+          <div class="col-xl-7">
+            <p class="ms-3">Thank You For Your Purchase!</p>
           </div>
-        <div class="col-xl-3">
+          <div class="col-xl-4">
             <ul class="list-unstyled">
-                <li class="text-muted d-flex justify-content-between">
-                    <span class="text-black">Total Price</span>
-                    <span>$1110</span>
-                </li>
-                <li class="text-muted d-flex justify-content-between mt-2">
-                    <span class="text-black">Tax</span>
-                    <span>Free</span>
-                </li>
-            </ul>
-            <p class="text-black d-flex justify-content-between">
-                <span><b>Total Paid<b></span>
-                <span style="font-size: 25px;"><b>$1221<b></span>
-            </p>
+              <li class="text-muted d-flex justify-content-between">
+                <span class="text-black">Total Paid:</span>
+                <span>Rp {{ number_format($totalPrice, 0, ',', '.') }}</span>
+            </li>
+            <!-- Other details -->
+          </ul>
         </div>
-        </div>
-        <hr>
       </div>
     </div>
   </div>

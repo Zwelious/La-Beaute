@@ -380,14 +380,10 @@
                                     </div>
                                 </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
-
-
         <!-- Fruits Shop End-->
 
 
