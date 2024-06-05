@@ -87,7 +87,7 @@
 <!-- Recommended -->
 <div class="container-fluid vesitable pt-5">
             <div class="container pt-5">
-                <h1 class="mb-0">Discount Products Here!</h1>
+                <h1 class="mb-0">Recommended Products</h1>
                 <div class="owl-carousel vegetable-carousel justify-content-center">
                 @foreach($recommendedProducts as $product)
                         
