@@ -20,7 +20,7 @@
                     <i class="fas fa-user fa-2x"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{ url('/change-password') }}">Change Password</a>
+                    <a class="dropdown-item" href="{{ url('/forget') }}">Change Password</a>
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
                         <button type="submit" class="dropdown-item">Logout</button>

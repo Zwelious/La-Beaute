@@ -39,8 +39,8 @@
     @section('body')
         <section class="vh-100" style="background-color: #E981A4;">
             <div class="container py-5 h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col col-xl-10">
+                <div class="row d-flex justify-content-center align-items-center h-100 pt-5">
+                    <div class="col col-xl-10 pt-5">
                         <div class="card" style="border-radius: 1rem;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
@@ -53,16 +53,26 @@
                                         <form>
 
                                             <div class="d-flex align-items-center mb-3 pb-1">
-
-                                                <span class="h1 fw-bold mb-0">Forgot Password</span>
+                                                @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
+                                                    <span class="h1 fw-bold mb-0">Change Password</span>
+                                                @else
+                                                    <span class="h1 fw-bold mb-0">Forgot Password</span>
+                                                @endif
                                             </div>
-
 
                                             <div data-mdb-input-init class="form-outline mb-4">
                                                 <input type="email" id="form2Example17"
                                                     class="form-control form-control-lg" />
                                                 <label class="form-label" for="form2Example17">Email address</label>
                                             </div>
+
+                                            @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
+                                                <div data-mdb-input-init class="form-outline mb-4">
+                                                    <input type="old password" id="oldpassword"
+                                                        class="form-control form-control-lg" />
+                                                    <label class="form-label" for="form2Example27">Old Password</label>
+                                                </div>
+                                            @endif
 
                                             <div data-mdb-input-init class="form-outline mb-4">
                                                 <input type="new password" id="form2Example27"
