@@ -16,8 +16,6 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\HomeController;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,3 +70,7 @@ Route::get('/contact', [ContactController::class, 'Contact']);
 Route::get('/receipt', [ReceiptController::class, 'Receipt']);
 
 Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');
+
+Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
+
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');

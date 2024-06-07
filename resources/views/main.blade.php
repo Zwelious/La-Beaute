@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>La Beautè</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -21,7 +22,6 @@
         <link href="{{ asset('lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
         <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
-
         <!-- Customized Bootstrap Stylesheet -->
         <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
@@ -37,7 +37,6 @@
             <div class="spinner-grow text-primary" role="status"></div>
         </div>
         <!-- Spinner End -->
-
 
         <!-- Navbar start -->
         <div class="container-fluid fixed-top">
@@ -163,11 +162,8 @@
         </div>
         <!-- Copyright End -->
 
-
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
-
 
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
