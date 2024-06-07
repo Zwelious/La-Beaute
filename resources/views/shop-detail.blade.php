@@ -16,9 +16,10 @@
                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1"
                 style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
         </a>
-        @if(session()->has('id_cust'))
+        @if (session()->has('id_cust'))
             <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user fa-2x"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -65,6 +66,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <h4 class="fw-bold mb-3">{{ $product->NAMA_PROD }}</h4>
+
                                 <p class="mb-3">Category: {{ $product->KATEGORI }}</p>
                                 @if ($product->DISKON > 0)
                                     <div class="price-wrap mb-2">
@@ -85,37 +87,54 @@
                                 </div>
 
                                 <p class="mb-4">{{ $product->DESKRIPSI }}</p>
-
-                                <div class="mb-4">
-                                    <label for="shadeSelect" class="form-label">Select Shade</label>
-                                    <select class="form-select" id="shadeSelect" style="width: 200px;">
-                                        <option selected>Choose a shade...</option>
-                                        @foreach ($dataProducts as $shadeProduct)
-                                            @if ($shadeProduct->NAMA_PROD == $product->NAMA_PROD)
-                                                <option value="{{ $shadeProduct->SHADE }}">{{ $shadeProduct->SHADE }}
-                                                </option>
-                                            @endif
-                                        @endforeach
-                                    </select>
-                                </div>
-
-                                <div class="input-group quantity mb-5" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minues rounded-circle bg-light border">
-                                            <i class="fa fa-minus"></i>
-                                        </button>
+                                <form action="{{ route('addtocart', ['id_prod' => $product->ID_PROD]) }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="nama_prod" value="{{ $product->NAMA_PROD }}">
+                                    <input type="hidden" name="shade" id="shade" value="">
+                                    <div class="mb-4">
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger">
+                                                @foreach ($errors->all() as $e)
+                                                    {{ $e }} <br>
+                                                @endforeach
+                                            </div>
+                                        @endif
+                                        @if (session()->has('error'))
+                                            <div class="alert alert-danger">
+                                                {{ session()->get('error') }}
+                                            </div>
+                                        @endif
+                                        <label for="shadeSelect" class="form-label">Select Shade</label>
+                                        <select class="form-select" id="shadeSelect" style="width: 200px;">
+                                            <option selected>Choose a shade...</option>
+                                            @foreach ($dataProducts as $shadeProduct)
+                                                @if ($shadeProduct->NAMA_PROD == $product->NAMA_PROD)
+                                                    <option value="{{ $shadeProduct->SHADE }}">{{ $shadeProduct->SHADE }}
+                                                    </option>
+                                                @endif
+                                            @endforeach
+                                        </select>
                                     </div>
-                                    <input type="text" class="form-control form-control-sm text-center border-0"
-                                        value="1" id="count">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
+
+                                    <div class="mb-5" style="width: 150px; display: flex; align-items: center;">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn-remove rounded-circle bg-light border">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="number" class="form-control text-center mx-2" value="1" id="count" name="count" readonly style="width=50px">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn-add rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <a href="#"
-                                    class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i
-                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    <button type="submit"
+                                        class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
+                                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                    </button>
+
+                                </form>
                             </div>
 
                             <script>
@@ -140,6 +159,32 @@
                                         this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
                                     });
                                 });
+
+
+                                document.getElementById('shadeSelect').addEventListener('change', function() {
+                                    var selectedShade = this.value;
+                                    document.getElementById('shadeDisplay').textContent = selectedShade;
+                                    document.getElementById('shade').value = selectedShade;
+                                });
+
+
+                                document.querySelectorAll('.btn-remove').forEach(function(button) {
+                                    button.addEventListener('click', function() {
+                                        var countInput = document.getElementById('count');
+                                        var count = parseInt(countInput.value);
+                                        if (count > 1) {
+                                            countInput.value = count - 1;
+                                        }
+                                    });
+                                });
+
+                                document.querySelectorAll('.btn-add').forEach(function(button) {
+                                    button.addEventListener('click', function() {
+                                        var countInput = document.getElementById('count');
+                                        var count = parseInt(countInput.value);
+                                        countInput.value = count + 1;
+                                    });
+                                });
                             </script>
                             <div class="col-lg-12">
                                 <nav>
@@ -148,19 +193,12 @@
                                             role="tab" id="nav-about-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-about" aria-controls="nav-about"
                                             aria-selected="true">Description</button>
-                                        <button class="nav-link border-white border-bottom-0" type="button" role="tab"
-                                            id="nav-mission-tab" data-bs-toggle="tab" data-bs-target="#nav-mission"
-                                            aria-controls="nav-mission" aria-selected="false">Reviews</button>
                                     </div>
                                 </nav>
                                 <div class="tab-content mb-5">
                                     <div class="tab-pane active" id="nav-about" role="tabpanel"
                                         aria-labelledby="nav-about-tab">
-                                        <p>Dior lip makeup star duo, Dior Addict Lip Glow lip balm and Dior Addict Lip
-                                            Maximizer gloss are yours to discover in this case. Dior Addict Lip Glow is a
-                                            lip balm that subtly revives the natural color of lips and hydrates them for
-                                            24h. The Dior Addict Lip Maximizer gloss visibly plumps lips and enhances them
-                                            with a mirror-shine effect. </p>
+                                        <p> {{ $product->DESKRIPSI }} </p>
                                         <div class="px-2">
                                             <div class="row g-4">
                                                 <div class="col-6">
@@ -179,7 +217,7 @@
                                                             <p class="mb-0">Category</p>
                                                         </div>
                                                         <div class="col-6">
-                                                            <p class="mb-0">Eyes</p>
+                                                            <p class="mb-0">{{ $product->KATEGORI }}</p>
                                                         </div>
                                                     </div>
                                                     <div
@@ -197,64 +235,14 @@
                                                             <p class="mb-0">Shade</p>
                                                         </div>
                                                         <div class="col-6">
-                                                            <p class="mb-0">Pink</p>
+                                                            <p class="mb-0" id="shadeDisplay">Not Selected</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="nav-mission" role="tabpanel"
-                                        aria-labelledby="nav-mission-tab">
-                                        <div class="d-flex">
-                                            <img src="{{ asset('img/avatar.jpg') }}" class="img-fluid rounded-circle p-3"
-                                                style="width: 100px; height: 100px;" alt="">
-                                            <div class="">
-                                                <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
-                                                <div class="d-flex justify-content-between">
-                                                    <h5>Jason Smith</h5>
-                                                    <div class="d-flex mb-3">
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <p>The generated Lorem Ipsum is therefore always free from repetition
-                                                    injected humour, or non-characteristic
-                                                    words etc. Susp endisse ultricies nisi vel quam suscipit </p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <img src="{{ asset('img/avatar.jpg') }}" class="img-fluid rounded-circle p-3"
-                                                style="width: 100px; height: 100px;" alt="">
-                                            <div class="">
-                                                <p class="mb-2" style="font-size: 14px;">April 12, 2024</p>
-                                                <div class="d-flex justify-content-between">
-                                                    <h5>Sam Peters</h5>
-                                                    <div class="d-flex mb-3">
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star text-secondary"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <p class="text-dark">The generated Lorem Ipsum is therefore always free
-                                                    from repetition injected humour, or non-characteristic
-                                                    words etc. Susp endisse ultricies nisi vel quam suscipit </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="nav-vision" role="tabpanel">
-                                        <p class="text-dark">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et
-                                            tempor sit. Aliqu diam
-                                            amet diam et eos labore. 3</p>
-                                        <p class="mb-0">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos
-                                            labore.
-                                            Clita erat ipsum et lorem et sit</p>
-                                    </div>
+
                                 </div>
                             </div>
                             <form action="#">
@@ -281,14 +269,7 @@
                                     <div class="col-lg-12">
                                         <div class="d-flex justify-content-between py-3 mb-5">
                                             <div class="d-flex align-items-center">
-                                                <p class="mb-0 me-3">Please rate:</p>
-                                                <div class="d-flex align-items-center" style="font-size: 12px;">
-                                                    <i class="fa fa-star text-muted"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
+                                                <p class="mb-0 me-3">Your message will be replied shortly!</p>
                                             </div>
                                             <a href="#"
                                                 class="btn border border-secondary text-primary rounded-pill px-4 py-3">
@@ -383,71 +364,80 @@
                     </div>
                 </div>
                 <h1 class="fw-bold mb-0">Similar products</h1>
-                <div class="vesitable">
+                <div class="container-fluid vesitable pt-3">
                     <div class="owl-carousel vegetable-carousel justify-content-center">
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="{{ asset('img/romand-dewyful.jpg') }}" class="img-fluid w-100 rounded-top"
-                                    alt="">
+                        @foreach ($similarProducts as $product)
+                            <div class="border border-primary rounded position-relative vesitable-item">
+                                <a href="{{ route('shop-details', ['id_prod' => $product->ID_PROD]) }}"
+                                    class="text-decoration-none text-dark">
+                                    <div class="vesitable-img">
+                                        <img src="{{ asset($product->FOTO_PROD) }}" class="img-fluid w-100 rounded-top"
+                                            alt="">
+                                    </div>
+                                    <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                                        style="top: 10px; right: 10px;">
+                                        {{ $product->KATEGORI }}
+                                    </div>
+                                    <div class="p-4 rounded-bottom">
+                                        <h4 class="product-title"
+                                            style="min-height: 2em; line-height: 1em; overflow: hidden;">
+                                            {{ $product->NAMA_PROD }}</h4>
+                                        <p class="product-description">
+                                            {{ $product->DESKRIPSI }}<span class="more-text d-none"></span>
+                                        </p>
+                                        <div class="d-flex flex-column">
+                                            @if ($product->DISKON > 0)
+                                                <div class="price-wrap mb-2">
+                                                    <strong class="text-dark fs-5 fw-bold mb-0">Rp
+                                                        {{ number_format($product->HARGA - ($product->HARGA * $product->DISKON) / 100, 0, ',', '.') }}
+                                                    </strong>
+                                                    <del class="text-success">Rp
+                                                        {{ number_format($product->HARGA, 0, ',', '.') }}
+                                                    </del>
+                                                </div>
+                                            @else
+                                                <p class="text-dark fs-5 fw-bold mb-2">Rp
+                                                    {{ number_format($product->HARGA, 0, ',', '.') }}
+                                                </p>
+                                            @endif
+                                            <a href="#"
+                                                class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                <i class="fa fa-shopping-bag me-2 text-primary"></i> Purchase
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                style="top: 10px; left: 10px;">Sale</div>
-                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom"
-                                style="height: 50px;">
-                                <a href="" class="text-white h6 w-100 text-center">Romand Dewyful Water Tint</a>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="{{ asset('img/romand.jpg') }}" class="img-fluid w-100 rounded-top"
-                                    alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                style="top: 10px; left: 10px;">Sale</div>
-                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom"
-                                style="height: 50px;">
-                                <a href="" class="text-white h6 w-100 text-center">Romand Lipstick</a>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="{{ asset('img/blusher.jpg') }}" class="img-fluid w-100 rounded-top"
-                                    alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                style="top: 10px; left: 10px;">Sale</div>
-                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom"
-                                style="height: 50px;">
-                                <a href="" class="text-white h6 w-100 text-center">Romand Blusher</a>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="{{ asset('img/shimmer-duo.jpg') }}" class="img-fluid w-100 rounded-top"
-                                    alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                style="top: 10px; left: 10px;">Sale</div>
-                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom"
-                                style="height: 50px;">
-                                <a href="" class="text-white h6 w-100 text-center">Shimmer Duo</a>
-                            </div>
-                        </div>
-                        <div class="border border-primary rounded position-relative vesitable-item">
-                            <div class="vesitable-img">
-                                <img src="{{ asset('img/milk-cheek.jpg') }}" class="img-fluid w-100 rounded-top"
-                                    alt="">
-                            </div>
-                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                                style="top: 10px; left: 10px;">Sale</div>
-                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-bottom"
-                                style="height: 50px;">
-                                <a href="" class="text-white h6 w-100 text-center">Milk Cheek</a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Single Product End -->
-    @endsection
+    </div>
+    <!-- Single Product End -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelectorAll('.product-description').forEach(function(element) {
+                var words = element.innerText.split(' ');
+                if (words.length > 12) {
+                    var visibleText = words.slice(0, 12).join(' ');
+                    var hiddenText = words.slice(12).join(' ');
+                    element.innerHTML = `
+                            ${visibleText}
+                            <span class="more-text-description d-none"> ${hiddenText}</span>
+                            <a href="#" class="read-more-description">Read more</a>
+                        `;
+                }
+            });
+            document.querySelectorAll('.read-more-description').forEach(function(element) {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var moreText = this.previousElementSibling;
+                    moreText.classList.toggle('d-none');
+                    this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                });
+            });
+        });
+    </script>
+@endsection

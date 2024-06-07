@@ -47,7 +47,7 @@
             <h4 class="card-title mb-4">Your wishlist</h4>
 
             @if($wishlistProducts->isEmpty())
-              <p>Your wishlist is empty. To add products to your wishlist, click on the heart icon!</p>
+              <p>Your wishlist is empty. To add products to your wishlist, click on the heart icon on a product!</p>
             @else
               @foreach($wishlistProducts as $wishlist)
                 @php
