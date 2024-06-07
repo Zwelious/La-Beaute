@@ -46,8 +46,8 @@ Route::post('/register', [RegisterController::class, 'RegisterAction'])->name('r
 Route::get('/forget', [ForgetPassController::class, 'ForgetPass'])->name('forget');
 
 Route::get('/cart', [CartController::class, 'Cart']);
-Route::post('/cart/update', [CartController::class, 'updateCart'])->name('update-cart');
-Route::post('/cart/remove', [CartController::class, 'removeCartItem'])->name('remove-cart-item');
+Route::post('/update-cart', [CartController::class, 'updateCart'])->name('update-cart');
+Route::post('/delete-cart', [CartController::class, 'removeCartItem'])->name('delete-cart');
 
 Route::get('/checkout', [CheckoutController::class, 'Checkout']);
 

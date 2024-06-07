@@ -31,11 +31,12 @@ class CartController extends Controller
     {
         $productId = $request->input('productId');
         $quantity = $request->input('quantity');
+        $id_cust = session('id_cust', Cookie::get('id_cust'));
 
         $updated = DB::table('keranjang')
-        ->where('ID_PROD', $productId)
-        ->where('ID_CUST', '=', $id_cust)
-        ->update(['QTY' => $quantity]);
+            ->where('ID_PROD', $productId)
+            ->where('ID_CUST', $id_cust) // Correctly use the customer ID from session
+            ->update(['QTY' => $quantity]);
 
         if ($updated) {
             return response()->json(['success' => true]);
@@ -49,6 +50,7 @@ class CartController extends Controller
 
         $deleted = DB::table('keranjang')
             ->where('ID_PROD', $productId)
+            ->where('ID_CUST', '=', $id_cust)
             ->delete();
 
         if ($deleted) {

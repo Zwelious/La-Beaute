@@ -48,7 +48,7 @@
                     </div>
                     <div class="top-link pe-2">
                         @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
-                            <small class="text-white mx-2" id="loginName">Welcome,<strong>{{ Session::get('name') ?? Cookie::get('name')}}</strong></small>
+                            <small class="text-white mx-2" id="loginName">Welcome, <strong>{{ Session::get('name') ?? Cookie::get('name')}}</strong></small>
                         @endif
                     </div>
                 </div>
