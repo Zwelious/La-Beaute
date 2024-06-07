@@ -230,6 +230,6 @@
                 });
             });
         </script>
-        <!-- Vesitable Shop End -->
+<!-- Vesitable Shop End -->
 
 @endsection
