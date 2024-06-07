@@ -14,9 +14,24 @@
         <i class="fa fa-shopping-bag fa-2x text-secondary"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
-    <a href="{{ url('/login') }}" class="my-auto">
-        <i class="fas fa-user fa-2x"></i>
-    </a>
+    @if(session()->has('id_cust'))
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user fa-2x"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{{ url('/forget') }}">Change Password</a>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+            </div>
+        </div>
+    @else
+        <a href="{{ url('/login') }}" class="my-auto">
+            <i class="fas fa-user fa-2x"></i>
+        </a>
+    @endif
 @endsection
 
 @section("body")
@@ -95,30 +110,6 @@
                       <label class="form-check-label" for="flexRadioDefault1">
                         Express delivery <br />
                         <small class="text-muted">3-4 days via Fedex </small>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 mb-3">
-                  <!-- Default radio -->
-                  <div class="form-check h-100 border rounded-3">
-                    <div class="p-3">
-                      <input class="form-check-input" type="radio" name="shippingMethod" id="flexRadioDefault2" />
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        Post office <br />
-                        <small class="text-muted">20-30 days via post </small>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 mb-3">
-                  <!-- Default radio -->
-                  <div class="form-check h-100 border rounded-3">
-                    <div class="p-3">
-                      <input class="form-check-input" type="radio" name="shippingMethod" id="flexRadioDefault3" />
-                      <label class="form-check-label" for="flexRadioDefault3">
-                        Self pick-up <br />
-                        <small class="text-muted">Come to our shop </small>
                       </label>
                     </div>
                   </div>
@@ -206,22 +197,29 @@
               </div>
 
               <div class="float-end">
-                <button class="btn btn-light border">Cancel</button>
-                <button class="btn btn-success shadow-0 border">Continue</button>
+                <button class="btn btn-success shadow-0 border">Pay Now</button>
               </div>
             </div>
           </div>
         </form>
           <!-- Checkout -->
-        </div>
-        <div class="col-lg-3">
+          </div>
+            <div class="col-lg-3">
                 <div class="card mb-3 border shadow-0">
-                <div class="card-body">
-              <h6 class="mb-3">Summary</h6>
-              <div class="d-flex justify-content-between">
-                <p class="mb-2">Total price:</p>
-                <p class="mb-2">Rp 888.000</p>
-              </div>
+                    <div class="card-body">
+                        <h6 class="mb-3">Summary</h6>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-2">Total price:</p>
+                            <p class="mb-2">Rp
+                                <?php
+                                    $totalPrice = 0;
+                                    foreach($cartProducts as $product) {
+                                        $totalPrice += $product->HARGA;
+                                    }
+                                    echo $totalPrice;
+                                ?>
+                            </p>
+                        </div>
               <div class="d-flex justify-content-between">
                 <p class="mb-2">Tax:</p>
                 <p class="mb-2">Free</p>
@@ -229,69 +227,34 @@
               <hr />
               <div class="d-flex justify-content-between">
                 <p class="mb-2">Total payment:</p>
-                <p class="mb-2 fw-bold">Rp 888.000</p>
+                <p class="mb-2 fw-bold">Rp {{ number_format($totalPrice, 0, ',', '.') }}</p>
               </div>
               <hr />
                 <hr />
                 <h6 class="text-dark my-4">Items in Your Cart</h6>
-
-                <!-- First Item -->
-            <div class="d-flex align-items-center mb-4">
-                <div class="me-3 position-relative">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                        1
-                    </span>
-                    <img src="img/romand-shape.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-                </div>
-                <div class="">
-                    <a href="#" class="nav-link">
-                        ROMAND Better Than Shape <br />
-                        Walnut Grain
-                    </a>
-                    <div class="price text-muted">Total: Rp. 199.000</div>
-                </div>
-            </div>
-
-                 <!-- Second Item -->
-            <div class="d-flex align-items-center mb-4">
-                <div class="me-3 position-relative">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                        2
-                    </span>
-                    <img src="img/romand-glasting.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-                </div>
-                <div class="">
-                    <a href="#" class="nav-link">
-                        ROMAND Glasting Melting Balm <br />
-                        Sorbet Balm
-                    </a>
-                    <div class="price text-muted">Total: Rp 189.000</div>
-                </div>
-            </div>
-
-                <!-- Third Item -->
-            <div class="d-flex align-items-center mb-4">
-                <div class="me-3 position-relative">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
-                        3
-                    </span>
-                    <img src="img/romand-palette.jpg" style="height: 96px; width: 96px;" class="img-sm rounded border" />
-                </div>
-                <div class="">
-                    <a href="#" class="nav-link">
-                        ROMAND Better Than Palette <br />
-                        Secret Garden
-                    </a>
-                    <div class="price text-muted">Total: Rp. 500.000</div>
+                 <!-- Cart Section -->
+                 @foreach($cartProducts as $product)
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3 position-relative">
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill badge-secondary">
+                                        {{ $product->QTY }}
+                                    </span>
+                                    <img src="{{ asset($product->FOTO_PROD) }}" style="height: 96px; width: 96px;" class="img-sm rounded border" />
+                                </div>
+                                <div class="">
+                                    <a href="#" class="nav-link">
+                                        {{ $product->NAMA_PROD }} <br />
+                                        {{ $product->SHADE }}
+                                    </a>
+                                    <div class="price text-muted">Total: Rp {{ number_format($product->HARGA, 0, ',', '.') }} </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        <!-- End Cart Section -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-        <!-- Checkout -->
-
-      </div>
-      </div>
-    </div>
-  </section>
+</section>
 @endsection

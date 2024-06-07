@@ -27,8 +27,7 @@ class RegisterController extends Controller
 
         if ($existingCustomer) {
             return redirect('/register')->with('error', 'Email exists. Try logging in instead.');
-        }
-        else{
+        } else {
             $insert = DB::table('customer')->insert([
                 'email' => $validatedData['email'],
                 'password_hash' => Hash::make($validatedData['password']),
@@ -43,5 +42,6 @@ class RegisterController extends Controller
         } else {
             return redirect('/register')->with('error', 'Error registering, please try again.');
         }
+
     }
 }

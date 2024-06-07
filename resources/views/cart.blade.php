@@ -14,9 +14,24 @@
         <i class="fa fa-shopping-bag fa-2x text-secondary"></i>
         <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
     </a>
-    <a href="{{ url('/login') }}" class="my-auto">
-        <i class="fas fa-user fa-2x"></i>
-    </a>
+    @if(session()->has('id_cust'))
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user fa-2x"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{{ url('/forget') }}">Change Password</a>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+            </div>
+        </div>
+    @else
+        <a href="{{ url('/login') }}" class="my-auto">
+            <i class="fas fa-user fa-2x"></i>
+        </a>
+    @endif
 @endsection
 
 @section("body")
@@ -33,25 +48,15 @@
                         <h4 class="card-title mb-4">Your shopping cart</h4>
 
                         @foreach($cartProducts as $cart)
-                            @if($cart->QTY == 0)
-                            <div class="row gy-3 mb-4">
-                            <div class="col-lg-7">
-                                <div class="me-lg-5">
-                                <div class="d-flex">
-                                    <text class="text-muted text-nowrap">Sorry, your cart is empty. Shop Now!</text>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            @elseif($cart->DISKON > 0)
-                                @php
-                                    $newPrice = $cart->HARGA - ($cart->HARGA * ($cart->DISKON/100));
-                                @endphp
-                            @else
-                                @php
-                                    $newPrice = $cart->HARGA;
-                                @endphp
-                            @endif
+                            @if($cart->DISKON > 0)
+                                    @php
+                                        $newPrice = $cart->HARGA - ($cart->HARGA * ($cart->DISKON/100));
+                                    @endphp
+                                @else
+                                    @php
+                                        $newPrice = $cart->HARGA;
+                                    @endphp
+                                @endif
                         <div class="row gy-3 mb-4" data-id="{{ $cart->ID_PROD }}" data-price="{{ $newPrice }}">
                             <div class="col-lg-7">
                                 <div class="me-lg-5">
@@ -90,7 +95,7 @@
                         <div class="border-top pt-4 mx-4 mb-4">
                             <p><i class="fas fa-truck text-muted fa-lg"></i> Free Delivery within 1-2 weeks</p>
                             <p class="text-muted">
-                            Enjoy complimentary shipping on all orders with no minimum purchase required. Expedited shipping options are available at an additional cost. Free shipping applies automatically at checkout and is subject to change without prior notice.
+                            Enjoy complimentary shipping on all orders with no minimum purchase required. Expedited shipping options are available at an additional cost. Free shipping applies automatically at checkout.
                             </p>
                         </div>
                     </div>

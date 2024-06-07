@@ -16,16 +16,31 @@
                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1"
                 style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
         </a>
-        <a href="{{ url('/login') }}" class="my-auto">
-            <i class="fas fa-user fa-2x text-secondary"></i>
-        </a>
+        @if(session()->has('id_cust'))
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user fa-2x"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{{ url('/change-password') }}">Change Password</a>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="dropdown-item">Logout</button>
+                    </form>
+                </div>
+            </div>
+        @else
+            <a href="{{ url('/login') }}" class="my-auto">
+                <i class="fas fa-user fa-2x"></i>
+            </a>
+        @endif
     @endsection
 
     @section('body')
         <section class="vh-100" style="background-color: #E981A4;">
             <div class="container py-5 h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col col-xl-10">
+                <div class="row d-flex justify-content-center align-items-center h-100 pt-5">
+                    <div class="col col-xl-10 pt-5">
                         <div class="card" style="border-radius: 1rem;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
@@ -38,16 +53,26 @@
                                         <form>
 
                                             <div class="d-flex align-items-center mb-3 pb-1">
-
-                                                <span class="h1 fw-bold mb-0">Forgot Password</span>
+                                                @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
+                                                    <span class="h1 fw-bold mb-0">Change Password</span>
+                                                @else
+                                                    <span class="h1 fw-bold mb-0">Forgot Password</span>
+                                                @endif
                                             </div>
-
 
                                             <div data-mdb-input-init class="form-outline mb-4">
                                                 <input type="email" id="form2Example17"
                                                     class="form-control form-control-lg" />
                                                 <label class="form-label" for="form2Example17">Email address</label>
                                             </div>
+
+                                            @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
+                                                <div data-mdb-input-init class="form-outline mb-4">
+                                                    <input type="old password" id="oldpassword"
+                                                        class="form-control form-control-lg" />
+                                                    <label class="form-label" for="form2Example27">Old Password</label>
+                                                </div>
+                                            @endif
 
                                             <div data-mdb-input-init class="form-outline mb-4">
                                                 <input type="new password" id="form2Example27"

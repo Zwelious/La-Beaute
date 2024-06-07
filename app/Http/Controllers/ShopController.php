@@ -18,9 +18,11 @@ class ShopController extends Controller
 
     public function Shop()
     {
-        $dataProducts = DB::table('DETAIL_PRODUK')
-            ->select('ID_PROD', 'NAMA_PROD', 'SHADE', 'DESKRIPSI', 'HARGA', 'DISKON', 'KATEGORI', 'STOCK', 'FOTO_PROD')
-            ->paginate(9);
+        $dataProducts = DB::table('DETAIL_PRODUK as dp')
+                ->join(DB::raw('(SELECT NAMA_PROD, MIN(ID_PROD) as min_id FROM DETAIL_PRODUK GROUP BY NAMA_PROD) as distinct_names'),
+                    'dp.ID_PROD', '=', 'distinct_names.min_id')
+                ->select('dp.ID_PROD', 'dp.NAMA_PROD', 'dp.SHADE', 'dp.DESKRIPSI', 'dp.HARGA', 'dp.DISKON', 'dp.KATEGORI', 'dp.STOCK', 'dp.FOTO_PROD')
+                ->paginate(9);
 
         return view('shop', compact('dataProducts'));
     }
@@ -30,19 +32,29 @@ class ShopController extends Controller
         return $this->dataProducts->firstWhere('ID_PROD', $id_prod);
     }
 
-    public function search(Request $request)
+    public function shopSearch(Request $request)
     {
-        $query = $request->input('query');
-        $products = collect();
+        $query = $request->input('searchQuery');
 
-        if ($query) {
-            $products = DB::table('DETAIL_PRODUK')
-                ->where('NAMA_PROD', 'LIKE', "%{$query}%")
-                ->orWhere('DESKRIPSI', 'LIKE', "%{$query}%")
-                ->get();
+        if ($query != '') {
+            $dataProducts = DB::table('DETAIL_PRODUK as dp')
+            ->join(DB::raw('(SELECT NAMA_PROD, MIN(ID_PROD) as min_id FROM DETAIL_PRODUK GROUP BY NAMA_PROD) as distinct_names'),
+                'dp.ID_PROD', '=', 'distinct_names.min_id')
+            ->select('dp.ID_PROD', 'dp.NAMA_PROD', 'dp.SHADE', 'dp.DESKRIPSI', 'dp.HARGA', 'dp.DISKON', 'dp.KATEGORI', 'dp.STOCK', 'dp.FOTO_PROD')
+            ->where('dp.NAMA_PROD', 'LIKE', "%{$query}%")
+            ->orWhere('dp.DESKRIPSI', 'LIKE', "%{$query}%")
+            ->paginate(9);
+
+        }
+        else{
+            $dataProducts = DB::table('DETAIL_PRODUK as dp')
+                ->join(DB::raw('(SELECT NAMA_PROD, MIN(ID_PROD) as min_id FROM DETAIL_PRODUK GROUP BY NAMA_PROD) as distinct_names'),
+                    'dp.ID_PROD', '=', 'distinct_names.min_id')
+                ->select('dp.ID_PROD', 'dp.NAMA_PROD', 'dp.SHADE', 'dp.DESKRIPSI', 'dp.HARGA', 'dp.DISKON', 'dp.KATEGORI', 'dp.STOCK', 'dp.FOTO_PROD')
+                ->paginate(9);
         }
 
-        return view('shop', compact('products', 'query'));
+        return view('shop', compact('dataProducts', 'query'));
     }
 }
 

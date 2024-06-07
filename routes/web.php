@@ -16,7 +16,6 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\HomeController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,9 +57,9 @@ Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
 
 Route::get('/shop', [ShopController::class, 'Shop'])->name('shop');
 
-Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
+Route::post('/shop', [ShopController::class, 'shopSearch'])->name('search');
 
-Route::get('/search', [App\Http\Controllers\ShopController::class, 'search'])->name('search');
+Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
 
 Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
 
@@ -71,3 +70,9 @@ Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
 Route::get('/contact', [ContactController::class, 'Contact']);
 
 Route::get('/receipt', [ReceiptController::class, 'Receipt']);
+
+Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');
+
+Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
+
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
