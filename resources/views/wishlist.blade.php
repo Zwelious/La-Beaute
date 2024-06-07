@@ -86,8 +86,11 @@
                       </form>
                     </div>
                   </div>
+                </div>
+              @endforeach
+              @endif
 
-                  <script>
+              <script>
                     $(document).ready(function() {
                       $('.remove-wishlist').on('click', function() {
                         var productId = $(this).data('id');
@@ -106,8 +109,12 @@
                           }
                         });
                       });
+                    });
+                  </script>
 
-                      $('.add-to-cart').on('click', function() {
+                <script>
+                  $(document).ready(function() {
+                    $('.add-to-cart').on('click', function() {
                         var productId = $(this).data('id');
                         $.ajax({
                           url: '{{ route('cart.add') }}',
@@ -130,12 +137,8 @@
                           }
                         });
                       });
-                    });
-                  </script>
-
-                </div>
-              @endforeach
-            @endif
+                  });
+                </script>
 
             <div class="border-top pt-4 mx-4 mb-4">
               <p><i class="fas fa-truck text-muted fa-lg"></i> Free Delivery within 1-2 weeks</p>
