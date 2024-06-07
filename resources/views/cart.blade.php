@@ -33,30 +33,40 @@
                         <h4 class="card-title mb-4">Your shopping cart</h4>
 
                         @foreach($cartProducts as $cart)
-                            @if($cart->DISKON > 0)
-                                    @php
-                                        $newPrice = $cart->HARGA - ($cart->HARGA * ($cart->DISKON/100));
-                                    @endphp
-                                @else
-                                    @php
-                                        $newPrice = $cart->HARGA;
-                                    @endphp
-                                @endif
-                        <div class="row gy-3 mb-4" data-id="{{ $cart->ID_PROD }}" data-price="{{ $newPrice }}">
+                            @if($cart->QTY == 0)
+                            <div class="row gy-3 mb-4">
                             <div class="col-lg-7">
                                 <div class="me-lg-5">
                                 <div class="d-flex">
-                                    <img src="{{ $cart->FOTO_PROD }}" class="border rounded me-3" style="width: 96px; height: 96px;">
-                                    <div class="d-flex flex-column">
-                                        <a href="{{ route('shop-details', ['id_prod' => $cart->ID_PROD]) }}" class="text-decoration-none text-primary">{{ $cart->NAMA_PROD }}</a>
-                                        <p class="text-muted">{{ $cart->SHADE }}</p>
-                                        <div class="d-flex align-items-center">
-                                            <button class="btn btn-light border" onclick="changeQuantity('{{ $cart->ID_PROD }}', '{{ $cart->QTY }}', -1)">-</button>
-                                            <input type="text" id="quantity-{{ $cart->ID_PROD }}" value="{{ $cart->QTY}}" oninput="updateTotalPrice()" readonly class="form-control text-center mx-2" style="width: 50px;">
-                                            <button class="btn btn-light border" onclick="changeQuantity('{{ $cart->ID_PROD }}', '{{ $cart->QTY }}', +1)">+</button>
+                                    <text class="text-muted text-nowrap">Sorry, your cart is empty. Shop Now!</text>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            @elseif($cart->DISKON > 0)
+                                @php
+                                    $newPrice = $cart->HARGA - ($cart->HARGA * ($cart->DISKON/100));
+                                @endphp
+                            @else
+                                @php
+                                    $newPrice = $cart->HARGA;
+                                @endphp
+                            @endif
+                        <div class="row gy-3 mb-4" data-id="{{ $cart->ID_PROD }}" data-price="{{ $newPrice }}">
+                            <div class="col-lg-7">
+                                <div class="me-lg-5">
+                                    <div class="d-flex">
+                                        <img src="{{ $cart->FOTO_PROD }}" class="border rounded me-3" style="width: 96px; height: 96px;">
+                                        <div class="d-flex flex-column">
+                                            <a href="{{ route('shop-details', ['id_prod' => $cart->ID_PROD]) }}" class="text-decoration-none text-primary">{{ $cart->NAMA_PROD }}</a>
+                                            <p class="text-muted">{{ $cart->SHADE }}</p>
+                                            <div class="d-flex align-items-center">
+                                                <button class="btn btn-light border" onclick="changeQuantity('{{ $cart->ID_PROD }}', '{{ $cart->QTY }}', -1)" data-id="{{ $cart->ID_PROD }}">-</button>
+                                                <input type="text" id="quantity-{{ $cart->ID_PROD }}" value="{{ $cart->QTY}}" data-current-qty="{{ $cart->QTY }}" readonly class="form-control text-center mx-2" style="width: 50px;">
+                                                <button class="btn btn-light border" onclick="changeQuantity('{{ $cart->ID_PROD }}', '{{ $cart->QTY }}', 1)" data-id="{{ $cart->ID_PROD }}">+</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
@@ -71,11 +81,12 @@
                             <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                                 <div class="float-md-end">
                                 <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-heart fa-lg px-1 text-wishlist"></i></a>
-                                <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
+                                <a href="#" class="btn btn-light border text-danger icon-hover-secondary" onclick="removeItem('{{ $cart->ID_PROD }}')">Remove</a>
                                 </div>
                             </div>
                         </div>
                         @endforeach
+
                         <div class="border-top pt-4 mx-4 mb-4">
                             <p><i class="fas fa-truck text-muted fa-lg"></i> Free Delivery within 1-2 weeks</p>
                             <p class="text-muted">
@@ -171,21 +182,93 @@
     </section>
     <!-- Recommend -->
 <script>
-    function changeQuantity(id, currentqty, change)
-    {
-        const inputField = document.querySelector(`#quantity-${id}`);
-        if (inputField)
-        {
-            let currentQty = parseInt(inputField.value, 10);
-            let newQuantity = currentQty + change;
-            if (newQuantity < 1) {
-                newQuantity = 1;
-            }
-            inputField.value = newQuantity;
+    // function changeQuantity(id, currentqty, change)
+    // {
+    //     const inputField = document.querySelector(`#quantity-${id}`);
+    //     if (inputField)
+    //     {
+    //         let currentQty = parseInt(inputField.value, 10);
+    //         let newQuantity = currentQty + change;
+    //         if (newQuantity < 1) {
+    //             newQuantity = 1;
+    //         }
+    //         inputField.value = newQuantity;
 
-            inputField.setAttribute('data-current-qty', newQuantity);
-            updateTotalPrice();
-        }
+    //         inputField.setAttribute('data-current-qty', newQuantity);
+    //         updateTotalPrice();
+    //     }
+    // }
+
+    function changeQuantity(id, currentQty, change) {
+        let newQty = parseInt(currentQty) + (change);
+        if (newQty < 1) return;
+
+        $.ajax({
+            url: '{{ route("update-cart") }}',
+            method: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}',
+                productId: id,
+                quantity: newQty
+            },
+            success: function(response) {
+                if (response.success) {
+                    // Update the quantity in the input field
+                    $('#quantity-' + id).val(newQty);
+                    // Update the current quantity attribute
+                    $('#quantity-' + id).attr('data-current-qty', newQty);
+                    // Optionally, update total price and other elements
+                } else {
+                    alert('Failed to update cart');
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('Error updating cart');
+            }
+        });
+        change = 0;
+    }
+
+    function setupQuantityButtons() {
+        $('button[data-action="increase"]').on('click', function() {
+            const id = $(this).data('id');
+            const currentQty = $('#quantity-' + id).attr('data-current-qty');
+            changeQuantity(id, currentQty, 1);
+        });
+
+        $('button[data-action="decrease"]').on('click', function() {
+            const id = $(this).data('id');
+            const currentQty = $('#quantity-' + id).attr('data-current-qty');
+            changeQuantity(id, currentQty, -1);
+        });
+    }
+
+    $(document).ready(function() {
+        setupQuantityButtons();
+    });
+
+    function removeItem(productId) {
+        if (!confirm('Are you sure you want to remove this item?')) return;
+
+        $.ajax({
+            url: '{{ route("remove-cart-item") }}',
+            method: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}',
+                productId: productId
+            },
+            success: function(response) {
+                if (response.success) {
+                    location.reload(); // Reload the page to reflect the changes
+                } else {
+                    alert('Failed to remove item');
+                }
+            },
+            error: function() {
+                alert('Error removing item');
+            }
+        });
     }
 
     function updateTotalPrice() {
