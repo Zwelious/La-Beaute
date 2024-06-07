@@ -37,7 +37,7 @@
     @endsection
 
     @section('body')
-        <section class="vh-100" style="background-color: #E981A4;">
+        <section class="vh-150" style="background-color: #E981A4;">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100 pt-5">
                     <div class="col col-xl-10 pt-5">

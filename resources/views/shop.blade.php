@@ -201,7 +201,7 @@
                                 <div class="row g-4 justify-content-center">
                                     @if (isset($query) && $query != '')
                                         @if ($dataProducts->isEmpty())
-                                            <p>No products found</p>
+                                            <h3>No products found. Please try a different keyword</h3>
                                         @else
                                             @foreach ($dataProducts as $product)
                                                 <div class="col-md-6 col-lg-6 col-xl-4">
@@ -235,7 +235,7 @@
                                                                             {{ number_format($product->HARGA, 0, ',', '.') }}
                                                                         </p>
                                                                     @endif
-                                                                    <a href="#"
+                                                                    <a href="{{ route('shop-details', ['id_prod' => $product->ID_PROD]) }}"
                                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                                             class="fa fa-shopping-bag me-2 text-primary"></i>
                                                                         Purchase</a>
@@ -279,11 +279,10 @@
                                                                             {{ number_format($product->HARGA, 0, ',', '.') }}
                                                                         </p>
                                                                     @endif
-                                                                    <a href="#"
+                                                                    <a href="{{ route('shop-details', ['id_prod' => $product->ID_PROD]) }}"
                                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                                             class="fa fa-shopping-bag me-2 text-primary"></i>
-                                                                        Add
-                                                                        to cart</a>
+                                                                        Purchase</a>
                                                                 </div>
                                                             </div>
                                                         </div>
