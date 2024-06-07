@@ -75,12 +75,64 @@
                       <br /> <small class="text-muted text-nowrap"> Rp {{ number_format($newPrice, 0, ',', '.') }} / per item </small>
                     </div>
                   </div>
+
                   <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                     <div class="float-md-end">
-                      <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i class="fas fa-shopping-cart fa-lg px-1 text-wishlist"></i></a>
-                      <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
+                      <a href="#!" class="btn btn-light border px-2 icon-hover-primary add-to-cart" data-id="{{ $wishlist->ID_PROD }}"><i class="fas fa-shopping-cart fa-lg px-1 text-wishlist"></i></a>
+                      <form action="{{ route('wishlist.remove') }}" method="POST" style="display: inline;">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $wishlist->ID_PROD }}">
+                        <button type="submit" class="btn btn-light border text-danger icon-hover-danger">Remove</button>
+                      </form>
                     </div>
                   </div>
+
+                  <script>
+                    $(document).ready(function() {
+                      $('.remove-wishlist').on('click', function() {
+                        var productId = $(this).data('id');
+                        $.ajax({
+                          url: '{{ route('wishlist.remove') }}',
+                          type: 'POST',
+                          data: {
+                            _token: '{{ csrf_token() }}',
+                            product_id: productId
+                          },
+                          success: function(response) {
+                            location.reload();
+                          },
+                          error: function(response) {
+                            alert('Failed to remove product from wishlist.');
+                          }
+                        });
+                      });
+
+                      $('.add-to-cart').on('click', function() {
+                        var productId = $(this).data('id');
+                        $.ajax({
+                          url: '{{ route('cart.add') }}',
+                          type: 'POST',
+                          data: {
+                            _token: '{{ csrf_token() }}',
+                            product_id: productId
+                          },
+                          success: function(response) {
+                            if (response.success) {
+                              alert(response.message);
+                              // Optionally, update the cart count or UI here
+                            } else {
+                              alert(response.message);
+                            }
+                          },
+                          error: function(response) {
+                            console.log(response);
+                            alert('Failed to add product to cart. Please try again.');
+                          }
+                        });
+                      });
+                    });
+                  </script>
+
                 </div>
               @endforeach
             @endif

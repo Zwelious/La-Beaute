@@ -38,4 +38,17 @@ class WishlistController extends Controller
 
         return view('wishlist', compact('wishlistProducts', 'recommendedProducts'));
     }
+
+    public function removeFromWishlist(Request $request)
+    {
+        $productId = $request->input('product_id');
+        // $customerId = auth()->user()->id; // Assuming you have authentication set up
+
+        DB::table('wishlist')
+            ->where('ID_PROD', $productId)
+            // ->where('ID_CUST', $customerId)
+            ->delete();
+
+        return back()->with('success', 'Product removed from wishlist.');
+    }
 }

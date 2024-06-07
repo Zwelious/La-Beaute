@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Response;
 
 class CartController extends Controller
 {
@@ -24,5 +25,80 @@ class CartController extends Controller
             ->get();
 
         return view('cart', compact('cartProducts'));
+    }
+
+    public function updateCart(Request $request)
+    {
+        $productId = $request->input('productId');
+        $quantity = $request->input('quantity');
+
+        $updated = DB::table('keranjang')
+        ->where('ID_PROD', $productId)
+        ->update(['QTY' => $quantity]);
+
+        if ($updated) {
+            return response()->json(['success' => true]);
+        }
+        return response()->json(['success' => false]);
+    }
+
+    public function removeCartItem(Request $request)
+    {
+        $productId = $request->input('productId');
+
+        $deleted = DB::table('keranjang')
+            ->where('ID_PROD', $productId)
+            ->delete();
+
+        if ($deleted) {
+            return response()->json(['success' => true]);
+        }
+
+        return response()->json(['success' => false]);
+    }
+
+    public function add(Request $request)
+    {
+        try {
+            $productId = $request->input('product_id');
+            // $userId = Auth::id(); // Ensure the user is authenticated
+
+            // if (!$userId) {
+            //    return response()->json(['success' => false, 'message' => 'User not authenticated'], 401);
+            //}
+
+            // Find the product details
+            $product = DB::table('detail_produk')->where('ID_PROD', $productId)->first();
+
+            if (!$product) {
+                return response()->json(['success' => false, 'message' => 'Product not found'], 404);
+            }
+
+            // Check if the product is already in the cart
+            $cartItem = DB::table('keranjang')
+                ->where('ID_PROD', $productId)
+                // ->where('ID_CUST', $userId)
+                ->first();
+
+            if ($cartItem) {
+                // Update the quantity if the product is already in the cart
+                DB::table('keranjang')
+                    ->where('ID_PROD', $productId)
+                    // ->where('ID_CUST', $userId)
+                    ->update(['QTY' => $cartItem->QTY + 1]);
+            } else {
+                // Add the new product to the cart
+                DB::table('keranjang')->insert([
+                   // 'ID_CUST' => $userId,
+                    'ID_PROD' => $productId,
+                    'QTY' => 1
+                ]);
+            }
+
+            return response()->json(['success' => true, 'message' => 'Product added to cart successfully']);
+        } catch (\Exception $e) {
+            Log::error('Failed to add product to cart: ' . $e->getMessage());
+            return response()->json(['success' => false, 'message' => 'Failed to add product to cart'], 500);
+        }
     }
 }

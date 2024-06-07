@@ -16,8 +16,6 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\HomeController;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,6 +46,8 @@ Route::post('/register', [RegisterController::class, 'RegisterAction'])->name('r
 Route::get('/forget', [ForgetPassController::class, 'ForgetPass'])->name('forget');
 
 Route::get('/cart', [CartController::class, 'Cart']);
+Route::post('/cart/update', [CartController::class, 'updateCart'])->name('update-cart');
+Route::post('/cart/remove', [CartController::class, 'removeCartItem'])->name('remove-cart-item');
 
 Route::get('/checkout', [CheckoutController::class, 'Checkout']);
 
@@ -75,4 +75,6 @@ Route::get('/receipt', [ReceiptController::class, 'Receipt']);
 
 Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');
 
+Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
 
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
