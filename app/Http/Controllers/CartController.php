@@ -34,6 +34,7 @@ class CartController extends Controller
 
         $updated = DB::table('keranjang')
         ->where('ID_PROD', $productId)
+        ->where('ID_CUST', '=', $id_cust)
         ->update(['QTY' => $quantity]);
 
         if ($updated) {
