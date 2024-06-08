@@ -24,7 +24,25 @@ class CartController extends Controller
             ->where('keranjang.ID_CUST', '=', $id_cust)
             ->get();
 
-        return view('cart', compact('cartProducts'));
+        $dataProducts = DB::table('DETAIL_PRODUK as dp')
+            ->join(DB::raw('(SELECT NAMA_PROD, MIN(ID_PROD) as min_id FROM DETAIL_PRODUK GROUP BY NAMA_PROD) as distinct_names'),
+                'dp.ID_PROD', '=', 'distinct_names.min_id')
+            ->select('dp.ID_PROD', 'dp.NAMA_PROD', 'dp.SHADE', 'dp.DESKRIPSI', 'dp.HARGA', 'dp.DISKON', 'dp.KATEGORI', 'dp.STOCK', 'dp.FOTO_PROD')
+            ->get();
+
+        $recommendedProducts = DB::table('detail_transaksi')
+            ->select('ID_PROD', DB::raw('COUNT(*) as total_sales'))
+            ->groupBy('ID_PROD')
+            ->orderByDesc('total_sales')
+            ->limit(7)
+            ->get();
+
+        $recommendedProductIds = $recommendedProducts->pluck('ID_PROD');
+
+        $recommendedProducts = $dataProducts->whereIn('ID_PROD', $recommendedProductIds)
+        ->whereNotIn('ID_PROD', $cartProducts->pluck('ID_PROD')->toArray());
+
+        return view('cart', compact('cartProducts', 'recommendedProducts'));
     }
 
     public function updateCart(Request $request)

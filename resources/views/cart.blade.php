@@ -9,7 +9,7 @@
         <a href="{{ url('/wishlist') }}" class="position-relative me-4 my-auto">
             <i class="fa fa-heart fa-2x"></i>
         </a>
-        <a href="{{ url('/checkout') }}" class="position-relative me-4 my-auto">
+        <a href="{{ url('/cart') }}" class="position-relative me-4 my-auto">
             <i class="fa fa-shopping-bag fa-2x text-secondary"></i>
             <span
                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1"
@@ -165,50 +165,57 @@
                     <h3>Recommended Products</h3>
                 </header>
 
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card px-4 border shadow-0 mb-4 mb-lg-0">
-                            <div class="mask px-2" style="height: 50px;">
-                                <div class="d-flex justify-content-between">
-                                    <h6><span class="badge bg-danger pt-1 mt-3 ms-2">New</span></h6>
-                                    <a href="#"><i
-                                            class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
-                                </div>
-                            </div>
-                            <a href="#" class="">
-                                <img src="img\2-in-1 DUAL ENDED.jpeg" class="card-img-top rounded-2" />
-                            </a>
-                            <div class="card-body d-flex flex-column pt-3 border-top">
-                                <a href="#" class="nav-link">PINKFLASH 2 IN 1 Dual-ended Lipstik Matte Velvet</a>
-                                <div class="price-wrap mb-2">
-                                    <strong class="">Rp 33.250</strong>
-                                </div>
-                                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-                                    <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
-                                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active p-0">
+                        <div class="container-fluid vesitable pt-3">
+                            <div class="owl-carousel vegetable-carousel justify-content-center">
+                                @foreach ($recommendedProducts as $product)
+                                    <div class="border border-primary rounded position-relative vesitable-item">
+                                        <a href="{{ route('shop-details', ['id_prod' => $product->ID_PROD]) }}"
+                                            class="text-decoration-none text-dark">
+                                            <div class="vesitable-img">
+                                                <img src="{{ asset($product->FOTO_PROD) }}"
+                                                    class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+                                                style="top: 10px; right: 10px;">
+                                                {{ $product->KATEGORI }}
+                                            </div>
+                                            <div class="p-4 rounded-bottom">
+                                                <h4 class="product-title"
+                                                    style="min-height: 2em; line-height: 1em; overflow: hidden;">
+                                                    {{ $product->NAMA_PROD }}</h4>
+                                                <p class="product-description">
+                                                    {{ $product->DESKRIPSI }}<span
+                                                        class="more-text d-none"></span>
+                                                </p>
+                                                <div class="d-flex flex-column">
+                                                    @if ($product->DISKON > 0)
+                                                        <div class="price-wrap mb-2">
+                                                            <strong class="text-dark fs-5 fw-bold mb-0">Rp
+                                                                {{ number_format($product->HARGA - ($product->HARGA * $product->DISKON) / 100, 0, ',', '.') }}
+                                                            </strong>
+                                                            <del class="text-success">Rp
+                                                                {{ number_format($product->HARGA, 0, ',', '.') }}
+                                                            </del>
+                                                        </div>
+                                                    @else
+                                                        <p class="text-dark fs-5 fw-bold mb-2">Rp
+                                                            {{ number_format($product->HARGA, 0, ',', '.') }}
+                                                        </p>
+                                                    @endif
+                                                    <a href="#"
+                                                        class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Purchase
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card px-4 border shadow-0 mb-4 mb-lg-0">
-                            <div class="mask px-2" style="height: 50px;">
-                                <a href="#"><i class="fas fa-heart text-wishlist fa-lg float-end pt-3 m-2"></i></a>
-                            </div>
-                            <a href="#" class="">
-                                <img src="img\4-in-4 PALETTE.jpeg" class="card-img-top rounded-2" />
-                            </a>
-                            <div class="card-body d-flex flex-column pt-3 border-top">
-                                <a href="#" class="nav-link">PINKFLASH OhMyLove 4 in 1 Multiple Face Palette</a>
-                                <div class="price-wrap mb-2">
-                                    <strong class="">Rp 75.000</strong>
-                                </div>
-                                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
-                                    <a href="#" class="btn btn-outline-primary w-100">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
     </div>
     </section>
@@ -295,5 +302,30 @@
 
             recalculateTotalPrice();
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelectorAll('.product-description').forEach(function(element) {
+                var words = element.innerText.split(' ');
+                if (words.length > 12) {
+                    var visibleText = words.slice(0, 12).join(' ');
+                    var hiddenText = words.slice(12).join(' ');
+                    element.innerHTML = `
+                        ${visibleText}
+                        <span class="more-text-description d-none"> ${hiddenText}</span>
+                        <a href="#" class="read-more-description">Read more</a>
+                    `;
+                }
+            });
+            document.querySelectorAll('.read-more-description').forEach(function(element) {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var moreText = this.previousElementSibling;
+                    moreText.classList.toggle('d-none');
+                    this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                });
+            });
+        });
+
     </script>
 @endsection
