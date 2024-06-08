@@ -47,6 +47,7 @@ class CartController extends Controller
     public function removeCartItem(Request $request)
     {
         $productId = $request->input('productId');
+        $id_cust = session('id_cust', Cookie::get('id_cust'));
 
         $deleted = DB::table('keranjang')
             ->where('ID_PROD', $productId)

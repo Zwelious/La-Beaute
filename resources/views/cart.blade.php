@@ -134,7 +134,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <p class="mb-2">Total price:</p>
-                                        <p class="mb-2">Rp 1.564.100</p>
+                                        <p class="mb-2" id="total-payment">Rp 0</p>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <p class="mb-2">Tax:</p>
@@ -229,7 +229,7 @@
                 },
                 success: function(response) {
                     if (response.success) {
-                        // Reload the page to reflect the changes
+                        recalculateTotalPrice();
                     } else {
                         alert('Failed to update cart');
                     }
@@ -241,42 +241,11 @@
 
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.btn-increment, .btn-decrement').forEach(button => {
-                button.addEventListener('click', function() {
-                    let isIncrement = this.classList.contains('btn-increment');
-                    let input = this.parentElement.querySelector('.qty-input');
-                    let currentQty = parseInt(input.value);
-                    let newQty = isIncrement ? currentQty + 1 : (currentQty > 1 ? currentQty - 1 :
-                        1);
-
-                    input.value = newQty;
-
-                    let productId = this.closest('.d-flex').getAttribute('data-id');
-                    updateCartQuantity(productId, newQty);
-                    updateTotalPrice();
-                });
-            });
-        });
-
-        function updateTotalPrice() {
-            let total = 0;
-            document.querySelectorAll('.cart-item').forEach(item => {
-                let price = parseFloat(item.getAttribute('data-price'));
-                let quantity = parseInt(item.querySelector('.qty-input').value);
-                total += price * quantity;
-            });
-
-            document.getElementById('total-payment').textContent = 'Rp ' + total.toLocaleString('id-ID', {
-                minimumFractionDigits: 0
-            });
-        }
-
         function removeItem(productId) {
             if (!confirm('Are you sure you want to remove this item?')) return;
 
             $.ajax({
-                url: '{{ route('delete-cart') }}',
+                url: '{{ route('remove-cart') }}',
                 method: 'POST',
                 data: {
                     _token: '{{ csrf_token() }}',
@@ -284,8 +253,8 @@
                 },
                 success: function(response) {
                     if (response.success) {
-                        updateTotalPrice();
-                        location.reload(); // Reload the page to reflect the changes
+                        recalculateTotalPrice();
+                        location.reload();
                     } else {
                         alert('Failed to remove item');
                     }
@@ -296,28 +265,35 @@
             });
         }
 
-        function updateTotalPrice() {
-            let totalPrice = 0;
-
-            // Get all cart item rows
-            let cartItems = document.querySelectorAll('.row[data-id]');
-
-            // Iterate over each cart item to calculate total price
-            cartItems.forEach(function(item) {
-                let price = parseFloat(item.getAttribute('data-price'));
-                let quantity = parseInt(item.getAttribute('data-quantity'));
-
-                totalPrice += price * quantity;
+        function recalculateTotalPrice() {
+            let total = 0;
+            document.querySelectorAll('.row[data-id]').forEach(item => {
+                const price = parseFloat(item.getAttribute('data-price'));
+                const quantity = parseInt(item.querySelector('.qty-input').value);
+                total += price * quantity;
             });
-
-            // Format the total price
-            let formattedTotalPrice = totalPrice.toLocaleString('id-ID', {
-                style: 'currency',
-                currency: 'IDR'
-            });
-
-            // Update the total price element
-            document.getElementById('total-price').innerText = formattedTotalPrice;
+            document.getElementById('total-payment').innerText = 'Rp ' + total.toLocaleString('id-ID');
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.btn-increment, .btn-decrement').forEach(button => {
+                button.addEventListener('click', function() {
+                    let isIncrement = this.classList.contains('btn-increment');
+                    let input = this.parentElement.querySelector('.qty-input');
+                    let currentQty = parseInt(input.value);
+                    let newQty = isIncrement ? currentQty + 1 : (currentQty > 1 ? currentQty -
+                        1 :
+                        1);
+
+                    input.value = newQty;
+
+                    let productId = this.closest('.d-flex').getAttribute('data-id');
+                    updateCartQuantity(productId, newQty);
+
+                });
+            });
+
+            recalculateTotalPrice();
+        });
     </script>
 @endsection

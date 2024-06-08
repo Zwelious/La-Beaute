@@ -19,9 +19,8 @@ class WishlistController extends Controller
         // Fetch wishlist products
         $wishlistProducts = DB::table('wishlist')
             ->join('detail_produk', 'wishlist.ID_PROD', '=', 'detail_produk.ID_PROD')
-            ->join('customer', 'wishlist.ID_CUST', '=', 'customer.ID_CUST')
+            ->join('customer', 'wishlist.ID_CUST', '=', $id_cust)
             ->select('wishlist.ID_PROD', 'detail_produk.NAMA_PROD', 'detail_produk.SHADE', 'detail_produk.HARGA', 'detail_produk.FOTO_PROD', 'detail_produk.DISKON', 'detail_produk.DESKRIPSI', 'detail_produk.KATEGORI')
-            ->where('wishlist.ID_CUST', '=', $id_cust)
             ->get();
 
         // Get the categories of the wishlist products

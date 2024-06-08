@@ -214,7 +214,7 @@
                                 <?php
                                     $totalPrice = 0;
                                     foreach($cartProducts as $product) {
-                                        $totalPrice += $product->HARGA;
+                                        $totalPrice += $product->HARGA * $product->QTY;
                                     }
                                     echo $totalPrice;
                                 ?>
@@ -246,7 +246,8 @@
                                         {{ $product->NAMA_PROD }} <br />
                                         {{ $product->SHADE }}
                                     </a>
-                                    <div class="price text-muted">Total: Rp {{ number_format($product->HARGA, 0, ',', '.') }} </div>
+                                    <div class="price text-muted">Price per item: <br><strong>Rp {{ number_format($product->HARGA, 0, ',', '.') }} </strong></br></div>
+                                    <div class="price text-muted">Quantity:  {{ number_format($product->QTY, 0, ',', '.') }} </div>
                                 </div>
                             </div>
                         @endforeach
