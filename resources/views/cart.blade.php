@@ -143,7 +143,7 @@
                                     <hr />
                                     <div class="d-flex justify-content-between">
                                         <p class="mb-2">Total payment:</p>
-                                        <p class="mb-2 fw-bold">Rp 1.564.100</p>
+                                        <p class="mb-2 fw-bold" id="total-payment">Rp o</p>
                                     </div>
 
                                     <div class="mt-3">
@@ -229,7 +229,7 @@
                 },
                 success: function(response) {
                     if (response.success) {
-                       // Reload the page to reflect the changes
+                        // Reload the page to reflect the changes
                     } else {
                         alert('Failed to update cart');
                     }
@@ -254,9 +254,23 @@
 
                     let productId = this.closest('.d-flex').getAttribute('data-id');
                     updateCartQuantity(productId, newQty);
+                    updateTotalPrice();
                 });
             });
         });
+
+        function updateTotalPrice() {
+            let total = 0;
+            document.querySelectorAll('.cart-item').forEach(item => {
+                let price = parseFloat(item.getAttribute('data-price'));
+                let quantity = parseInt(item.querySelector('.qty-input').value);
+                total += price * quantity;
+            });
+
+            document.getElementById('total-payment').textContent = 'Rp ' + total.toLocaleString('id-ID', {
+                minimumFractionDigits: 0
+            });
+        }
 
         function removeItem(productId) {
             if (!confirm('Are you sure you want to remove this item?')) return;
@@ -270,6 +284,7 @@
                 },
                 success: function(response) {
                     if (response.success) {
+                        updateTotalPrice();
                         location.reload(); // Reload the page to reflect the changes
                     } else {
                         alert('Failed to remove item');
