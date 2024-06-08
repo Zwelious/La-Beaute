@@ -39,7 +39,7 @@ class CheckoutController extends Controller
             ->get();
 
 
-        return redirect()->route('checkout')->with('success', 'Checkout successful!');
+        return redirect()->route('receipt')->with('success', 'Checkout successful!');
     }
 
     public function Checkout()

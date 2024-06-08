@@ -3,7 +3,6 @@
 @section('navbar')
     <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
     <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
-    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
     <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     </div>
     <div class="d-flex m-3 me-0">
@@ -16,9 +15,10 @@
                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1"
                 style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
         </a>
-        @if(session()->has('id_cust'))
+        @if (session()->has('id_cust'))
             <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user fa-2x"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -50,8 +50,8 @@
                                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                     <div class="card-body p-4 p-lg-5 text-black">
 
-                                        <form>
-
+                                        <form action="{{ route('reset-pass') }}" method="POST">
+                                            @csrf
                                             <div class="d-flex align-items-center mb-3 pb-1">
                                                 @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
                                                     <span class="h1 fw-bold mb-0">Change Password</span>
@@ -61,29 +61,37 @@
                                             </div>
 
                                             <div data-mdb-input-init class="form-outline mb-4">
-                                                <input type="email" id="form2Example17"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form2Example17">Email address</label>
+                                                <input type="email" id="email" name="email"
+                                                    class="form-control form-control-lg" required />
+                                                <label class="form-label" for="email">Email address</label>
                                             </div>
 
                                             @if (session()->has('id_cust') || Cookie::get('id_cust') != null)
                                                 <div data-mdb-input-init class="form-outline mb-4">
-                                                    <input type="old password" id="oldpassword"
-                                                        class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form2Example27">Old Password</label>
+                                                    <input type="password" id="old_password" name="old_password"
+                                                        class="form-control form-control-lg" required />
+                                                    <label class="form-label" for="old_password">Old Password</label>
+                                                </div>
+                                            @else
+                                                <div data-mdb-input-init class="form-outline mb-4">
+                                                    <input type="tel" id="phone" name="phone"
+                                                        class="form-control form-control-lg" required />
+                                                    <label class="form-label" for="phone">Phone Number</label>
                                                 </div>
                                             @endif
 
                                             <div data-mdb-input-init class="form-outline mb-4">
-                                                <input type="new password" id="form2Example27"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form2Example27">New Password</label>
+                                                <input type="password" id="new_password" name="new_password"
+                                                    class="form-control form-control-lg" required />
+                                                <label class="form-label" for="new_password">New Password</label>
                                             </div>
 
                                             <div data-mdb-input-init class="form-outline mb-4">
-                                                <input type="confirm password" id="form2Example27"
-                                                    class="form-control form-control-lg" />
-                                                <label class="form-label" for="form2Example27">Confirm Password</label>
+                                                <input type="password" id="new_password_confirmation"
+                                                    name="new_password_confirmation" class="form-control form-control-lg"
+                                                    required />
+                                                <label class="form-label" for="new_password_confirmation">Confirm
+                                                    Password</label>
                                             </div>
 
                                             <div class="pt-1 mb-4">

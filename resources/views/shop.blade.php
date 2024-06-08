@@ -3,7 +3,6 @@
 @section('navbar')
     <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
     <a href="{{ url('/shop') }}" class="nav-item nav-link active">Shop</a>
-    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
     <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     </div>
     <div class="d-flex m-3 me-0">

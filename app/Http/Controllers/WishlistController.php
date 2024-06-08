@@ -13,7 +13,7 @@ class WishlistController extends Controller
         $id_cust = session('id_cust', Cookie::get('id_cust'));
 
         if (!$id_cust) {
-            return redirect()->route('login');
+            return redirect()->route('login')->with('error', "Please Log in first.");
         }
 
         // Fetch wishlist products

@@ -3,7 +3,6 @@
 @section('navbar')
     <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
     <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
-    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
     <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     </div>
     <div class="d-flex m-3 me-0">
@@ -143,7 +142,7 @@
                                     <hr />
                                     <div class="d-flex justify-content-between">
                                         <p class="mb-2">Total payment:</p>
-                                        <p class="mb-2 fw-bold" id="total-payment">Rp o</p>
+                                        <p class="mb-2 fw-bold" id="grand-total">Rp 0</p>
                                     </div>
 
                                     <div class="mt-3">
@@ -273,6 +272,7 @@
                 total += price * quantity;
             });
             document.getElementById('total-payment').innerText = 'Rp ' + total.toLocaleString('id-ID');
+            document.getElementById('grand-total').innerText = 'Rp ' + total.toLocaleString('id-ID');
         }
 
         document.addEventListener('DOMContentLoaded', function() {

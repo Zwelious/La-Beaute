@@ -39,11 +39,9 @@ Route::post('/login', [LoginController::class, 'LoginAction'])->name('login');
 Route::get('/register', [RegisterController::class, 'Register'])->name('register');
 Route::post('/register', [RegisterController::class, 'RegisterAction'])->name('register');
 
-// Route::post('/register', 'Auth\RegisterController@register')->name('register');
-
-// Route::post('/register', 'AuthController@register')->name('register');
-
 Route::get('/forget', [ForgetPassController::class, 'ForgetPass'])->name('forget');
+
+Route::post('/forget', [ForgetPassController::class, 'resetPassword'])->name('reset-pass');
 
 Route::get('/cart', [CartController::class, 'Cart']);
 Route::post('/update-cart', [CartController::class, 'updateCart'])->name('update-cart');
@@ -63,15 +61,13 @@ Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->na
 
 Route::post('/shop/{id_prod}', [ShopDetailsController::class, 'addToCart'])->name('addtocart');
 
-Route::get('/testimonials', [TestimonialController::class, 'Testimonial']);
-
 Route::get('/admin-dashboard', [AdminTransController::class, 'AdminTrans']);
 
 Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
 
 Route::get('/contact', [ContactController::class, 'Contact']);
 
-Route::get('/receipt', [ReceiptController::class, 'Receipt']);
+Route::get('/receipt', [ReceiptController::class, 'Receipt'])->name('receipt');
 
 Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');
 

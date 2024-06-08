@@ -3,7 +3,6 @@
 @section("navbar")
     <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
     <a href="{{ url('/shop') }}" class="nav-item nav-link">Shop</a>
-    <a href="{{ url('/testimonials') }}" class="nav-item nav-link">Testimonial</a>
     <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact</a>
     </div>
     <div class="d-flex m-3 me-0">
@@ -41,7 +40,7 @@
     <div class="container mb-5 mt-5">
       <div class="row d-flex align-items-baseline justify-content-cente">
         <div class="col-xl-9">
-          <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong><b>ID: #123-123<b></strong></p>
+          <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong><b>ID: #{{ $transaction->ID_TRANS }}<b></strong></p>
         </div>
         <hr>
       </div>
@@ -57,20 +56,20 @@
         <div class="row">
           <div class="col-xl-8">
             <ul class="list-unstyled">
-              <li class="text-primary">To: <span style="color:black ;">John Lorem</span></li>
-              <li class="text-primary">Street, City, Country</li>
-              <li class="text-primary"><i class="fas fa-phone"></i> 123-456-789</li>
+              <li class="text-primary">To: <span style="color:black ;">{{ $customer->NAME }}</span></li>
+              <li class="text-primary">Email: {{ $customer->EMAIL }}</li>
+              <li class="text-primary"><i class="fas fa-phone"></i> {{ $customer->PHONE }}</li>
             </ul>
           </div>
           <div class="col-xl-4">
             <ul class="list-unstyled">
             <li class="text-primary"><i class="fas fa-circle"></i> <span
-                  class="fw-bold">ID: </span> #123-456</li>
+                  class="fw-bold">ID: </span> #{{ $transaction->ID_TRANS }}</li>
             <li class="text-primary"><i class="fas fa-circle"></i> <span
-                  class="fw-bold">Creation Date: </span>Jun 23,2021</li>
+                  class="fw-bold">Creation Date: </span>{{ $transaction->TANGGAL}}</li>
             <li class="text-primary"><i class="fas fa-circle"></i> <span
-                  class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold">
-                  Unpaid</span></li>
+                  class="me-1 fw-bold">Status:</span><span class="badge bg-success text-black fw-bold">
+                  Paid</span></li>
             </ul>
           </div>
         </div>
@@ -110,7 +109,7 @@
         </div>
         <div class="row">
           <div class="col-xl-7">
-            <p class="ms-3">Thank You For Your Purchase!</p>
+            <p class="ms-3">Thank you for your purchase at La Beaute!</p>
           </div>
           <div class="col-xl-4">
             <ul class="list-unstyled">
@@ -121,6 +120,11 @@
             <!-- Other details -->
           </ul>
         </div>
+      </div>
+      <<div class="position-relative">
+        <a href="/" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0; z-index: 1050;">
+          Back to Home
+        </a>
       </div>
     </div>
   </div>

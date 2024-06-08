@@ -38,7 +38,7 @@ class RegisterController extends Controller
         }
 
         if ($insert) {
-            return redirect('/login')->with('success', 'Registration successful!');
+            return redirect('/login')->with('success', 'Registration successful! Please Log in.');
         } else {
             return redirect('/register')->with('error', 'Error registering, please try again.');
         }
