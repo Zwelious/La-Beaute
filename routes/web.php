@@ -76,3 +76,6 @@ Route::get('/receipt', [ReceiptController::class, 'Receipt'])->name('receipt');
 Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');
 
 Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
+
+Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
