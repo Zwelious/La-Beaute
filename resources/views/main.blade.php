@@ -85,52 +85,30 @@
                                 <p class="text-primary mb-0">Your beauty pal.</p>
                             </a>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="position-relative mx-auto">
-                                <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email" id="yourEmail">
-                                <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-9">
                             <div class="d-flex justify-content-end pt-3">
-                                <a class="btn  btn-outline-primary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-primary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-primary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-outline-primary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn  btn-outline-primary me-2 btn-md-square rounded-circle" href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary me-2 btn-md-square rounded-circle" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary me-2 btn-md-square rounded-circle" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-primary btn-md-square rounded-circle" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-5 col-md-6">
                         <div class="footer-item">
-                            <h4 class="text-light mb-3">Why People Like us!</h4>
-                            <p class="mb-4">Our brands are high-quality, worldwide-recognized brand, granting you beauty
-                                to be the best version of yourself!
+                            <h4 class="text-light mb-3">Why People Like us?</h4>
+                            <p class="mb-4">Our products are meticulously crafted with premium ingredients, ensuring the highest quality standards for your skincare and beauty regimen. Experience transformative beauty with our carefully curated collection. From radiant skin to captivating makeup looks, our products deliver stunning results every time.
                             </p>
-                            <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read More</a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex flex-column text-start footer-item">
-                            <h4 class="text-light mb-3">Shop Info</h4>
-                            <a class="btn-link" href="">About Us</a>
-                            <a class="btn-link" href="">Contact Us</a>
-                            <a class="btn-link" href="">Privacy Policy</a>
-                            <a class="btn-link" href="">Terms & Condition</a>
-                            <a class="btn-link" href="">Return Policy</a>
-                            <a class="btn-link" href="">FAQs & Help</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                             <h4 class="text-light mb-3">Account</h4>
-                            <a class="btn-link" href="">My Account</a>
-                            <a class="btn-link" href="">Shop details</a>
-                            <a class="btn-link" href="">Shopping Cart</a>
-                            <a class="btn-link" href="">Wishlist</a>
-                            <a class="btn-link" href="">Order History</a>
-                            <a class="btn-link" href="">International Orders</a>
+                            <a class="btn-link" href="{{ route('Cart') }}">Shopping Cart</a>
+                            <a class="btn-link" href="{{ route('Wishlist') }}">Wishlist</a>
+                            <a class="btn-link" href="">Log Out</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">

@@ -43,7 +43,7 @@ Route::get('/forget', [ForgetPassController::class, 'ForgetPass'])->name('forget
 
 Route::post('/forget', [ForgetPassController::class, 'resetPassword'])->name('reset-pass');
 
-Route::get('/cart', [CartController::class, 'Cart']);
+Route::get('/cart', [CartController::class, 'Cart'])->name('Cart');
 Route::post('/update-cart', [CartController::class, 'updateCart'])->name('update-cart');
 Route::post('/remove-cart', [CartController::class, 'removeCartItem'])->name('remove-cart');
 
@@ -51,7 +51,7 @@ Route::get('/checkout', [CheckoutController::class, 'Checkout']);
 
 Route::post('/checkout', [CheckoutController::class, 'CheckoutSubmit'])->name('checkout');
 
-Route::get('/wishlist', [WishlistController::class, 'Wishlist']);
+Route::get('/wishlist', [WishlistController::class, 'Wishlist'])->name('Wishlist');
 
 Route::get('/shop', [ShopController::class, 'Shop'])->name('shop');
 
