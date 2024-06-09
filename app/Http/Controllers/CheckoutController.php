@@ -57,6 +57,11 @@ class CheckoutController extends Controller
             ->where('keranjang.ID_CUST', '=', $id_cust)
             ->get();
 
+
+        if ($cartProducts->isEmpty()) {
+            return redirect('/cart')->with('error', 'Cart is empty. Go to shop to buy our best beauty products!');
+        }
+
         return view('checkout', compact('cartProducts'));
     }
 

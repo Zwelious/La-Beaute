@@ -25,37 +25,51 @@ class ReceiptController extends Controller
             ->where('keranjang.ID_CUST', '=', $id_cust)
             ->get();
 
+        // Store cart products in session
+        Session::put('cartProducts', $cartProducts);
+
+        if($cartProducts->isEmpty()){
+            return redirect('/');
+        }
+
+        // Calculate total price
         $total = $cartProducts->reduce(function ($carry, $product) {
-            return $carry + ($product->HARGA * $product->QTY);
+            $discountedPrice = $product->HARGA * (1 - $product->DISKON / 100);
+            return $carry + ($discountedPrice * $product->QTY);
         }, 0);
 
+        // Insert transaction into the database
         DB::table('transaksi')->insert([
             'ID_CUST' => $id_cust,
             'TANGGAL' => Carbon::now(),
             'TOTAL' => $total,
         ]);
 
+        // Insert detail transactions into the database
         foreach ($cartProducts as $product) {
+            $discountedPrice = $product->DISKON > 0 ? $product->HARGA * (1 - $product->DISKON / 100) : $product->HARGA;
+
             DB::table('detail_transaksi')->insert([
                 'ID_PROD' => $product->ID_PROD,
-                'HARGA' => $product->HARGA,
+                'HARGA' => $discountedPrice,
                 'QTY' => $product->QTY,
             ]);
         }
 
-        // Clear the cart for the customer
-        DB::table('keranjang')
-            ->where('ID_CUST', '=', $id_cust)
-            ->delete();
+        // Delete cart products from the database
+        DB::table('keranjang')->where('ID_CUST', '=', $id_cust)->delete();
 
+        // Retrieve transaction details
         $transaction = DB::table('transaksi')
-        ->where('ID_CUST', $id_cust)
-        ->orderBy('TANGGAL', 'desc')
-        ->first();
+            ->where('ID_CUST', $id_cust)
+            ->orderBy('TANGGAL', 'desc')
+            ->first();
 
+        // Retrieve customer details
         $customer = DB::table('customer')->where('ID_CUST', $id_cust)->first();
 
-        Session::put('cartProducts', $cartProducts);
+        // Retrieve cart products from session
+        $cartProducts = session('cartProducts');
 
         return view('receipt', compact('cartProducts', 'transaction', 'customer'));
     }

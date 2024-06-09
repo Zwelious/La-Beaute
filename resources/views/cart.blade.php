@@ -212,7 +212,7 @@
                                                             {{ number_format($product->HARGA, 0, ',', '.') }}
                                                         </p>
                                                     @endif
-                                                    <a href="#"
+                                                    <a href="{{ route('shop-details', ['id_prod' => $product->ID_PROD]) }}"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary">
                                                         <i class="fa fa-shopping-bag me-2 text-primary"></i> Purchase
                                                     </a>
