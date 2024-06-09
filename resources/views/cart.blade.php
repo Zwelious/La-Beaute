@@ -58,8 +58,7 @@
                                     @endif
 
                                     @if ($cartProducts->isEmpty())
-                                        <p>Your wishlist is empty. To add products to your wishlist, click on the heart
-                                            icon!</p>
+                                        <p>Your cart is empty. To add products to your cart, open the shop!</p>
                                     @else
                                         @foreach ($cartProducts as $cart)
                                             @if ($cart->DISKON > 0)

@@ -65,10 +65,6 @@ Route::post('/shop/{id_prod}', [ShopDetailsController::class, 'addToCart'])->nam
 
 Route::post('/shop-wishlist', [ShopDetailsController::class, 'addToWishlist'])->name('addtowishlist');
 
-Route::get('/admin-dashboard', [AdminTransController::class, 'AdminTrans']);
-
-Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
-
 Route::get('/contact', [ContactController::class, 'Contact']);
 
 Route::get('/receipt', [ReceiptController::class, 'Receipt'])->name('receipt');
@@ -76,3 +72,7 @@ Route::get('/receipt', [ReceiptController::class, 'Receipt'])->name('receipt');
 Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');
 
 Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
+
+Route::get('/admin', [AdminTransController::class, 'AdminTrans']);
+
+Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);

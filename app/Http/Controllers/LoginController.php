@@ -24,31 +24,41 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
-        // Retrieve the user from the database
-        $DBuser = DB::table('customer')->where('email', $credentials['email'])->first();
+        $DBadmin = DB::table('adminlogin')->where('email', $credentials['email'])->where('admin-pin', $credentials['password'])->first();
 
-        // Check if the user exists and the password_hash field is available
-        if ($DBuser !== null) {
-            // Verify the password
-            if (Hash::check($credentials['password'], $DBuser->PASSWORD_HASH)) {
-                // Handle "remember me" functionality
-                if ($request->has('remember')) {
-                    Cookie::queue('id_cust', $DBuser->ID_CUST, 60 * 24 * 7);
-                    Cookie::queue('email', $DBuser->EMAIL, 60 * 24 * 7);
-                    Cookie::queue('name', $DBuser->NAME, 60 * 24 * 7);
-                    // Do not store password or password hashes in cookies
+        if (!$DBadmin == null)
+        {
+            $request->session()->put('admin', $DBadmin->EMAIL);
+            return redirect('/admin');
+        }
+        else
+        {
+            $DBuser = DB::table('customer')->where('email', $credentials['email'])->first();
+
+            // Check if the user exists and the password_hash field is available
+            if ($DBuser !== null) {
+                // Verify the password
+                if (Hash::check($credentials['password'], $DBuser->PASSWORD_HASH)) {
+                    // Handle "remember me" functionality
+                    if ($request->has('remember')) {
+                        Cookie::queue('id_cust', $DBuser->ID_CUST, 60 * 24 * 7);
+                        Cookie::queue('email', $DBuser->EMAIL, 60 * 24 * 7);
+                        Cookie::queue('name', $DBuser->NAME, 60 * 24 * 7);
+                        // Do not store password or password hashes in cookies
+                    } else {
+                        $request->session()->put('id_cust', $DBuser->ID_CUST);
+                        $request->session()->put('email', $DBuser->EMAIL);
+                        $request->session()->put('name', $DBuser->NAME);
+                    }
+                    return redirect('/')->with('success', 'Login Successful');
                 } else {
-                    $request->session()->put('id_cust', $DBuser->ID_CUST);
-                    $request->session()->put('email', $DBuser->EMAIL);
-                    $request->session()->put('name', $DBuser->NAME);
+                    return redirect('/login')->with('error', 'Login Failed! Please Try Again.');
                 }
-                return redirect('/')->with('success', 'Login Successful');
             } else {
                 return redirect('/login')->with('error', 'Login Failed! Please Try Again.');
             }
-        } else {
-            return redirect('/login')->with('error', 'Login Failed! Please Try Again.');
         }
+
     }
 
     public function Logout(Request $request)
