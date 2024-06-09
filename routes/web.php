@@ -76,3 +76,5 @@ Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'
 Route::get('/admin', [AdminTransController::class, 'AdminTrans']);
 
 Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
+Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
