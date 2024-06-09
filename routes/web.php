@@ -80,6 +80,8 @@ Route::get('/admin-contact', [AdminTransController::class, 'AdminContact']);
 Route::get('/admin-shop', [AdminTransController::class, 'AdminShop']);
 Route::post('/admin-shop-add', [AdminTransController::class, 'addProduct'])->name('addProduct');
 Route::post('/admin-shop-edit', [AdminTransController::class, 'editProduct'])->name('editProduct');
+Route::post('/admin-shop-delete', [AdminTransController::class, 'deleteProduct'])->name('deleteProduct');
+
 
 Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
 

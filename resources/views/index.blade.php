@@ -11,9 +11,6 @@
         </a>
         <a href="{{ url('/cart') }}" class="position-relative me-4 my-auto">
             <i class="fa fa-shopping-bag fa-2x"></i>
-            <span
-                class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1"
-                style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
         </a>
         @if(session()->has('id_cust'))
             <div class="dropdown">
@@ -481,9 +478,9 @@
                                                 </del>
                                             </div>
                                         @endif
-                                        <a href="#"
+                                        <a href="{{ route('shop-details', ['id_prod' => $product->ID_PROD]) }}"
                                             class="btn border border-secondary rounded-pill px-3 text-primary">
-                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Purchase
                                         </a>
                                     </div>
                                 </div>
@@ -518,7 +515,7 @@
                 });
             });
         </script>
-        
+
         <!-- Vesitable Shop End -->
 
 

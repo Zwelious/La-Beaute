@@ -32,18 +32,9 @@
             <h1 class="h3 mb-2 text-gray-800 mt-5">Shop Table</h1>
             <p class="mb-4">DataTable with products data, to add, reduce, or remove La Beaute products.</p>
             <!-- DataTales Example -->
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2 class="text-white">Manage Products</h2>
-                    </div>
-                    <div class="col-sm-6 text-right">
-                        <a href="#addProductModal" class="btn btn-success" data-toggle="modal">
-                            <i class="material-icons">&#xE147;</i> <span>Add New Product</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <a href="#addProductModal" class="btn btn-success mb-3" data-toggle="modal">
+                <i class="fas fa-plus"></i> <span>Add New Product</span>
+            </a>
             <table class="table table-bordered table-hover">
                 <thead class="thead-dark">
                     <tr>
@@ -52,6 +43,7 @@
                         <th>Shade</th>
                         <th>Description</th>
                         <th>Price</th>
+                        <th>Discount</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -64,13 +56,15 @@
                             <td>{{ $product->SHADE }}</td>
                             <td>{{ $product->DESKRIPSI }}</td>
                             <td>Rp {{ number_format($product->HARGA, 0, ',', '.') }}</td>
+                            <td>{{ $product->DISKON }}%</td>
                             <td>
                                 <a href="#editProductModal" class="edit" data-toggle="modal"
                                     data-id="{{ $product->ID_PROD }}">
-                                    <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                                    <i class="fas fa-wrench" data-toggle="tooltip" title="Edit"></i>
                                 </a>
-                                <a class="delete">
-                                    <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                                <a ref="#deleteProductModal" class="delete" data-toggle="modal"
+                                    data-id="{{ $product->ID_PROD }}">
+                                    <i class="fas fa-trash-alt" data-toggle="tooltip" title="Delete"></i>
                                 </a>
                             </td>
                         </tr>
@@ -132,29 +126,45 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form id="editProductForm" action="{{ route('editProduct') }}" method="POST" enctype="multipart/form-data">
+                    <form id="editProductForm" action="{{ route('editProduct') }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="produk_id" id="edit_produk_id">
                         <div class="form-group">
-                            <label>Product Name</label>
-                            <input type="text" name="nama_produk" id="edit_nama_produk" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Image</label>
-                            <input type="file" name="image" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Description</label>
-                            <textarea name="deskripsi" id="edit_deskripsi" class="form-control" required></textarea>
-                        </div>
-                        <div class="form-group">
                             <label>Price</label>
                             <input type="number" name="harga" id="edit_harga" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Discount</label>
+                            <input type="number" name="diskon" id="edit_harga" class="form-control" required>
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
                             <input type="submit" class="btn btn-success" value="Save">
                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteProductModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Product</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this product?</p>
+                    <p class="text-warning"><small>This action cannot be undone.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <form id="deleteProductForm" action="{{ route('deleteProduct') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="produk_id" id="delete_produk_id">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </div>
             </div>

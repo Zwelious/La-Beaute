@@ -112,13 +112,8 @@ class AdminTransController extends Controller
     public function editProduct(Request $request)
     {
         $request->validate([
-            'nama_produk' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'shade' => 'required|string',
-            'deskripsi' => 'required|string',
             'harga' => 'required|numeric',
             'diskon' => 'required|numeric',
-            'stock' => 'required|numeric',
         ]);
 
         $product = DB::table('detail_produk')->where('produk_id', $request->produk_id)->first();
@@ -128,22 +123,28 @@ class AdminTransController extends Controller
         }
 
         $updateData = [
-            'NAMA_PROD' => $request->nama_produk,
-            'FOTO_PROD' => $imagePath,
-            'SHADE' => $shade,
-            'DESKRIPSI' => $request->deskripsi,
             'HARGA' => $request->harga,
-            'DISKON'=> $request->diskon,
-            'STOCK'=> $request->stock,
+            'DISKON' => $request->diskon,
         ];
-
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('product_images', 'public');
-            $updateData['image'] = $imagePath;
-        }
 
         DB::table('detail_produk')->where('produk_id', $request->produk_id)->update($updateData);
 
-        return redirect()->route('AdminShop')->with('success', 'Product updated successfully.');
+        return redirect()->route('AdminShop')->with('success', 'Price and discount updated successfully.');
+    }
+
+    public function deleteProduct(Request $request){
+        $productId = $request->input('produk_id');
+
+        // Check if the product exists
+        $product = DB::table('detail_produk')->where('produk_id', $productId)->first();
+
+        if (!$product) {
+            return redirect()->route('AdminShop')->with('error', 'Product not found.');
+        }
+
+        // Delete the product
+        DB::table('detail_produk')->where('produk_id', $productId)->delete();
+
+        return redirect()->route('AdminShop')->with('success', 'Product deleted successfully.');
     }
 }

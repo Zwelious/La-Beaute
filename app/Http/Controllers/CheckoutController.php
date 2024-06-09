@@ -12,17 +12,20 @@ class CheckoutController extends Controller
     public function checkoutSubmit(Request $request)
     {
         $validatedData = $request->validate([
-            'email' => 'required|email',
-            'firstName' => 'required',
-            'lastName' => 'required',
-            'phone' => 'required',
-            'address' => 'required',
-            'city' => 'required',
-            'country' => 'required',
-            'cardholderName' => 'required',
-            'cardNumber' => 'required',
-            'expirationDate' => 'required',
-            'cvv' => 'required',
+        // Personal information
+        'email' => 'required|email',
+        'firstName' => 'required',
+        'lastName' => 'required',
+        'phone' => 'required',
+        'address' => 'required',
+        'city' => 'required',
+        'country' => 'required',
+
+        // Payment information
+        'cardholderName' => 'required',
+        'cardNumber' => 'required|numeric',
+        'expirationDate' => 'required|date_format:m/y',
+        'cvv' => 'required|digits:3',
         ]);
 
         $id_cust = session('id_cust', Cookie::get('id_cust'));

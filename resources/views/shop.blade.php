@@ -11,9 +11,6 @@
         </a>
         <a href="{{ url('/cart') }}" class="position-relative me-4 my-auto">
             <i class="fa fa-shopping-bag fa-2x"></i>
-            <span
-                class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-light px-1"
-                style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
         </a>
         @if (session()->has('id_cust'))
             <div class="dropdown">
@@ -107,62 +104,11 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <h4 class="mb-3">Featured products</h4>
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                                <img src="img/DR100401.png" class="img-fluid rounded" alt="">
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-2">DIOR Addict Lip Tint</h6>
-                                                <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <div class="d-flex mb-2">
-                                                    <h5 class="fw-bold me-2">Rp 665.000</h5>
-                                                    <h5 class="text-danger text-decoration-line-through">Rp 700.000</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                                <img src="img/romand-veil.jpg" class="img-fluid rounded" alt="">
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-2">ROMAND See-Through Veil Lighter</h6>
-                                                <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <div class="d-flex mb-2">
-                                                    <h5 class="fw-bold me-2">Rp 189.050</h5>
-                                                    <h5 class="text-danger text-decoration-line-through">Rp 199.000</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                                <img src="img/LIPOIL.jpeg" class="img-fluid rounded" alt="">
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-2">PINKFLASH Natural Lip Oil Moisturize</h6>
-                                                <div class="d-flex mb-2">
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star text-secondary"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <div class="d-flex mb-2">
-                                                    <h5 class="fw-bold me-2">Rp 24.605</h5>
-                                                    <h5 class="text-danger text-decoration-line-through">Rp 25.900</h5>
-                                                </div>
+                                        <div class="position-relative">
+                                            <img src="img/banner_keren.jpg" class="img-fluid w-100 rounded"
+                                                alt="">
+                                            <div class="position-absolute"
+                                                style="top: 50%; right: 10px; transform: translateY(-50%);">
                                             </div>
                                         </div>
                                     </div>
