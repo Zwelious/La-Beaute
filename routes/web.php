@@ -75,6 +75,12 @@ Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'
 
 Route::get('/admin', [AdminTransController::class, 'AdminTrans']);
 
-Route::get('/admin-shop', [AdminShopController::class, 'AdminShop']);
+Route::get('/admin-contact', [AdminTransController::class, 'AdminContact']);
+
+Route::get('/admin-shop', [AdminTransController::class, 'AdminShop']);
+Route::post('/admin-shop-add', [AdminTransController::class, 'addProduct'])->name('addProduct');
+Route::post('/admin-shop-edit', [AdminTransController::class, 'editProduct'])->name('editProduct');
+
 Route::get('/contact', [ContactController::class, 'Contact'])->name('contact');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::post('/contact.store', [ContactController::class, 'store'])->name('contact.store');

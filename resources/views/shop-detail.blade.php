@@ -259,25 +259,34 @@
 
                                 </div>
                             </div>
-                            <form action="#">
+                            @if (session('success'))
+                                <div class="alert alert-success mt-4">
+                                    {{ session('success') }}
+                                </div>
+                            @elseif($errors->any())
+                                <div class="alert alert-danger">
+                                    @foreach ($errors->all() as $e)
+                                        {{ $e }} <br>
+                                    @endforeach
+                                </div>
+                            @endif
+                            <form method="POST" action="{{ route('contact.store') }}" class="">
+                                @csrf
                                 <h4 class="mb-5 fw-bold">Leave a Reply</h4>
                                 <div class="row g-4">
                                     <div class="col-lg-6">
                                         <div class="border-bottom rounded">
-                                            <input type="text" class="form-control border-0 me-4"
-                                                placeholder="Your Name *">
+                                            <input type="text" name="name" class="form-control border-0 me-4" placeholder="Your Name *">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="border-bottom rounded">
-                                            <input type="email" class="form-control border-0"
-                                                placeholder="Your Email *">
+                                            <input type="email" name="email" class="form-control border-0" placeholder="Your Email *">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="border-bottom rounded my-4">
-                                            <textarea name="" id="" class="form-control border-0" cols="30" rows="8"
-                                                placeholder="Your Review *" spellcheck="false"></textarea>
+                                            <textarea name="message" class="form-control border-0" cols="30" rows="8" placeholder="Your Review *" spellcheck="false"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -285,9 +294,10 @@
                                             <div class="d-flex align-items-center">
                                                 <p class="mb-0 me-3">Your message will be replied shortly!</p>
                                             </div>
-                                            <a href="#"
-                                                class="btn border border-secondary text-primary rounded-pill px-4 py-3">
-                                                Post Comment</a>
+                                            <button type="submit"
+                                                class="btn form-control border border-secondary text-primary rounded-pill px-4 py-3">
+                                                Post Comment
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

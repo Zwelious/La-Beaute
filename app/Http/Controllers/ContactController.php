@@ -24,8 +24,9 @@ class ContactController extends Controller
             'NAME' => $request->input('name'),
             'EMAIL' => $request->input('email'),
             'MESSAGE' => $request->input('message'),
+            'created_at' => now(),
         ]);
 
-        return redirect()->route('contact')->with('success', 'Your message has been sent successfully!');
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
 }
