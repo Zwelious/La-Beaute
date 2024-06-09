@@ -40,27 +40,52 @@ class ShopDetailsController extends Controller
     }
     public function addToCart(Request $request)
     {
-        $validated = $request->validate([
-            'nama_prod' => 'required|string',
-            'shade' => 'required|string',
-            'count' => 'required|integer|min:1',
-        ]);
+        // Validate the request data
+    $validated = $request->validate([
+        'nama_prod' => 'required|string',
+        'shade' => 'required|string',
+        'count' => 'required|integer|min:1',
+    ]);
 
-        $product = DB::table('detail_produk')
+    // Retrieve the product details
+    $product = DB::table('detail_produk')
         ->where('NAMA_PROD', $validated['nama_prod'])
         ->where('SHADE', $validated['shade'])
         ->first();
 
-        if(!$product){
-            return back()->with('error', 'Please select a shade.');
-        }
+    // If the product is not found, return with an error message
+    if (!$product) {
+        return back()->with('error', 'Please select a valid shade.');
+    }
 
-        $id_cust = session('id_cust', Cookie::get('id_cust'));
+    // Get the customer ID from session or cookie
+    $id_cust = session('id_cust', Cookie::get('id_cust'));
 
-        if (!$id_cust) {
-            return redirect()->route('login');
-        }
+    // Redirect to login if the customer is not logged in
+    if (!$id_cust) {
+        return redirect()->route('login')->with('error', "Please log in first.");
+    }
 
+    // Check if the product is already in the cart
+    $existingCartItem = DB::table('KERANJANG')
+        ->where('ID_CUST', $id_cust)
+        ->where('ID_PROD', $product->ID_PROD)
+        ->where('SHADE', $validated['shade'])
+        ->first();
+
+    if ($existingCartItem) {
+        // If the product is already in the cart, update the quantity
+        DB::table('KERANJANG')
+            ->where('ID_CUST', $id_cust)
+            ->where('ID_PROD', $product->ID_PROD)
+            ->where('SHADE', $validated['shade'])
+            ->update([
+                'QTY' => $existingCartItem->QTY + $validated['count'],
+            ]);
+
+        return redirect('/cart')->with('success', 'Product quantity updated in cart successfully!');
+    } else {
+        // Add product to cart if it is not already present
         DB::table('KERANJANG')->insert([
             'ID_CUST' => $id_cust,
             'ID_PROD' => $product->ID_PROD,
@@ -72,6 +97,49 @@ class ShopDetailsController extends Controller
 
         // Redirect back with a success message
         return redirect('/cart')->with('success', 'Product added to cart successfully!');
+    }
 
+    }
+
+    public function addToWishlist(request $request){
+        // Validate the request data
+    $validated = $request->validate([
+        'nama_prod' => 'required|string',
+    ]);
+
+    // Retrieve the product details
+    $product = DB::table('detail_produk')
+        ->where('NAMA_PROD', $validated['nama_prod'])
+        ->first();
+
+    // Get the customer ID from session or cookie
+    $id_cust = session('id_cust', Cookie::get('id_cust'));
+
+    // Redirect to login if the customer is not logged in
+    if (!$id_cust) {
+        return redirect()->route('login')->with('error', "Please log in first.");
+    }
+
+    // Check if the product is already in the wishlist
+    $existingWishlistItem = DB::table('wishlist')
+        ->where('ID_CUST', $id_cust)
+        ->where('ID_PROD', $product->ID_PROD)
+        ->first();
+
+    if ($existingWishlistItem) {
+        // Redirect back with an error message if the product is already in the wishlist
+        return redirect('/wishlist')->with('error', "This product is already in your wishlist.");
+    }
+
+    // Add product to wishlist
+    DB::table('wishlist')->insert([
+        'ID_CUST' => $id_cust,
+        'ID_PROD' => $product->ID_PROD,
+        'NAMA_PROD' => $product->NAMA_PROD,
+        'HARGA' => $product->DISKON > 0 ? $product->HARGA - ($product->HARGA * $product->DISKON) / 100 : $product->HARGA,
+    ]);
+
+    // Redirect back with a success message
+    return redirect('/wishlist')->with('success', 'Product added to wishlist successfully!');
     }
 }

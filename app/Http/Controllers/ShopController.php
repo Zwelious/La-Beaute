@@ -24,7 +24,9 @@ class ShopController extends Controller
                 ->select('dp.ID_PROD', 'dp.NAMA_PROD', 'dp.SHADE', 'dp.DESKRIPSI', 'dp.HARGA', 'dp.DISKON', 'dp.KATEGORI', 'dp.STOCK', 'dp.FOTO_PROD')
                 ->paginate(9);
 
-        return view('shop', compact('dataProducts'));
+        $allProducts = DB::table('detail_produk')->get();
+
+        return view('shop', compact('dataProducts', 'allProducts'));
     }
 
     public function getProductById($id_prod)
@@ -55,6 +57,15 @@ class ShopController extends Controller
         }
 
         return view('shop', compact('dataProducts', 'query'));
+    }
+    public function showByCategory($category)
+    {
+        $allProducts = DB::table('detail_produk')->get();
+        $dataProducts = DB::table('detail_produk')
+            ->where('KATEGORI', $category)
+            ->paginate(9);
+
+        return view('shop', compact('allProducts', 'dataProducts', 'category'));
     }
 }
 

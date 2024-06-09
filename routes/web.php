@@ -57,9 +57,13 @@ Route::get('/shop', [ShopController::class, 'Shop'])->name('shop');
 
 Route::post('/shop', [ShopController::class, 'shopSearch'])->name('search');
 
+Route::get('/shop-{category}', [ShopController::class, 'showByCategory'])->name('shop-category');
+
 Route::get('/shop/{id_prod}', [ShopDetailsController::class, 'ShopDetails'])->name('shop-details');
 
 Route::post('/shop/{id_prod}', [ShopDetailsController::class, 'addToCart'])->name('addtocart');
+
+Route::post('/shop-wishlist', [ShopDetailsController::class, 'addToWishlist'])->name('addtowishlist');
 
 Route::get('/admin-dashboard', [AdminTransController::class, 'AdminTrans']);
 
@@ -72,5 +76,3 @@ Route::get('/receipt', [ReceiptController::class, 'Receipt'])->name('receipt');
 Route::post('/logout', [LoginController::class, 'Logout'])->name('logout');
 
 Route::post('/wishlist/remove', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
-
-Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');

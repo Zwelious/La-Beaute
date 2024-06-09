@@ -47,6 +47,16 @@
                             <div class="card border shadow-0">
                                 <div class="m-4">
                                     <h4 class="card-title mb-4">Your shopping cart</h4>
+                                    @if (session()->has('success'))
+                                        <div class="alert alert-success">
+                                            {{ session()->get('success') }}
+                                        </div>
+                                    @elseif(session()->has('error'))
+                                        <div class="alert alert-danger">
+                                            {{ session()->get('error') }}
+                                        </div>
+                                    @endif
+
                                     @if ($cartProducts->isEmpty())
                                         <p>Your wishlist is empty. To add products to your wishlist, click on the heart
                                             icon!</p>
@@ -186,8 +196,7 @@
                                                     style="min-height: 2em; line-height: 1em; overflow: hidden;">
                                                     {{ $product->NAMA_PROD }}</h4>
                                                 <p class="product-description">
-                                                    {{ $product->DESKRIPSI }}<span
-                                                        class="more-text d-none"></span>
+                                                    {{ $product->DESKRIPSI }}<span class="more-text d-none"></span>
                                                 </p>
                                                 <div class="d-flex flex-column">
                                                     @if ($product->DISKON > 0)
@@ -216,116 +225,115 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
-    </div>
-    </section>
-    <!-- Recommend -->
+        </section>
+        <!-- Recommend -->
 
 
-    <script>
-        function updateCartQuantity(productId, quantity) {
+        <script>
+            function updateCartQuantity(productId, quantity) {
 
-            $.ajax({
-                url: '{{ route('update-cart') }}',
-                method: 'POST',
-                data: {
-                    _token: '{{ csrf_token() }}',
-                    productId: productId,
-                    quantity: quantity
-                },
-                success: function(response) {
-                    if (response.success) {
-                        recalculateTotalPrice();
-                    } else {
-                        alert('Failed to update cart');
+                $.ajax({
+                    url: '{{ route('update-cart') }}',
+                    method: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        productId: productId,
+                        quantity: quantity
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            recalculateTotalPrice();
+                        } else {
+                            alert('Failed to update cart');
+                        }
+                    },
+                    error: function() {
+                        alert('Error updating cart');
                     }
-                },
-                error: function() {
-                    alert('Error updating cart');
-                }
-            });
-
-        }
-
-        function removeItem(productId) {
-            if (!confirm('Are you sure you want to remove this item?')) return;
-
-            $.ajax({
-                url: '{{ route('remove-cart') }}',
-                method: 'POST',
-                data: {
-                    _token: '{{ csrf_token() }}',
-                    productId: productId
-                },
-                success: function(response) {
-                    if (response.success) {
-                        recalculateTotalPrice();
-                        location.reload();
-                    } else {
-                        alert('Failed to remove item');
-                    }
-                },
-                error: function() {
-                    alert('Error removing item');
-                }
-            });
-        }
-
-        function recalculateTotalPrice() {
-            let total = 0;
-            document.querySelectorAll('.row[data-id]').forEach(item => {
-                const price = parseFloat(item.getAttribute('data-price'));
-                const quantity = parseInt(item.querySelector('.qty-input').value);
-                total += price * quantity;
-            });
-            document.getElementById('total-payment').innerText = 'Rp ' + total.toLocaleString('id-ID');
-            document.getElementById('grand-total').innerText = 'Rp ' + total.toLocaleString('id-ID');
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.btn-increment, .btn-decrement').forEach(button => {
-                button.addEventListener('click', function() {
-                    let isIncrement = this.classList.contains('btn-increment');
-                    let input = this.parentElement.querySelector('.qty-input');
-                    let currentQty = parseInt(input.value);
-                    let newQty = isIncrement ? currentQty + 1 : (currentQty > 1 ? currentQty -
-                        1 :
-                        1);
-
-                    input.value = newQty;
-
-                    let productId = this.closest('.d-flex').getAttribute('data-id');
-                    updateCartQuantity(productId, newQty);
-
                 });
+
+            }
+
+            function removeItem(productId) {
+                if (!confirm('Are you sure you want to remove this item?')) return;
+
+                $.ajax({
+                    url: '{{ route('remove-cart') }}',
+                    method: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        productId: productId
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            recalculateTotalPrice();
+                            location.reload();
+                        } else {
+                            alert('Failed to remove item');
+                        }
+                    },
+                    error: function() {
+                        alert('Error removing item');
+                    }
+                });
+            }
+
+            function recalculateTotalPrice() {
+                let total = 0;
+                document.querySelectorAll('.row[data-id]').forEach(item => {
+                    const price = parseFloat(item.getAttribute('data-price'));
+                    const quantity = parseInt(item.querySelector('.qty-input').value);
+                    total += price * quantity;
+                });
+                document.getElementById('total-payment').innerText = 'Rp ' + total.toLocaleString('id-ID');
+                document.getElementById('grand-total').innerText = 'Rp ' + total.toLocaleString('id-ID');
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.btn-increment, .btn-decrement').forEach(button => {
+                    button.addEventListener('click', function() {
+                        let isIncrement = this.classList.contains('btn-increment');
+                        let input = this.parentElement.querySelector('.qty-input');
+                        let currentQty = parseInt(input.value);
+                        let newQty = isIncrement ? currentQty + 1 : (currentQty > 1 ? currentQty -
+                            1 :
+                            1);
+
+                        input.value = newQty;
+
+                        let productId = this.closest('.d-flex').getAttribute('data-id');
+                        updateCartQuantity(productId, newQty);
+
+                    });
+                });
+
+                recalculateTotalPrice();
             });
 
-            recalculateTotalPrice();
-        });
+            document.addEventListener('DOMContentLoaded', function() {
 
-        document.addEventListener('DOMContentLoaded', function() {
-
-            document.querySelectorAll('.product-description').forEach(function(element) {
-                var words = element.innerText.split(' ');
-                if (words.length > 12) {
-                    var visibleText = words.slice(0, 12).join(' ');
-                    var hiddenText = words.slice(12).join(' ');
-                    element.innerHTML = `
+                document.querySelectorAll('.product-description').forEach(function(element) {
+                    var words = element.innerText.split(' ');
+                    if (words.length > 12) {
+                        var visibleText = words.slice(0, 12).join(' ');
+                        var hiddenText = words.slice(12).join(' ');
+                        element.innerHTML = `
                         ${visibleText}
                         <span class="more-text-description d-none"> ${hiddenText}</span>
                         <a href="#" class="read-more-description">Read more</a>
                     `;
-                }
-            });
-            document.querySelectorAll('.read-more-description').forEach(function(element) {
-                element.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var moreText = this.previousElementSibling;
-                    moreText.classList.toggle('d-none');
-                    this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                    }
+                });
+                document.querySelectorAll('.read-more-description').forEach(function(element) {
+                    element.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        var moreText = this.previousElementSibling;
+                        moreText.classList.toggle('d-none');
+                        this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';
+                    });
                 });
             });
-        });
-
-    </script>
-@endsection
+        </script>
+    @endsection

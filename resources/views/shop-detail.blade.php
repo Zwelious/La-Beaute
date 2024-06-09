@@ -85,7 +85,9 @@
                                     <i class="fa fa-star"></i>
                                 </div>
 
-                                <p class="mb-4">{{ $product->DESKRIPSI }}</p>
+                                <p class="product-description mb-2">
+                                    {{ $product->DESKRIPSI }}<span class="more-text d-none"></span>
+                                </p>
                                 <form action="{{ route('addtocart', ['id_prod' => $product->ID_PROD]) }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="nama_prod" value="{{ $product->NAMA_PROD }}">
@@ -115,24 +117,37 @@
                                         </select>
                                     </div>
 
-                                    <div class="mb-5" style="width: 150px; display: flex; align-items: center;">
+                                    <div class="mb-4" style="width: 150px; display: flex; align-items: center;">
                                         <div class="input-group-btn">
                                             <button type="button" class="btn-remove rounded-circle bg-light border">
                                                 <i class="fa fa-minus"></i>
                                             </button>
                                         </div>
-                                        <input type="number" class="form-control text-center mx-2" value="1" id="count" name="count" readonly style="width=50px">
+                                        <input type="number" class="form-control text-center mx-2" value="1"
+                                            id="count" name="count" readonly style="width=50px">
                                         <div class="input-group-btn">
                                             <button type="button" class="btn-add rounded-circle bg-light border">
                                                 <i class="fa fa-plus"></i>
                                             </button>
                                         </div>
                                     </div>
+                                    <div class="d-flex">
+                                        <button type="submit"
+                                            class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
+                                            <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                        </button>
+                                    </div>
+
+                                </form>
+                                <form action="{{ route('addtowishlist', ['id_prod' => $product->ID_PROD]) }}"
+                                    method="POST">
+                                    @csrf
+                                    <input type="hidden" name="nama_prod" value="{{ $product->NAMA_PROD }}">
+                                    <input type="hidden" name="shade" id="shadeWishlist" value="">
                                     <button type="submit"
                                         class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
-                                        <i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart
+                                        <i class="fa fa-heart me-2 text-primary"></i> Add to wishlist
                                     </button>
-
                                 </form>
                             </div>
 
