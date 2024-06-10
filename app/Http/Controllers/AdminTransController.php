@@ -18,30 +18,30 @@ class AdminTransController extends Controller
             return redirect()->route('login')->with('error', "Session timed out. Log in again.");
         }
 
-        $allTransactions = DB::table('TRANSAKSI')
+        $allTransactions = DB::table('transaksi')
         ->select('ID_TRANS', 'ID_CUST', 'TANGGAL', 'TOTAL', 'STATUS_DEL')
         ->where('TOTAL', '>', 0)
         ->get();
 
-        $transactions = DB::table('TRANSAKSI')
+        $transactions = DB::table('transaksi')
         ->select('ID_TRANS', 'ID_CUST', 'TANGGAL', 'TOTAL', 'STATUS_DEL')
         ->where('TOTAL', '>', 0)
         ->paginate(15);
 
-        $allTimeEarnings = DB::table('TRANSAKSI')
+        $allTimeEarnings = DB::table('transaksi')
         ->sum('TOTAL');
 
         $startDate = Carbon::now()->subDays(30)->startOfDay();
         $endDate = Carbon::now()->endOfDay();
 
         // Sum the total earnings for the last 30 days
-        $monthlyEarnings = DB::table('TRANSAKSI')
+        $monthlyEarnings = DB::table('transaksi')
             ->where('TANGGAL', '>=', $startDate)
             ->where('TANGGAL', '<=', $endDate)
             ->where('TOTAL', '>', 0)
             ->sum('TOTAL');
 
-        $detailTransactions = DB::table('DETAIL_TRANSAKSI')
+        $detailTransactions = DB::table('detail_transaksi')
         ->select('ID_TRANS', 'ID_PROD', 'HARGA', 'QTY', 'STATUS_DEL')
         ->get();
 

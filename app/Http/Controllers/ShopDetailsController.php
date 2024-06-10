@@ -75,7 +75,7 @@ class ShopDetailsController extends Controller
 
     if ($existingCartItem) {
         // If the product is already in the cart, update the quantity
-        DB::table('KERANJANG')
+        DB::table('keranjang')
             ->where('ID_CUST', $id_cust)
             ->where('ID_PROD', $product->ID_PROD)
             ->where('SHADE', $validated['shade'])

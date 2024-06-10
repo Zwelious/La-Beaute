@@ -20,11 +20,11 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        DB::table('MESSAGE')->insert([
+        DB::table('message')->insert([
             'NAME' => $request->input('name'),
             'EMAIL' => $request->input('email'),
             'MESSAGE' => $request->input('message'),
-            'created_at' => now(),
+            'CREATED_AT' => now(),
         ]);
 
         return redirect()->back()->with('success', 'Your message has been sent successfully!');

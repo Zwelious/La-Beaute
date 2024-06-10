@@ -24,7 +24,7 @@ class CartController extends Controller
             ->where('keranjang.ID_CUST', '=', $id_cust)
             ->get();
 
-        $dataProducts = DB::table('DETAIL_PRODUK as dp')
+        $dataProducts = DB::table('detail_produk as dp')
             ->join(DB::raw('(SELECT NAMA_PROD, MIN(ID_PROD) as min_id FROM DETAIL_PRODUK GROUP BY NAMA_PROD) as distinct_names'),
                 'dp.ID_PROD', '=', 'distinct_names.min_id')
             ->select('dp.ID_PROD', 'dp.NAMA_PROD', 'dp.SHADE', 'dp.DESKRIPSI', 'dp.HARGA', 'dp.DISKON', 'dp.KATEGORI', 'dp.STOCK', 'dp.FOTO_PROD')
